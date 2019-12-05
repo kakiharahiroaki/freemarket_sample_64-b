@@ -36,7 +36,7 @@ Things you may want to cover:
 
 |first_name_kana|string|null: false|
 
-|nmb_birthday|integer|null: false|                    生年月日
+|nmb_birthday|integer|null: false|
 
 |phone_number|integer|unique: true,null: false|
 
@@ -48,19 +48,19 @@ Things you may want to cover:
 
 |password_confirmation|integer|null: false|
 
-|postcode|integer|null: false|                          郵便番号
+|postcode|integer|null: false|
 
-|prefecture_id|string|null: false|                     都道府県
+|prefecture_id|string|null: false|
 
-|city|string|null: false|                              市区町村
+|city|string|null: false|
 
-|block|string|null: false|                             番地
+|block|string|null: false|
 
-|building|string||                          建物名・部屋番号
+|building|string||
 
-|biography|string||                         自己紹介
+|biography|string||
 
-|avatar_image_id|string||                   プロフィール画像
+|avatar_image_id|string||
 
 
 ### Association
@@ -75,13 +75,13 @@ Things you may want to cover:
 |------|----|-------|
 |products|string|null: false, foreign_key: true|
 
-|Description of item|string|null: false, foreign_key: true|          商品説明
+|Description of item|string|null: false, foreign_key: true|
 
 |price|integer|null: false, foreign_key: true|
 
-|saler_id|integer|null: false, foreign_key: true|                     売り者
+|saler_id|integer|null: false, foreign_key: true|
 
-|buyer_id|integer|null: false, foreign_key: true|                     買い者
+|buyer_id|integer|null: false, foreign_key: true|
 
 
 ### Association
@@ -106,9 +106,7 @@ Things you may want to cover:
 
 |main|string|null: false|
 
-|sub|string||
-
-|sub_right|string||
+|ancestry|string||
 
 |item_id|integer|null: false, foreign_key: true|
 
@@ -206,7 +204,7 @@ Things you may want to cover:
 
 
 
-## statuesテーブル
+## statusesテーブル
 |Column|Type|Options|
 |------|----|-------|
 
@@ -237,9 +235,9 @@ Things you may want to cover:
 
 |number|integer|null: false, foreign_key: true|
 
-|expiration date|integer|null: false, foreign_key: true|       有効期限
+|expiration date|integer|null: false, foreign_key: true|
 
-|3-digit PIN|integer|null: false, foreign_key: true|           3桁の暗証番号
+|3-digit PIN|integer|null: false, foreign_key: true|
 
 |user_id|integer|null: false, foreign_key: true|
 
