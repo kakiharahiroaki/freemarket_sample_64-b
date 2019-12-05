@@ -24,6 +24,7 @@ Things you may want to cover:
 * ...
 
 
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -93,6 +94,7 @@ Things you may want to cover:
 - has_many :postages
 - has_many :statues
 - has_many :shipping origins
+
 - belongs_to :credit_card
 - belongs_to :user
 
@@ -125,6 +127,7 @@ Things you may want to cover:
 - belongs_to :item
 
 
+
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -137,6 +140,9 @@ Things you may want to cover:
 
 - belongs_to :user
 - belongs_to :item
+
+
+
 
 
 ## sizesテーブル
@@ -182,6 +188,7 @@ Things you may want to cover:
 - belongs_to :item
 
 
+
 ## postagesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -193,6 +200,8 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :item
+
+
 
 
 ## statusesテーブル
