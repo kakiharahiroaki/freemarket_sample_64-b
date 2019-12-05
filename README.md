@@ -38,17 +38,17 @@ Things you may want to cover:
 
 |nmb_birthday|integer|null: false|                    生年月日
 
-|phone_number|string|null: false|
+|phone_number|integer|unique: true,null: false|
 
-|is_phone_number_authenticated|string|null: false|
+|is_phone_number_authenticated|integer|null: false|
 
-|email|string|null: false|
+|email|string|unique: true,null: false|
 
-|password|integer|null: false|
+|password|integer|unique: true,null: false|
 
 |password_confirmation|integer|null: false|
 
-|postcode|string|null: false|                          郵便番号
+|postcode|integer|null: false|                          郵便番号
 
 |prefecture_id|string|null: false|                     都道府県
 
@@ -56,16 +56,15 @@ Things you may want to cover:
 
 |block|string|null: false|                             番地
 
-|building|string|null: false|                          建物名・部屋番号
+|building|string||                          建物名・部屋番号
 
-|biography|string|null: false|                         自己紹介
+|biography|string||                         自己紹介
 
-|avatar_image_id|string|null: false|                   プロフィール画像
+|avatar_image_id|string||                   プロフィール画像
 
 
 ### Association
-- has_many :credit_card
-- has_many :status
+- has_one :credit_card
 - has_many :items
 - has_many :images
 
@@ -74,21 +73,9 @@ Things you may want to cover:
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|products|integer|null: false, foreign_key: true|
+|products|string|null: false, foreign_key: true|
 
-|Description of item|integer|null: false, foreign_key: true|          商品説明
-
-|status|integer|null: false, foreign_key: true|                       状態
-
-|size|integer|null: false, foreign_key: true|
-
-|postage|integer|null: false, foreign_key: true|                      送料
-
-|Shipping origin|integer|null: false, foreign_key: true|              発送元
-
-|shipping_date|integer|null: false, foreign_key: true|                発送日
-
-|shipping method|integer|null: false, foreign_key: true|              発送方法
+|Description of item|string|null: false, foreign_key: true|          商品説明
 
 |price|integer|null: false, foreign_key: true|
 
@@ -99,28 +86,17 @@ Things you may want to cover:
 
 ### Association
 - has_many :images
-- has_many :categories,through: :items_categories
-- has_many :items_categories
-- belongs_to :credit_cards
+- has_many :categories
+- has_many :brands
+- has_many :sizes
+- has_many :shipping_dates
+- has_many :shipping methods
+- has_many :postages
+- has_many :statues
+- has_many :shipping origins
+
+- belongs_to :credit_card
 - belongs_to :user
-- belongs_to :statuses
-
-
-
-
-## items_categoriesテーブル             中間
-|Column|Type|Options|
-|------|----|-------|
-
-|item_id|string|null: false|
-
-|category_id|string|null: false|
-
-
-### Association
-- belongs_to :item
-- belongs_to :category
-
 
 
 
@@ -128,17 +104,29 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 
-|  |text||
+|main|string|null: false|
 
-|  |string||
+|sub|string||
 
-|  |string||
+|sub_right|string||
 
-|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :items_categories
-- has_many :items,through: :items_categories
+- belongs_to :item
+
+
+
+## brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
+
+|brand|string|null: false|
+
+|item_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :item
 
 
 
@@ -146,36 +134,101 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 
-|products|string|null: false|
+|product|string|null: false|
 
-|item_id|string|null: false|
+|item_id|integer|null: false, foreign_key: true|
 
-|user_id|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
 
-### Association
 - belongs_to :user
 - belongs_to :item
 
 
 
 
-## statusesテーブル
+
+## sizesテーブル
 |Column|Type|Options|
 |------|----|-------|
 
-|Exhibiting|string||
-
-|During trading|string||
-
-|Sold|string|  |
+|size|integer|null: false, foreign_key: true|
 
 |item_id|integer|null: false, foreign_key: true|
 
+### Association
+- belongs_to :item
+
+
+
+## shipping_datesテーブル
+|Column|Type|Options|
+|------|----|-------|
+
+
+|shipping_date|integer|null: false, foreign_key: true| 
+
+
+|item_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :items
-- belongs_to :group
+- belongs_to :item
 
+
+
+
+## shipping methodsテーブル
+|Column|Type|Options|
+|------|----|-------|
+
+
+|shipping method|string|null: false, foreign_key: true|
+
+|item_id|integer|null: false|
+
+
+### Association
+- belongs_to :item
+
+
+
+## postagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+
+|postage|integer|null: false, foreign_key: true| 
+
+|item_id|integer|null: false|
+
+
+### Association
+- belongs_to :item
+
+
+
+
+## statuesテーブル
+|Column|Type|Options|
+|------|----|-------|
+
+|status|string|null: false, foreign_key: true|  
+
+|item_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :item
+
+
+
+## Shipping originsテーブル
+|Column|Type|Options|
+|------|----|-------|
+
+|Shipping origin|string|null: false, foreign_key: true|  
+
+|item_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :item
 
 
 ## credit_cardsテーブル
