@@ -1,2 +1,8 @@
 class User < ApplicationRecord
+
+  
+
+
+
+  
 end
