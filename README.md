@@ -45,7 +45,7 @@ Things you may want to cover:
 
 ### Association
 - has_one :credit_card
-- has_many :items
+- has_many :items, dependent: :destroy
 - has_one :address
 
 
@@ -54,13 +54,13 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |products|string|null: false|
-|description of item|string|null: false|
+|description_of_item|string|null: false|
 |price|integer|null: false|
 |size|integer|null: false|
 |shipping_date|integer|null: false| 
-|shipping method|string|null: false|
+|shipping_method|string|null: false|
 |postage|integer|null: false| 
-|shipping origin|string|null: false|  
+|shipping_origin|string|null: false|  
 |condition|string|null: false|
 |brand_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
@@ -70,10 +70,10 @@ Things you may want to cover:
 
 
 ### Association
-- has_many :images
+- has_many :images, dependent: :destroy
 - belongs_to :category
 - belongs_to :brand
-- has_many :statues
+- has_many :statues, dependent: :destroy
 - belongs_to :user
 
 
@@ -125,7 +125,7 @@ Things you may want to cover:
 |------|----|-------|
 |number|integer|null: false|
 |expiration date|integer|null: false|
-|3-digit PIN|integer|null: false|
+|3_digit_PIN|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 
@@ -140,7 +140,7 @@ Things you may want to cover:
 |city|string|null: false|
 |block|string|null: false|
 |building|string||
-|user_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
