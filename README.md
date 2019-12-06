@@ -68,8 +68,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :images
-- has_many :categories
-- has_many :brands
+- belongs_to :category
+- belongs_to :brand
 - has_many :statues
 - belongs_to :user
 
@@ -83,7 +83,7 @@ Things you may want to cover:
 |item_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :item
+- has_many :items
 
 
 
@@ -94,14 +94,14 @@ Things you may want to cover:
 |item_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :item
+- has_many :items
 
 
 
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|product|string|null: false|
+|image|string|null: false|
 |item_id|integer|null: false, foreign_key: true|
 
 ### Association
