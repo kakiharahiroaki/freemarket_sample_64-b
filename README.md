@@ -41,7 +41,6 @@ Things you may want to cover:
 |password_confirmation|integer|null: false|
 |biography|string||
 |avatar_image_id|string||
-|user_id|integer|null:false, foreign_key: true|
 
 
 ### Association
@@ -63,8 +62,9 @@ Things you may want to cover:
 |postage|integer|null: false| 
 |shipping origin|string|null: false|  
 |condition|string|null: false|
-|brand_id|integer|null:false, foreign_key: true|
-|category_id|integer|null:false, foreign_key: true|  
+|brand_id|integer|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 |saler_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|null: false, foreign_key: true|
 
@@ -93,7 +93,7 @@ Things you may want to cover:
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|brand|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :items
@@ -140,6 +140,7 @@ Things you may want to cover:
 |city|string|null: false|
 |block|string|null: false|
 |building|string||
+|user_id|integer|null: false|
 
 ### Association
 - belongs_to :user
