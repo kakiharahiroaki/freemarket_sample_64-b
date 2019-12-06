@@ -61,7 +61,9 @@ Things you may want to cover:
 |shipping method|string|null: false|
 |postage|integer|null: false| 
 |shipping origin|string|null: false|  
-|condition|string|null: false|  
+|condition|string|null: false|
+|brand_id|integer|null:false, foreign_key: true|
+|category_id|integer|null:false, foreign_key: true|  
 |saler_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|null: false, foreign_key: true|
 
@@ -80,7 +82,7 @@ Things you may want to cover:
 |------|----|-------|
 |main|string|null: false|
 |ancestry|string||
-|item_id|integer|null: false, foreign_key: true|
+
 
 ### Association
 - has_many :items
@@ -91,7 +93,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |brand|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :items
