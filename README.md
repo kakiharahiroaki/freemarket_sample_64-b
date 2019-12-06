@@ -41,6 +41,7 @@ Things you may want to cover:
 |password_confirmation|integer|null: false|
 |biography|string||
 |avatar_image_id|string||
+|user_id|integer|null:false, foreign_key: true|
 
 
 ### Association
@@ -135,7 +136,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |postcode|integer|null: false|
-|prefecture_id|string|null: false|
+|prefecture|string|null: false|
 |city|string|null: false|
 |block|string|null: false|
 |building|string||
