@@ -1,8 +1,8 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-#__next{
+.__next{
+  background-color: white;
 }
 
 .foom{
@@ -22,7 +22,7 @@
   &__input__box{
     display: flex;
   }
-  &--image{
+  &__image{
     width: 136px;
     height: 40px;
     margin-right: 45px;
@@ -83,14 +83,12 @@
   padding-right: 50px;
 }
 
-.content{
-width: 100%;
-background-color: blue;
-font-size: 100px;
-}
 
-.footer{
-  height: 100px;
-  width: 100%;
-  background-color: red;
+.heading{
+}
+nav{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
