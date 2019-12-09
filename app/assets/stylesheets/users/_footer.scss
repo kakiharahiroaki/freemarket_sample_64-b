@@ -1,0 +1,21 @@
+.single-footer {
+  height: 30vh;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 250px;
+    padding: 0;
+    text-align: center;
+  .clearfix{
+    padding: 3rem;
+    display: flex;
+    margin: 0 auto;
+    li{
+      padding: 1rem;
+    }
+  }
+}
