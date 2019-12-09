@@ -1,0 +1,49 @@
+.prefectures-select{
+  width: 20rem;
+  height: 3rem;
+  margin-left: 2rem;
+}
+.prefectures-select select {
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.prefectures-select select::-ms-expand {
+  display: none;
+}
+.prefectures-select.tab {
+  position: relative;
+  margin: auto 0;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px;
+	background: #ffffff;
+}
+.prefectures-select.tab::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #d4cccc;
+	pointer-events: none;
+}
+.prefectures-select.tab select {
+	color: #aca6a6;
+}
+.form-any{
+  font-weight: bold;
+  background-color: #d4cccc;
+  padding: 1%;
+}
