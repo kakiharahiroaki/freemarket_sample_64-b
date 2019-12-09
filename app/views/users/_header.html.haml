@@ -1,0 +1,47 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title FreemarketSample64B
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    #__next
+    .header__t
+      .header
+        .header__box
+          .header__input__box
+            %a.header--image
+              = image_tag "fmarket_logo_red.svg", size: "134x36"
+            .foom
+              %input.search__box{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
+              %button.header--btn
+                -# %i.fa.fa-search
+        .header__bottom
+          .header__bottom__left
+            = link_to "カテゴリーから探す", '#',class:"category"
+            = link_to "ブランドから探す", '#',class:"brand"
+          .header__bottom__right
+            %ul.header__navi
+            %li.header__navi__link
+            = link_to "いいね！一覧", '#',class:"link"
+            %i.far.fa-heart
+            = link_to "お知らせ", '#',class:"menu"
+            %i.icon-bell
+            = link_to "やることリスト", '#',class:"link"
+            %i.icon-check
+            = link_to "マイページ", '#',class:"link"
+  %nav.bread__list
+    %ul
+      %li{itemscope: "", itemtype: "#"}
+        %a{href: "#", itemprop: "url"}
+          = link_to "メルカリ", '#'
+        %i.icon-arrow-right
+      %li{itemscope: "", itemtype: "#"}
+        %a{href: "#", itemprop: "url"}
+          = link_to "マイページ", '#'
+        %i.icon-arrow-right
+      %li{itemscope: "", itemtype: "#"}
+        = link_to "ログアウト", '#'
