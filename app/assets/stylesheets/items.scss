@@ -1,6 +1,11 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.__next{
+  background-color: white;
+}
+
 .foom{
   position: relative;
   width: 100%;
@@ -73,20 +78,37 @@
   padding-left: 10px;
   padding-right: 50px;
 }
-.content{
-width: 100%;
-background-color: blue;
-font-size: 100px;
-}
 .footer{
   width: 100%;
   background-color: rgb(46, 44, 44);
   font-size: 12px;
   color: white;
-  padding: 0 10px 20px 10px;
+  padding: 0 20px 10px 20px;
+  a{
+    color: #fff;
+  }
+  &__left{
+  }
+  &--help{
+  }
   &__list{
+    margin-top: 16px;
+    color: white;
+  }
+  &__center__right{
+    padding-top: 40px;
+  }
+  &__bottom{
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
   }
 }
+.heading{
+}
 nav{
+  width: 80%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
