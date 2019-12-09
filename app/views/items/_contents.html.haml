@@ -3,19 +3,25 @@
     = image_tag "index_keyvisual.png", size: "1020x390"
   .contents__category
     %h2 人気のカテゴリー
-    %a.contents__list{ href: 'http://google.co.jp' }
-      レディース
-    %a.contents__list{ href: 'http://google.co.jp' }
-      メンズ
-    %a.contents__list{ href: 'http://google.co.jp' }
-      家電・スマホ・カメラ
-    %a.contents__list{ href: 'http://google.co.jp' }
-      おもちゃ・ホビー・グッズ
+    .contents__group
+      .contents__list
+        = link_to "#" do
+          レディース
+      .contents__list
+        = link_to "#" do
+          メンズ
+      .contents__list
+        = link_to "#" do
+          家電・スマホ・カメラ
+      .contents__list
+        = link_to "#" do
+          おもちゃ・ホビー・グッズ
   .contents__main
     .contents__main__top
       %h3 レディース新着アイテム
-      %a.contents__list{ href: 'http://google.co.jp' }
-        もっと見る
+      .contents__list
+        = link_to "#", target: "_blank" do
+          もっと見る
     .contents--product
       %ul.product__images
         %li.product__image
@@ -30,8 +36,9 @@
                   500
     .contents__main__top
       %h3 メンス新着アイテム
-      %a.contents__list{ href: 'http://google.co.jp' }
-        もっと見る
+      .contents__list
+        = link_to "#", target: "_blank" do
+          もっと見る
     .contents--product
       %ul.product__images
         %li.product__image
@@ -46,8 +53,9 @@
                   500
     .contents__main__top
       %h3 家電・スマホ・カメラ新着アイテム
-      %a.contents__list{ href: 'http://google.co.jp' }
-        もっと見る
+      .contents__list
+        = link_to "#", target: "_blank" do
+          もっと見る
     .contents--product
       %ul.product__images
         %li.product__image
@@ -62,8 +70,9 @@
                   500
     .contents__main__top
       %h3 おもちゃ・ホビー・グッズ新着アイテム
-      %a.contents__list{ href: 'http://google.co.jp' }
-        もっと見る
+      .contents__list
+        = link_to "#", target: "_blank" do
+          もっと見る
     .contents--product
       %ul.product__images
         %li.product__image
@@ -78,19 +87,25 @@
                   500
   .contents__category__center
     %h2 人気のブランド
-    %a.contents__list{ href: 'http://google.co.jp' }
-      シャネル
-    %a.contents__list{ href: 'http://google.co.jp' }
-      ルイヴィトン
-    %a.contents__list{ href: 'http://google.co.jp' }
-      シュプリーム
-    %a.contents__list{ href: 'http://google.co.jp' }
-      ナイキ
+    .contents__group
+      .contents__list
+        = link_to "#" do
+          シャネル
+      .contents__list
+        = link_to "#" do
+          ルイヴィトン
+      .contents__list
+        = link_to "#" do
+          シュプリーム
+      .contents__list
+        = link_to "#" do
+          ナイキ
   .contents__main
     .contents__main__top
       %h3 シャネル新着アイテム
-      %a.contents__list{ href: 'http://google.co.jp' }
-        もっと見る
+      .contents__list
+        = link_to "#", target: "_blank" do
+          もっと見る
     .contents--product
       %ul.product__images
         %li.product__image
@@ -105,8 +120,9 @@
                   500
     .contents__main__top
       %h3 ルイヴィトン新着アイテム
-      %a.contents__list{ href: 'http://google.co.jp' }
-        もっと見る
+      .contents__list
+        = link_to "#", target: "_blank" do
+          もっと見る
     .contents--product
       %ul.product__images
         %li.product__image
@@ -121,8 +137,9 @@
                   500
     .contents__main__top
       %h3 シュプリーム新着アイテム
-      %a.contents__list{ href: 'http://google.co.jp' }
-        もっと見る
+      .contents__list
+        = link_to "#", target: "_blank" do
+          もっと見る
     .contents--product
       %ul.product__images
         %li.product__image
@@ -137,8 +154,9 @@
                   500
     .contents__main__top
       %h3 ナイキ新着アイテム
-      %a.contents__list{ href: 'http://google.co.jp' }
-        もっと見る
+      .contents__list
+        = link_to "#", target: "_blank" do
+          もっと見る
     .contents--product
       %ul.product__images
         %li.product__image
