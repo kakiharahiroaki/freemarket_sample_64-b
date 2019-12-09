@@ -1,0 +1,51 @@
+body{
+  .single-header {
+    height: 128px;
+    display: flex;
+    h1{
+      margin-left: 30%;
+    }
+    .progress-bar {
+      .clearfix{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+      }
+      ol {
+        display: block;
+        list-style-type: decimal;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+      }
+      li {
+        list-style: none;
+      }
+      .progress-status {
+        width: 12px;
+        height: 12px;
+        margin: 8px auto 0;
+        background: #ccc;
+        border-radius: 50%;
+      }
+    }
+  }
+  .single-main{
+    margin-bottom: 15%;
+    .registration{
+      color: black;
+      background-color: white;
+      border: none;
+    }
+    .smsSubmit_btn{
+      margin: 1rem;
+    }
+    .phone_link{
+      color: #0099e8;
+      text-decoration: none;
+      float: right;
+    }
+  }
+}
