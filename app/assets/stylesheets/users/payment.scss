@@ -1,26 +1,80 @@
+.menber__payment__input{
+  .single-header {
+    position: relative;
+    display: flex;
+    height: 128px;
+  }
+  .single-header a {
+    position: absolute;
+    left: 30%;
+    width: 185px;
+    height: 49px;
+    line-height: 49px;
+  }
+  .single-header img {
+    width: 185px;
+    height: 49px;
+  }
+  .single-header h1 {
+    margin: 40px 0 0;
+    // display: inline-block;
+  }
+  .signup-bar.progress-bar {
+    padding: 40px 0 0 44px;
+    border: 0;
+  }
+  .clearfix{
+    display: flex;
+  }
+  .progress-bar ol {
+    position: absolute;
+    left: 50%;
+    margin: 0;
+  }
+  li{
+    list-style-type: square;
+    margin: 20px;
+  }
+
+main {
+  display: block;
+}
+.l-single-container {
+  width: 700px;
+  margin: 0 auto;
+  background: #fff;
+}
+.l-single-head.registration, .l-chapter-head.registration {
+  font-size: 22px;
+  padding: 32px;
+}
+.l-single-inner.registration-form {
+  padding: 40px 40px 64px;
+}
 .form-group{
-  margin: 3rem;
+margin: 3rem;
 }
 .creditCard-img{
-  display: flex;
-  list-style: none;
-}
+display: flex;
+list-style: none;
+ }
 .select-default {
-  position: relative;
-  z-index: 2;
-  height: 48px;
-  padding: 0 16px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  cursor: pointer;
+position: relative;
+z-index: 2;
+height: 48px;
+padding: 0 16px;
+border-radius: 4px;
+border: 1px solid #ccc;
+background: 0;
+font-size: 16px;
+line-height: 1.5;
+cursor: pointer;
 }
 .form-group.selectYear{
-  display: flex;
+display: flex;
 }
 span.selectYear{
-  font-size: 130%;
-  line-height: 3rem;
+font-size: 130%;
+line-height: 3rem;
+}
 }

@@ -1,4 +1,4 @@
-%body
+.input__address__wrapper
   %header.single-header
     %h1
       %a{:href => "https://www.mercari.com/jp/"}
@@ -20,30 +20,28 @@
         %li
           完了
           .progress-status
-
   %main.single-main
     %section.l-single-container
       %h2.l-single-head.registration 住所入力
       %form#register-form.l-single-inner.registration-form{:action => "https://www.mercari.com/jp/signup/sms_confirmation/", :method => "POST", :novalidate => "novalidate"}
-        %input{:name => "__csrf_value", :type => "hidden", :value => "eb82bada54233689f664eac52a1c7c1069c240c57f79a2a36e0c76fe951d867fb6447c575d9ea1b359155f36e81108827ee253253c537dfc5b2a1299cafc52e34"}/
+        %input{:name => "__csrf_value", :type => "hidden", :value => "2b0bd02ba73e48c27fd16b34ab5e5da4b853da435eb59c088d73c317593574df77900fd4d81fb9e605c5b1a9711cea1f57bae3973930545a3d4ae550b7cc5db7a"}/
         .l-single-content
           .form-group
-            %label{:for => "nickname"} お名前
+            %label{:for => "name"} お名前
             %span.form-require 必須
-            %input.input-default{:name => "nickname", :placeholder => "例) 山田", :type => "text", :value => ""}/
-            %input.input-default{:name => "nickname", :placeholder => "例) 彩", :type => "text", :value => ""}/
+            %input.input-default{:name => "name", :placeholder => "例) 山田", :type => "text", :value => ""}/
+            %input.input-default{:name => "name", :placeholder => "例) 彩", :type => "name", :value => ""}/
           %input{:name => "login_type", :type => "hidden", :value => ""}/
           .form-group
-            %label{:for => "nickname"} お名前カナ
+            %label{:for => "namek"} お名前カナ
             %span.form-require 必須
-            %input.input-default{:name => "nickname", :placeholder => "例) ヤマダ", :type => "text", :value => ""}/
-            %input.input-default{:name => "nickname", :placeholder => "例) アヤ", :type => "text", :value => ""}/
+            %input.input-default{:name => "name", :placeholder => "例) ヤマダ", :type => "text", :value => ""}/
+            %input.input-default{:name => "name", :placeholder => "例) アヤ", :type => "name", :value => ""}/
           %input{:name => "login_type", :type => "hidden", :value => ""}/
-          .form-group
-            %label{:for => "postnumber"} 郵便番号
+          .form-group.form-password-revelation
+            %label{:for => "addressnumber"} 郵便番号
             %span.form-require 必須
-            %input.input-default{:name => "postnumber", :placeholder => "例) 124567", :type => "text", :value => ""}/
-          %input{:name => "login_type", :type => "hidden", :value => ""}/
+            %input.input-default{:name => "addressnumber", :placeholder => "例）123-4567", :type => "addressnumber"}/
           .form-group
             %label{:for => "nickname"} 都道府県
             %span.form-require 必須
@@ -98,36 +96,36 @@
                 %option{:value => "鹿児島県"} 鹿児島県
                 %option{:value => "沖縄県"} 沖縄県
           .form-group
-            %label{:for => "postnumber"} 市区町村
+            %label{:for => "addressnumber"} 市区町村
             %span.form-require 必須
-            %input.input-default{:name => "postnumber", :placeholder => "例) 124567", :type => "text", :value => ""}/
+            %input.input-default{:name => "city", :placeholder => "例）横浜市緑区", :type => "city"}/
           .form-group
-            %label{:for => "postnumber"} 番地
+            %label{:for => "address"} 番地
             %span.form-require 必須
-            %input.input-default{:name => "postnumber", :placeholder => "例) 124567", :type => "text", :value => ""}/
+            %input.input-default{:name => "address", :placeholder => "例）青山1-1-1", :type => "address"}/  
           .form-group
-            %label{:for => "postnumber"} 建物名
-            %span.form-any 任意
-            %input.input-default{:name => "postnumber", :placeholder => "例) 124567", :type => "text", :value => ""}/
+            %label{:for => "address"} 建物名
+            %span.form-lay 任意
+            %input.input-default{:name => "billname", :placeholder => "例）○○ビル", :type => "billname"}/  
           .form-group
-            %label{:for => "postnumber"} 電話
-            %span.form-any 任意
-            %input.input-default{:name => "postnumber", :placeholder => "例) 124567", :type => "text", :value => ""}/
-
-            
+            %label{:for => "address"} 番地
+            %span.form-lay 任意
+            %input.input-default{:name => "phonenumber", :placeholder => "例）123456789", :type => "phonenumber"}/  
           %button.btn-default.btn-red{:type => "submit"} 次へ進む
-    .footer_warrap 
-      %footer.single-footer
-        %nav
-          %ul.clearfix
-            %li
-              %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
-            %li
-              %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
-            %li
-              %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
-        %a.single-footer-logo{:href => "https://www.mercari.com/jp/"}
-          %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2356214421", :width => "80"}/
-          %p
-            %small © Mercari, Inc.
+    
+    = render "shared/users/footer"     
+    -# .footer_warrap 
+    -#   %footer.single-footer
+    -#     %nav
+    -#       %ul.clearfix
+    -#         %li
+    -#           %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+    -#         %li
+    -#           %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+    -#         %li
+    -#           %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    -#     %a.single-footer-logo{:href => "https://www.mercari.com/jp/"}
+    -#       %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2356214421", :width => "80"}/
+    -#       %p
+    -#         %small © Mercari, Inc.
       

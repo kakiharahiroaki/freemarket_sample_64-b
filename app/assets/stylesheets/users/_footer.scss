@@ -1,6 +1,6 @@
 .single-footer {
-  height: 30vh;
-  display: block;
+  width: 456px;
+  height: 220px;
   margin: 0 auto;
   position: absolute;
     right: 0;
@@ -8,14 +8,19 @@
     left: 0;
     z-index: 1;
     height: 250px;
-    padding: 0;
-    text-align: center;
-  .clearfix{
-    padding: 3rem;
-    display: flex;
-    margin: 0 auto;
-    li{
-      padding: 1rem;
-    }
-  }
+    padding: 40px 0;
+    text-align: center
+}
+
+nav ol, nav ul {
+  list-style: none;
+}
+.single-footer a {
+  display: block;
+  color: #333;
+}
+.single-footer-logo {
+  width: 80px;
+  height: 65px;
+  margin: 40px auto 0;
 }
