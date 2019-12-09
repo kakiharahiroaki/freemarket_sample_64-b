@@ -1,74 +1,74 @@
 .buy-index__single-wrapper
-  %header__single-wrapper
+  %header-single-wrapper
     %h1
       =link_to "", "https://www.mercari.com/jp/"
       =image_tag "fmarket_logo_white.svg", size: "185x49", alt: "mercari"
-  .main-contents
-    %section.main-content.buy-item-container
-      %h2.main-content.buy-head 購入内容の確認
-      %section.item-content.buy-item 
-        .item-content-inner
-          .item-box
-            %h3.item-image
-            =image_tag "shoes-icon.jpeg", size: "60x80", alt: "靴の画像",class: "item-image"
-            .item-detail
-              %p.item-name 期間限定値下げ❤︎Lautre choese 黒スエード パンプス 23.5
-              %p.item-price
+  .main__contents
+    %section.main__content.buy-item-container
+      %h2.main__content.buy-head 購入内容の確認
+      %section.item__content.buy-item 
+        .item__content--inner
+          .item__box
+            %h3.item__image
+            =image_tag "shoes-icon.jpeg", size: "60x80", alt: "靴の画像",class: "item__image"
+            .item__detail
+              %p.item__name 期間限定値下げ❤︎Lautre choese 黒スエード パンプス 23.5
+              %p.item__price
                 %span ¥7,999
-                %span.item-fee （税込）送料込み
+                %span.item__fee （税込）送料込み
 
-      %section.item-content.buy-item 
-        .item-content-inner
+      %section.item__content.buy-item 
+        .item__content--inner
           %form
-            %ul.item-price-table
-              %li.item-price-row.buy-you-pay
-                .item-price-cell.item-price-cell-label 支払金額
-                .item-price-cell
-                  %span.data-item-pay ¥3,800
-            %ul.item-point
-              %li.point-parent
-                .checkbox-default.item-use-point
+            %ul.item__price-table
+              %li.item__price-row.buy__you-pay
+                .item__price-cell.item__price-cell-label 支払い金額
+                .item__price-cell
+                  %span.data__item-pay ¥3,800
+            %ul.item__point
+              %li.point__parent
+                .checkbox-default.item__use-point
                   %input#checkbox-id{type: "checkbox disabled"}
                   %label{ for: "checkbox-id"} ポイントを使用（所持ポイント: P0)
-            %section.item-content
-              .item-content__innner
+            %section.item__content
+              .item__content--innner
                 %h3 支払い方法
                 
-                %p.item-info
+                %p.item__info
                   %i.icon-plus-circle 
-                  %span.icon-text &#x2295;
-                  =link_to '登録してください',"#",class: "item-info"
-            %section.item-content
-              .item-content-inner
-                .address-content
+                  %span.icon__text &#x2295;
+                  =link_to '登録してください',"#",class: "item__info"
+            %section.item__content
+              .item__content--inner
+                .address__content
                   %h3.user-left 配送先
-                  =link_to "変更する", "#", class: "user-right"
-                %address.icon-text
+                  =link_to "変更する", "#", class: "user__right"
+                %address.icon__text-address
                   %p 
                     〒000-0000
                     %br 
                     熊本県〇〇市〇〇町〇〇〇〇〇
                     %br
                     山田太郎
-            %section.item-content
-              %p.error-text この商品はゆうゆうメルカリ便をゆうゆうメルカリ便を利用しているため、アプリからのみ、アプリからのみ購入できます。
-              %button.button-default{type: "submit"} 購入する
-              %p.no-app-text アプリをお持ちでない方は以下よりインストールして以下よりインストールしてご利用いただけます。
-              .item-store-logos
+            %section.content__error
+              %p.error__text この商品はゆうゆうメルカリ便をゆうゆうメルカリ便を利用しているため、アプリからのみ、アプリからのみ購入できます。
+              %button.button__default{type: "submit"} 購入する
+              %p.no__app-text アプリをお持ちでない方は以下よりインストールして以下よりインストールしてご利用いただけます。
+              .item__store-logos
                 =link_to image_tag("cat.jpeg", size: '135x40', alt: ""), "#"
                 =link_to image_tag("cat.jpeg", size: '135x40', alt: ""), "#"
                      
 
-  %footer.content-footer
+  %footer.content__footer
     %nav
-      %ul.footer-nav
+      %ul.footer__nav
         %li
         =link_to "プライバシーポリシー", "#"
         %li
         =link_to "メルカリ利用規約", "#"
         %li
         =link_to "特定商取引に関する表記" , "#"
-    =link_to "", "#", class: "footer-logo"
-    =image_tag "logo_gray.svg", size: "80x65", alt: "mercari",class: "footer-logo"
+    =link_to "", "#", class: "footer__logo"
+    =image_tag "logo_gray.svg", size: "80x65", alt: "mercari",class: "footer__logo"
     %p
       %small © Mercari, Inc.
