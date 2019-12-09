@@ -1,0 +1,288 @@
+.show-container
+  %section.item-show-container
+    %h1.item-name ノーリーズ ソフィ セーター
+    .item-content
+      .buy-photo
+        .photo-area
+          .photo-area__upper
+            .photo-stage
+              .photo-item.active
+                .photo-item__inner
+                  =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo-item__inner"
+              -# .photo-item
+              -#   .photo-item__inner
+              -#     =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo-item__inner"
+              -# .photo-item
+              -#   .photo-item__inner
+              -#     =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo-item__inner"
+              -# .photo-item
+              -#   .photo-item__inner
+              -#     =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo-item__inner"
+              -# .photo-item
+              -#   .photo-item__inner
+              -#     =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo-item__inner"
+              -# .photo-item
+              -#   .photo-item__inner
+              -#     =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo-item__inner"
+          .photo-nav.disabled    
+          .photo-dots
+            .photo-dot.active
+              .photo-dot-inner
+                =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
+            .photo-dot
+              .photo-dot-inner
+                =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
+            .photo-dot
+              .photo-dot-inner
+                =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
+            .photo-dot
+              .photo-dot-inner
+                =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
+            .photo-dot
+              .photo-dot-inner
+                =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
+            .photo-dot
+              .photo-dot-inner
+                =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
+      .item-table
+        %table
+          %tr
+            %th 出品者
+            %td
+              =link_to "kogumi", "#", class: "table-link"
+              .item-user-face 
+                .item-user-face__icon
+                  %i.icon-laugh
+                  %span 18
+                .item-user-face__icon
+                  %i.icon-nomal
+                  %span 0
+                .item-user-face__icon
+                  %i.icon-sad
+                  %span 0
+          %tr
+            %th カテゴリー
+            %td
+              =link_to "レディース" , "#" , class: "table-link"
+              =link_to "トップス" , "#", class: "table-link"
+              =link_to "ニット/セーター" , "#", class: "table-link"
+          %tr
+            %th ブランド
+            %td 
+              =link_to "ノーリーズソフィ", "#",class: "table-link"
+          %tr
+            %th 商品のサイズ
+            %td M
+          %tr
+            %th 商品の状態
+            %td 目立った傷や汚れなし
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td らくらくメルカリ便
+          %tr
+            %th 配送元地域
+            %td 未定
+          %tr
+            %th 発送日の目安
+            %td 1~2日で発送
+    .item-price
+      %span.item-price__bold ¥1,300
+      %span.item-fee (税込)
+      %span.item-total 送料込み
+    =link_to "購入画面に進む", "#", class: "item-btn"
+    .item-explanation
+      %p.item-explanation__inner 
+      昨年に購入したノーリーズソフィのサンプル品です。今の季節にピッタリです！
+
+      モヘアが使われているので、毛足が少し長めです。
+
+      後ろ身頃が長く、オーバーサイズ気味に着用する感じとなりますので、パンツスタイルはもちろん、タイトスカートとも相性が良いと思います。
+
+      使用は、2・3度のみで、素人検品ではどこも問題ございませんが、あくまでも中古であることをご理解ください。
+
+      サイズ（平置き）
+      横幅（ワキからワキまで）約51㎝
+      肩から裾までの長さ
+      前身頃  約54㎝
+      後ろ身頃  約63㎝
+    .item-btn-content
+  .item-message
+    .comment-container
+      .comment-content
+        %form.comment-form
+          %p 相手のことを考え相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          %textarea
+          %button.comment-submit{type: "submit"} 
+            %span コメントする
+  %ul.item-nav
+    %li.item-nav__prev
+      %i.icon-left プレディア ファンゴWクレンズ300g2個
+    %li.item-nav__next
+      =link_to "ホークス 若鷹ガチャ デスパイネ レア 缶バッチ", "#", class: "item-nav__next"
+      %i.icon-left
+  .item-media-icon
+    .icon-center
+    %ul.media-icon
+      %li
+      =link_to "","#",class: "btn", target: "_blank"
+      =image_tag "facebook-icon.png", size: "44x44", alt: "facebookのアイコン画像", class: "btn"
+      %li
+      =link_to "","#",class: "btn", target: "_blank"
+      =image_tag "twitter-icon.png", size: "44x44", alt: "twitterのアイコン画像", class: "btn"
+      %li
+      =link_to "","#",class: "btn", target: "_blank"
+      =image_tag "line-icon.png", size: "44x44", alt: "lineのアイコン画像", class: "btn"
+      %li
+      =link_to "","#",class: "btn", target: "_blank"
+      =image_tag "red-icon.png", size: "44x44", alt: "ピンタレストのアイコン画像", class: "btn"
+  .user-profile
+    %section.user-items
+      %h2.user-items__head
+        =link_to "kogumiさんのその他の出品", "#", class: "user-items__head"
+      .user-items-content
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+    %section.user-items
+      %h2.user-items__head
+        =link_to "ノーリーズソフィのニット/セーターその他の商品", "#", class: "user-items__head"
+      .user-items-content
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like
+        %section.items-content
+          %a{ href: "#", class: "item-content"}
+            %figure.items-photo
+              = image_tag "cloth.jpg" ,alt: "服の画像" , class: "items-photo"
+            .items-text
+              %h3.items-name 
+              ノーリーズ  トップス  グレー  水玉
+              .items-num
+                .items-price ¥1,600
+                .items-heart-icon
+                  %i.icon-like              
+  %nav.bottom-crumbs
+    %ul
+      %li
+        =link_to "メルカリ", "#", class: "bottom-icon"
+        %i.icon-arrow
+      %li
+        %span ノーリーズ ソフィ セーター
