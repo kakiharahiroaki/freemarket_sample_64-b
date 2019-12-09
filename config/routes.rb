@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root  'users#edit'
-  
-  
+  root  'users#update'
+
+  # root  'items#index'
+
 end
