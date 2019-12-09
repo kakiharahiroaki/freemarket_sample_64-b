@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  def updata
+  def update
   end
 
   
