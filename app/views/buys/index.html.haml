@@ -1,0 +1,74 @@
+.buy-index__single-wrapper
+  %header__single-wrapper
+    %h1
+      =link_to "", "https://www.mercari.com/jp/"
+      =image_tag "fmarket_logo_white.svg", size: "185x49", alt: "mercari"
+  .main-contents
+    %section.main-content.buy-item-container
+      %h2.main-content.buy-head 購入内容の確認
+      %section.item-content.buy-item 
+        .item-content-inner
+          .item-box
+            %h3.item-image
+            =image_tag "shoes-icon.jpeg", size: "60x80", alt: "靴の画像",class: "item-image"
+            .item-detail
+              %p.item-name 期間限定値下げ❤︎Lautre choese 黒スエード パンプス 23.5
+              %p.item-price
+                %span ¥7,999
+                %span.item-fee （税込）送料込み
+
+      %section.item-content.buy-item 
+        .item-content-inner
+          %form
+            %ul.item-price-table
+              %li.item-price-row.buy-you-pay
+                .item-price-cell.item-price-cell-label 支払金額
+                .item-price-cell
+                  %span.data-item-pay ¥3,800
+            %ul.item-point
+              %li.point-parent
+                .checkbox-default.item-use-point
+                  %input#checkbox-id{type: "checkbox disabled"}
+                  %label{ for: "checkbox-id"} ポイントを使用（所持ポイント: P0)
+            %section.item-content
+              .item-content__innner
+                %h3 支払い方法
+                
+                %p.item-info
+                  %i.icon-plus-circle 
+                  %span.icon-text &#x2295;
+                  =link_to '登録してください',"#",class: "item-info"
+            %section.item-content
+              .item-content-inner
+                .address-content
+                  %h3.user-left 配送先
+                  =link_to "変更する", "#", class: "user-right"
+                %address.icon-text
+                  %p 
+                    〒000-0000
+                    %br 
+                    熊本県〇〇市〇〇町〇〇〇〇〇
+                    %br
+                    山田太郎
+            %section.item-content
+              %p.error-text この商品はゆうゆうメルカリ便をゆうゆうメルカリ便を利用しているため、アプリからのみ、アプリからのみ購入できます。
+              %button.button-default{type: "submit"} 購入する
+              %p.no-app-text アプリをお持ちでない方は以下よりインストールして以下よりインストールしてご利用いただけます。
+              .item-store-logos
+                =link_to image_tag("cat.jpeg", size: '135x40', alt: ""), "#"
+                =link_to image_tag("cat.jpeg", size: '135x40', alt: ""), "#"
+                     
+
+  %footer.content-footer
+    %nav
+      %ul.footer-nav
+        %li
+        =link_to "プライバシーポリシー", "#"
+        %li
+        =link_to "メルカリ利用規約", "#"
+        %li
+        =link_to "特定商取引に関する表記" , "#"
+    =link_to "", "#", class: "footer-logo"
+    =image_tag "logo_gray.svg", size: "80x65", alt: "mercari",class: "footer-logo"
+    %p
+      %small © Mercari, Inc.
