@@ -1,0 +1,106 @@
+body{
+  .single-header {
+    height: 128px;
+    display: flex;
+    h1{
+      margin-left: 30%;
+    }
+    .progress-bar {
+      .clearfix{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+      }
+      ol {
+        display: block;
+        list-style-type: decimal;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+      }
+      li {
+        list-style: none;
+      }
+      .progress-status {
+        width: 12px;
+        height: 12px;
+        margin: 8px auto 0;
+        background: #ccc;
+        border-radius: 50%;
+      }
+    }
+  }
+  
+  main {
+    .l-single-container {
+      margin: 0 auto;
+      background: #fff;
+      .l-chapter-head.registration {
+        font-size: 22px;
+        padding: 32px;
+      }
+      .registration-form {
+        padding: 40px 40px 64px;
+        width: 100wh;
+      }
+      label{
+        font-weight: bold;
+      }
+      .form-require{
+        background-color: red;
+        color: white;
+        padding: 1%;
+      }
+      .input-default{
+        width: 80%;
+        height: 3rem;
+        margin: 1rem;
+        padding-left: 1rem;
+      }
+      .checkbox-default{
+        font-weight: none;
+      }
+      .half{
+        width: 40%;
+      }
+      .birthday-select-wrap{
+        display: flex;
+      }
+      .select-default {
+        padding: 0 10px;
+        width: 100%;
+        border-color: #d4cccc;
+      }
+      .btn-red{
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+}
+.footer_warrap {
+  height: 20vh;
+  position: relative;
+  .single-footer {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      height: 250px;
+      padding: 0;
+      text-align: center;
+    .clearfix{
+      padding: 3rem;
+      display: flex;
+      margin: 0 auto;
+      li{
+        padding: 1rem;
+      }
+    }
+  }
+}
