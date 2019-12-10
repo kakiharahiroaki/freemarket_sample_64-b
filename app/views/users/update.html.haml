@@ -1,0 +1,19 @@
+=render "users/header"
+.content__all__view.clearfix
+  .main__profile
+    %section.profile__all
+      %h2.main__content__profile__head プロフィール
+      %form.main__content__form{action: "#"}
+        %input.main__content__input{name: "__csrf_value", type: "hidden", value: "#"}/
+        .profile__main
+          %figure.profile__main__figure
+            = image_tag "プロフィール.jpg", size: "60x60"
+          %input.profile__main__input{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: "永瀬翔吾"}/
+        .profile__main__content
+          %textarea.extarea__main{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+          %input.extarea__main__input{name: "after_save_callback", type: "hidden", value: "#"}/
+          %button.extarea__main__btn{type: "submit"} 変更する
+    =render "users/kamera"
+  =render "users/left_side_bar"
+=render "users/footer" 
+  
