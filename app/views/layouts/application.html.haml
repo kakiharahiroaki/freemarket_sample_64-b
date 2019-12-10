@@ -1,32 +1,11 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", http: {equiv: "Content-Type"}}
     %title FreemarketSample64B
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    #__next
-    .header
-      .header__box
-        .header__input__box
-          %a.header--image
-            -# = image_tag "merucaritop.png", size: "134x36"
-          .foom
-            %input.search__box{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
-            %button.header--btn
-              -# %i.fa.fa-search
-      .header__bottom
-        .header__bottom__left
-          %a.category{ href: 'http://google.co.jp' }
-            カテゴリーから探す
-          %a{ href: 'http://google.co.jp' }
-            ブランドから探す
-        .header__bottom__right
-          %a.registration{ href: 'http://google.co.jp' }
-            新規会員登録
-          %a.login{ href: 'http://google.co.jp' }
-            ログイン
-      = yield
+    = yield
