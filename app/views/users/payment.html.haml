@@ -28,8 +28,9 @@
         %input{:name => "__csrf_value", :type => "hidden", :value => "eb82bada54233689f664eac52a1c7c1069c240c57f79a2a36e0c76fe951d867fb6447c575d9ea1b359155f36e81108827ee253253c537dfc5b2a1299cafc52e34"}/
         .l-single-content
           .form-group
-            %label{:for => "nickname"} ニックネーム
+            %label{:for => "nickname"} カード番号
             %span.form-require 必須
+            %br/
             %input.input-default{:name => "nickname", :placeholder => "半角数字のみ", :type => "text", :value => ""}/
             .creditCard-img
               %ul.signup-card-list
@@ -49,6 +50,8 @@
                 %img{:alt => "", :height => "20", :src => "//www-mercari-jp.akamaized.net/assets/img/card/discover.svg?2356214421", :width => "32"}/
 
           .form-group.selectYear
+            %label{:for => "nickname"} カード番号
+            %span.form-require 必須
             %select#payment_card_expire_mm.select-default
               %option{:value => "01"} 01
               %option{:value => "02"} 02
@@ -79,6 +82,7 @@
           .form-group
             %label{:for => "nickname"} セキュリティコード
             %span.form-require 必須
+            %br/
             %input.input-default{:name => "nickname", :placeholder => "カード背面4桁もしくは3桁の番号", :type => "text", :value => ""}/
             .signup-seqcode-text{"data-js" => "show-tips-toggle"}
               %span.form-question？

@@ -47,16 +47,46 @@ main {
 .l-single-head.registration, .l-chapter-head.registration {
   font-size: 22px;
   padding: 32px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+.l-single-inner.registration-form .l-single-content {
+  max-width: 343px;
+}
+.l-single-content {
+  margin: 0 auto;
 }
 .l-single-inner.registration-form {
   padding: 40px 40px 64px;
 }
-.form-group{
-margin: 3rem;
+.form-group label {
+  font-weight: 600;
+}
+form-require {
+  background: #ea352d;
+}
+input {
+  border: 0;
+  outline: 0;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.message-is-seller, .news-private {
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
 }
 .creditCard-img{
 display: flex;
 list-style: none;
+ }
+ li{
+  list-style-type: none;
  }
 .select-default {
 position: relative;
@@ -70,11 +100,30 @@ font-size: 16px;
 line-height: 1.5;
 cursor: pointer;
 }
+.select-default.has-error {
+  border-color: #ea352d;
+}
 .form-group.selectYear{
 display: flex;
 }
 span.selectYear{
 font-size: 130%;
 line-height: 3rem;
+}
+.btn-red {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+}
+.btn-default {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
 }
 }
