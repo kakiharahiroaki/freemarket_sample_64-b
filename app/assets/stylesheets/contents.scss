@@ -1,0 +1,140 @@
+.contents{
+  background-color: rgb(245, 245, 245);
+  max-width: 1020px;
+  width: 100%;
+  margin: auto;
+  &__image{
+    background-size: auto;
+  }
+  &__category{
+    background-color: white;
+    padding-top: 56px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    margin-left: -50vw;
+    position: relative;
+    top: 0px;
+    width: 100vw;
+    h2{
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+  }
+  &__group{
+    display: flex;
+    justify-content: center;
+  }
+  &__category__center{
+    background-color: white;
+    padding-top: 56px;
+    padding-bottom: 30px;
+    margin-top: 100px;
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    margin-left: -50vw;
+    position: relative;
+    top: 0px;
+    width: 100vw;
+    h2{
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+  }
+  &__list{
+  height: 40px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  }
+  &__main{
+    background-color: rgb(245, 245, 245);
+    
+  }
+  &__main__top{
+    margin-top: 60px;
+    a{
+      color: rgb(12, 136, 238);
+    }
+    h3{
+      font-size: 24px;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  &__bottom__image{
+    margin-top: 100px;
+    width: 100%;
+    height: 260px;
+    color: white;
+    vertical-align: bottom;
+    line-height: 0em;
+    background-image: url("イギリス.png");
+    background-size: cover;
+  }
+  
+  &__bottom__image__detail{
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    margin: 0 auto;
+    
+  }
+  &__bottom__left__text{
+    font-size: 24px;
+    font-weight: 600px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+  }
+  &__bottom__left__texts{
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  &__bottom__icon{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: baseline;
+  }
+  &__bottom__app{
+    margin-top: 16px;
+  }
+  &__bottom__google{
+    margin-top: 16px;
+  }
+  .product__image{
+    width: 20%;
+    vertical-align: bottom;
+    line-height: 1em;
+    figure{
+      margin: 0;
+      background-color: white;
+      width: 188px;
+    }
+  }
+  .pricetag{
+    position: relative;
+  }
+  .price{
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(0,0,0,.4);
+    border-radius: 0 14px 14px 0;
+    bottom: 24px;
+    -webkit-box-sizing: border-box;
+    color: #fff;
+    display: inline-flex;
+    font-size: 17px;
+    height: 32px;
+    height: 28px;
+    letter-spacing: .02em;
+    padding: 0 12px;
+    position: absolute;
+  }
+  }

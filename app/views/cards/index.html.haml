@@ -1,0 +1,23 @@
+=render "users/header"
+.main__content.clearfix
+  .main__content__right
+    %section.main__content__right__all
+      %h2.main__content__right__head 支払い方法
+      .main__content__right__head__inner
+        %section
+          .main__content__center
+            %h3.main__content__sub__head クレジットカード一覧
+          %ul.settings__payment__list
+        %section.settings__add__card
+          .single__content
+            %a.submit__button{href: "#"}
+              %i.icon-card
+              クレジットカードを追加する
+        .settings__not__regist
+          %a{href: "#", target: "_blank"}
+            %span 支払い方法について
+            %i.icon-arrow-right
+    =render "users/kamera"
+  =render "users/left_side_bar"
+=render "users/footer" 
+
