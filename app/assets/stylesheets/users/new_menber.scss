@@ -28,6 +28,9 @@ padding: 32px;
 .l-single-inner.registration-form {
 padding: 40px 40px 64px;
  }
+.l-single-content{
+text-align: center;
+ }
 .btn-default {
 border-radius: 4px;
 }
@@ -51,7 +54,7 @@ color: #333;
 }
 .btn-default {
 display: block;
-width: 100%;
+width: 50%;
 line-height: 48px;
 font-size: 14px;
 // border: 1px solid transparent;
