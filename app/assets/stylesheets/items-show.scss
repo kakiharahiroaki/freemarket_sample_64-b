@@ -275,15 +275,13 @@
               font-size: 15px;
               font-weight: 600;
             }
-            
           }
         }
       }
       .items__content:nth-child(3n) {
         margin-right: 0;
       }
-    }
-    
+    }  
   }
   .bottom__crumbs {
     background: #f5f5f5;
@@ -293,17 +291,14 @@
       width: 700px;
       margin: 0 auto;
       padding:16px 0;
-      li {
+      .bottom__icon {
         display: inline-block;
         font-size: 14px;
-        line-height: 1.2;
-        .bottom__icon {
-          color:#0099e8;
-          
-        }
-        span {
-          font-weight: 600;
-        }
+        color:#0099e8;
+        float: left; 
+      }
+      .bottom__text{
+        font-weight: 600; 
       }
     }
   }
