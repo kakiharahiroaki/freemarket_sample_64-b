@@ -1,4 +1,4 @@
-%body
+.signUp__complete
   %header.single-header
     %h1
       %a{:href => "https://www.mercari.com/jp/"}
@@ -22,16 +22,13 @@
           .progress-status
   
   %main.single-main
-    %section.l-single-container
-      %h2.l-single-head.registration 会員登録完了
-      %form#register-form.l-single-inner.registration-form{:action => "https://www.mercari.com/jp/signup/sms_confirmation/", :method => "POST", :novalidate => "novalidate"}
-        %input{:name => "__csrf_value", :type => "hidden", :value => "eb82bada54233689f664eac52a1c7c1069c240c57f79a2a36e0c76fe951d867fb6447c575d9ea1b359155f36e81108827ee253253c537dfc5b2a1299cafc52e34"}/
+  %section.l-single-container
+    %h2.l-chapter-head.registration 会員登録完了
     .complete-text
       %p ありがとうございます。
       %p 会員登録完了しました。
-    %button.btn-default.btn-red{:type => "submit"} メルカリをはじめる
-    .advertisement
-    = image_tag 'advertisement.png'
+      %button.btn-default.btn-red{:type => "submit"} SMSを送信する
+      = image_tag 'advertisement.png'
 
     .footer_warrap 
       %footer.single-footer

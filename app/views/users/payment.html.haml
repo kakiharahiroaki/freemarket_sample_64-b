@@ -25,7 +25,7 @@
     %main.l-container.clearfix
       .l-content
         %section.l-chapter-container
-          %h2.l-chapter-head クレジットカード情報入力
+          %h2.l-chapter-head お支払い方法
           %form#add-card-form.l-single-inner.registration-form{:action => "https://www.mercari.com/jp/mypage/card/add/", "data-adyen-id" => "card-form", :method => "POST", :novalidate => "novalidate"}
             %input{:name => "__csrf_value", :type => "hidden", :value => "f59696891753b1cec98f42267145ec59096dbccdaed213bc5683edd30973523e79a04b1aceae754613065a40efc7ab3fbe11c0430c429c93b10fafa8d47a0b693"}/
             .l-single-content
