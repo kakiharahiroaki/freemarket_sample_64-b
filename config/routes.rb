@@ -9,7 +9,7 @@ root  'items#index'
  root  'top#index'
  resources :users do
     collection do
-      get 'index'
+      get 'new_menber'
       get 'registration'
       get 'sms_confirmation'
       get 'input_address'

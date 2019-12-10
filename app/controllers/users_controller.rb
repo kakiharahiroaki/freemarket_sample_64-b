@@ -8,6 +8,9 @@ class UsersController <  ApplicationController
 
   def index
   end
+  
+  def new_menber
+  end
 
   def registration
   end
