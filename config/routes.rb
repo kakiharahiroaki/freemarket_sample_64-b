@@ -4,3 +4,6 @@ Rails.application.routes.draw do
   get  "/buys/index", to: "buys#index"
   resources :items, only: [:index]
 end
+
+
+  
