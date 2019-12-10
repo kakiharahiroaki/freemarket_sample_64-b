@@ -1,54 +1,37 @@
-!!!
-%html
-  %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title FreemarketSample64B
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    #__next
-    .header__t
-      .header
-        .header__box
-          .header__input__box
-            %a.header--image
-              = image_tag "fmarket_logo_red.svg", size: "134x36"
-            .foom
-              %input.search__box{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
-              %button.header--btn
-                -# %i.fa.fa-search
+#__next
+  .header__t
+    .header
+      .header__box
+        .header__input__box
+          %a.header--image
+            = image_tag "fmarket_logo_red.svg", size: "134x36"
+          .foom
+            %input.search__box{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
+            %button.header--btn
+              -# %i.fa.fa-search
         .header__bottom
           .header__bottom__left
-            %a.category{ href:'#' }
-              カテゴリーから探す
-            %a{ href:'#' }
-              ブランドから探す
+            = link_to "カテゴリーから探す", '#',class:"category"
+            = link_to "ブランドから探す", '#',class:"brand"
           .header__bottom__right
             %ul.header__navi
-            %li.liked__items__link
-              %a.header__navi__link{href: "#"}
-                %i.far.fa-heart
-                %span いいね！一覧
-              %a.header__navi__menu__link{"data-url" => "#", href: "#"}
-                %i.icon-bell
-                %span お知らせ
-              %a.header__navi__link{"data-url" => "#", href: "#"}
-                %i.icon-check
-                %span やることリスト
-              %a.header__user__icon.header__navi__link{href: "#"}
-                %img{alt: "", src: "", width: ""}/
-                %span マイページ
+            %li.header__navi__link
+            = link_to "いいね！一覧", '#',class:"link"
+            %i.far.fa-heart
+            = link_to "お知らせ", '#',class:"menu"
+            %i.icon-bell
+            = link_to "やることリスト", '#',class:"link"
+            %i.icon-check
+            = link_to "マイページ", '#',class:"link"
   %nav.bread__list
     %ul
       %li{itemscope: "", itemtype: "#"}
         %a{href: "#", itemprop: "url"}
-          %span{itemprop: "title"} メルカリ
+          = link_to "メルカリ", '#'
         %i.icon-arrow-right
       %li{itemscope: "", itemtype: "#"}
         %a{href: "#", itemprop: "url"}
-          %span{itemprop: "title"} マイページ
+          = link_to "マイページ", '#'
         %i.icon-arrow-right
       %li{itemscope: "", itemtype: "#"}
-        %span{itemprop: "title"} ログアウト
+        = link_to "ログアウト", '#'
