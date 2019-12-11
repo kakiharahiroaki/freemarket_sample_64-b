@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   get  "/buys/index", to: "buys#index"
   get  "/users/show", to: "users#show"
   resources :items, only: [:index]
-
+  resources :users do
+    collection do
+      get 'new_menber'
+    end
+  end
 end
 
 

@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     def update
     end
 
-  
+    def new_menber
+    end
 
 end
