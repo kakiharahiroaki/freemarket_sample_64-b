@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get 'sms_confirmation'
       get 'payment'
       get 'signup_complete'
+      get 'login'
     end
   end
 end
