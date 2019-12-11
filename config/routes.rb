@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'new_menber'
       get 'sms_confirmation'
       get 'payment'
+      get 'signup_complete'
     end
   end
 end

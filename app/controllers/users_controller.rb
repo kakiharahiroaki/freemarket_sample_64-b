@@ -24,4 +24,7 @@ class UsersController < ApplicationController
     def payment
     end
 
+    def signup_complete
+    end
+
 end
