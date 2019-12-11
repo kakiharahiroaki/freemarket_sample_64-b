@@ -18,4 +18,7 @@ class UsersController < ApplicationController
     def new_menber
     end
 
+    def payment
+    end
+
 end

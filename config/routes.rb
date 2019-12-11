@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get 'new_menber'
+      get 'payment'
     end
   end
 end

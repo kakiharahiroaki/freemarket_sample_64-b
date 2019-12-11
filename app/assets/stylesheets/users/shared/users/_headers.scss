@@ -1,0 +1,36 @@
+.single-header {
+  position: relative;
+  display: flex;
+  height: 128px;
+}
+.single-header a {
+  position: absolute;
+  left: 30%;
+  width: 185px;
+  height: 49px;
+  line-height: 49px;
+}
+.single-header img {
+  width: 185px;
+  height: 49px;
+}
+.single-header h1 {
+  margin: 40px 0 0;
+  // display: inline-block;
+}
+.signup-bar.progress-bar {
+  padding: 40px 0 0 44px;
+  border: 0;
+}
+.clearfix{
+  display: flex;
+}
+.progress-bar ol {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+}
+li{
+  list-style-type: square;
+  margin: 20px;
+}
