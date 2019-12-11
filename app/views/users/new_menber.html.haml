@@ -3,18 +3,18 @@
 
   = render "shared/users/header"
 
-  %main.single-main
-  %section.l-single-container
-    %h2.l-single-head.registration 新規会員登録
-    .l-single-inner.registration-form
-      .l-single-content
-        %a.btn-default.btn-mail{:href => "https://www.mercari.com/jp/signup/registration/"}
+  %main.single__main
+  %section.l__single__container
+    %h2.l__single__head.registration 新規会員登録
+    .l__single__inner.registration__form
+      .l__single__content
+        %a.btn__default.btn__mail{:href => "https://www.mercari.com/jp/signup/registration/"}
           %i.icon-mail
           メールアドレスで登録する
-        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+        %button#facebook__login.btn__default.btn__sns.btn__sns--facebook
           %i.icon-facebook
           Facebookで登録する
-        %button#google-login.btn-default.btn-sns.btn-sns-google
+        %button#google__login.btn__default.btn__sns.btn__sns__google
           Googleで登録する
   -# %form#login_form_facebook{:action => "/jp/signup/facebook/", :method => "POST", :novalidate => "novalidate"}
   -#   %input{:name => "__csrf_value", :type => "hidden", :value => "2b0bd02ba73e48c27fd16b34ab5e5da4b853da435eb59c088d73c317593574df77900fd4d81fb9e605c5b1a9711cea1f57bae3973930545a3d4ae550b7cc5db7a"}/

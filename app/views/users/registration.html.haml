@@ -1,41 +1,21 @@
 -# 電話番号入力
 .menberInfo__input
-  .single-container
-    %header.single-header
-      %h1
-        %a{:href => "#"}
-          %img{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2356214421"}/
-      %nav.progress-bar.signup-bar
-        %ol.clearfix
-          %li.active
-            会員情報
-            .progress-status
-          %li
-            電話番号認証
-            .progress-status
-          %li
-            お届け先住所入力
-            .progress-status
-          %li
-            支払い方法
-            .progress-status
-          %li
-            完了
-            .progress-status
-    %main.single-main
-      %section.l-single-container
-        %h2.l-single-head.registration 会員情報入力
-        %form#register-form.l-single-inner.registration-form{:action => "https://www.mercari.com/jp/signup/sms_confirmation/", :method => "POST", :novalidate => "novalidate"}
-          %input{:name => "__csrf_value", :type => "hidden", :value => "2b0bd02ba73e48c27fd16b34ab5e5da4b853da435eb59c088d73c317593574df77900fd4d81fb9e605c5b1a9711cea1f57bae3973930545a3d4ae550b7cc5db7a"}/
-          .l-single-content
-            .form-group
-              %label{:for => "nickname"} ニックネーム
-              %span.form-require 必須
-              %input.input-default{:name => "nickname", :placeholder => "例) メルカリ太郎", :type => "text", :value => ""}/
-            .form-group
-              %label{:for => "email"} メールアドレス
-              %span.form-require 必須
-              %input.input-default{:name => "email", :placeholder => "PC・携帯どちらでも可", :type => "email", :value => ""}/
+  = render "shared/users/headers"
+
+  %main.single-main
+    %section.l-single-container
+      %h2.l-single-head.registration 会員情報入力
+      %form#register-form.l-single-inner.registration-form{:action => "https://www.mercari.com/jp/signup/sms_confirmation/", :method => "POST", :novalidate => "novalidate"}
+        %input{:name => "__csrf_value", :type => "hidden", :value => "2b0bd02ba73e48c27fd16b34ab5e5da4b853da435eb59c088d73c317593574df77900fd4d81fb9e605c5b1a9711cea1f57bae3973930545a3d4ae550b7cc5db7a"}/
+        .l-single-content
+          .form-group
+            %label{:for => "nickname"} ニックネーム
+            %span.form-require 必須
+            %input.input-default{:name => "nickname", :placeholder => "例) メルカリ太郎", :type => "text", :value => ""}/
+          .form-group
+            %label{:for => "email"} メールアドレス
+            %span.form-require 必須
+            %input.input-default{:name => "email", :placeholder => "PC・携帯どちらでも可", :type => "email", :value => ""}/
             %input{:name => "login_type", :type => "hidden", :value => ""}/
             .form-group.form-password-revelation
               %label{:for => "password"} パスワード
@@ -243,5 +223,7 @@
                 %a{:href => "/jp/help_center/article/423/", :target => "_blank"}
                   本人情報の登録について
                   %i.icon-arrow-right
-    .menberInfo__info__fotter  
-      -# = render "shared/users/footer"
+
+    
+.menberInfo__info__fotter
+  = render "shared/users/footer"

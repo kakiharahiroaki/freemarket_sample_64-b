@@ -7,54 +7,54 @@ main {
 display: block;
 text-align: center;
  }
- .l-single-head.registration{
+.l__single__head.registration{
    color: black;
    background-color: white;
    border: none;
  }
-.l-single-container {
-width: 700px;
+.l__single__container {
+width: 450px;
 margin: 0 auto;
 text-align: center;
 }
-.l-single-container {
+.l__single__container {
 background: #fff;
 
 }
-.l-chapter-head.registration {
+.l__chapter__head.registration {
 font-size: 22px;
 padding: 32px;
 }
-.l-single-inner.registration-form {
+.l__single__inner.registration__form {
 padding: 40px 40px 64px;
  }
-.l-single-content{
+.l__single__content{
 text-align: center;
  }
-.btn-default {
+.btn__default {
 border-radius: 4px;
 }
-.btn-mail {
+.btn__mail {
 color: #fff;
 background-color: #ea352d;
 }
-.btn-sns {
+.btn__sns {
 position: relative;
 }
-.btn-sns-facebook {
+.btn__sns--facebook {
 margin: 16px 0 0;
 background: #385185;
 color: #fff;
 }
-.btn-sns-google {
+.btn__sns--google {
 margin: 16px 0 0;
 background: #fff url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
 border: #979797 solid 1px;
 color: #333;
 }
-.btn-default {
+.btn__default {
 display: block;
-width: 50%;
+width: 100%;
 line-height: 48px;
 font-size: 14px;
 // border: 1px solid transparent;
