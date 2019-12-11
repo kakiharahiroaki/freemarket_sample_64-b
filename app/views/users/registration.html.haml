@@ -1,7 +1,8 @@
 -# 会員情報入力
 .menberInfo__input
-  = render "shared/users/headers"
 
+  = render "shared/users/headers"
+  
   %main.single-main
     %section.l-single-container
       %h2.l-single-head.registration 会員情報入力
@@ -249,8 +250,8 @@
                 =link_to "#" do
                   利用規約
                 に同意したものとみなします
-            %button.btn-default.btn-red{type: "submit"} 次へ進む
-            .form-group.text-right
+              %button.btn-default.btn-red{type: "submit"} 次へ進む
+              .form-group.text-right
               %p
                 =link_to "#" do
                   本人情報の登録について
