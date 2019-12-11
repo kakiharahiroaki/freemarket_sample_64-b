@@ -1,0 +1,117 @@
+=render "users/header"
+.mypage__view.clearfix
+  .mypage__view__all
+    %section.mypage__view__user-icon
+      = link_to "", '#', class:""
+      .figure
+        = image_tag "mypage-icon.jpg", size: "60x60", class:"user"
+      .mypage__view__user__name 永瀬翔吾
+      .mypage__view__number
+        .mypage__view__name
+          評価
+          %span.bold 0
+        .mypage__view__name
+          出品数
+          %span.bold 0
+    %section.mypage__view__tab
+      %ul.mypage__view__tabs
+        %li.active
+          .mypage__view__informatiom
+            = link_to "お知らせ", '#',class:"information"
+            %span.mypage__view__nav__number
+              38
+        %li.active__two
+          .mypage__view__informatiom
+            = link_to "やることリスト", '#',class:"information"
+            %span.mypage__view__nav__number
+              1
+      .tab__content
+        %ul.tab__content__list
+          %li
+            .tab__content__link
+              = link_to "", '#',class:"#"
+              .lazyloaded
+                = image_tag "icon.jpg", size: "60x60"
+              .mypage__view__body
+                .mypage__view__text【必ずP3,000もらえる！？】今のうちに買うシカない！
+                %time
+                  %i.icon__time
+                  %span 5 時間前
+              %i.icon-arrow-right
+          %li
+            .tab__content__link
+              = link_to "", '#',class:"#"
+              .lazyloaded
+                = image_tag "icon.jpg", size: "60x60"
+              .mypage__view__body
+                .mypage__view__text 購入ごとに最大3％還元！お支払い方法は《メルペイスマート払い》が一番お得
+                %time
+                  %i.icon__time
+                  %span 1 日前
+              %i.icon-arrow-right
+          %li
+            .tab__content__link
+              = link_to "", '#',class:"#"
+              .lazyloaded
+                = image_tag "icon.jpg", size: "60x60"
+              .mypage__view__body
+                .mypage__view__text 購入ごとに最大3％還元！お支払い方法は《メルペイスマート払い》が一番お得
+                %time
+                  %i.icon__time
+                  %span 1 日前
+              %i.icon-arrow-right
+          %li
+            .tab__content__link
+              = link_to "", '#',class:"#"
+              .lazyloaded
+                = image_tag "icon.jpg", size: "60x60"
+              .mypage__view__body
+                .mypage__view__text 購入ごとに最大3％還元！お支払い方法は《メルペイスマート払い》が一番お得
+                %time
+                  %i.icon__time
+                  %span 1 日前
+              %i.icon-arrow-right
+          %li
+            .tab__content__link
+              = link_to "", '#',class:"#"
+              .lazyloaded
+                = image_tag "icon.jpg", size: "60x60"
+              .mypage__view__body
+                .mypage__view__text 購入ごとに最大3％還元！お支払い方法は《メルペイスマート払い》が一番お得
+                %time
+                  %i.icon__time
+                  %span 1 日前
+              %i.icon-arrow-right
+          %li.mypage-go-list
+          = link_to "", '#',class:"#"
+        %ul.tab__content__list
+          %li
+            .tab__content__link
+              = link_to "", '#',class:"#"
+              .lazyloaded
+                = image_tag "icon.jpg", size: "60x60"
+              .mypage__view__body
+                .mypage__view__text ご登録のメールアドレスに認証メールを送りました。メールに記載のURLをクリックして、メールアドレスを認証してください。
+                %time
+                  %i.icon__time
+                  %span 61 日前
+              %i.icon-arrow-right
+          %li.tab__content__link
+            = link_to "一覧を見る", '#',class:"list"
+    %aside.modal{"data-close" => "modal", "data-modal" => "banner"}   
+    %section.mypage__tab__footer
+      %h2.mypage__tab__head 購入した商品
+      %ul.mypage__view__tabs
+        %li.active
+          .mypage__view__informatiom
+            = link_to "取引中", '#',class:"trading"    
+        %li.active__two
+          .mypage__view__informatiom
+            = link_to "過去の取引", '#',class:"transactions"
+      .tab__content
+        %ul.tab__content__active
+          %li.tab__content__item 取引中の商品がありません
+        %ul.tab__content__active
+    =render "users/kamera"
+  =render "users/left_side_bar"
+=render "users/footer" 
