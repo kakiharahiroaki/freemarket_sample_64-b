@@ -1,0 +1,307 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.items__show-container {
+  background-color: #f5f5f5 ;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  padding-top: 40px;
+  .item__show-container {
+    padding: 24px 40px 40px;
+    background: #fff;
+    margin:0 auto ;
+    width: 700px;
+    .item__name {
+      font-size: 24px;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .item__content {
+      margin: 16px 0 0;
+      height:420px;
+      
+      .buy__photo {
+        float: left;
+        min-width: 300px;
+        max-width: 300px;
+        min-height:420px;
+        background-color:#f5f5f5;
+        .photo__area__upper {
+          overflow: hidden;
+          .photo__stage {
+            left: -600px;
+            width: 1800px;
+            .photo__item {
+              width: 300px;
+              height: 300px;
+              float: left;
+              position: relative;
+              &__inner {
+              position: absolute;
+              top:10px;
+              bottom:0;
+              }
+            }
+          }
+        }
+        .photo__dots {
+          height: 120px;
+          width: 300px;
+          .photo__dot {
+            opacity: 4;
+            width: 60px;
+            height: 60px;
+            display:block;
+            overflow: hidden;
+            cursor: pointer;
+            float:left;
+          }
+        }
+      }
+      .item__table {
+        float: right;
+        height: 420px;
+        border: 1px solid #f5f5f5;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        table {
+        font-size: 14px;
+        border-spacing: 0;
+        tr {
+          display: table-row;
+          
+          th {
+            text-align: left;
+            font-weight: 400;
+            background-color: #fafafa;
+            width: 39%;
+            padding: 8px;
+            border: 1px solid #f5f5f5;
+            border-collapse: collapse;
+          }
+          td {
+            width: 182px;
+            background-color: #fff;
+            padding: 8px;
+            border: 1px solid #f5f5f5;
+            border-collapse: collapse;
+            .table__link {
+              display: block;
+              color:#0099e8;
+              cursor: pointer;
+            }
+            .item__user__face {
+              &__icon {
+                display: inline-block;
+                height:30px;
+              }
+            }
+          }
+        }
+      }
+      }
+    }
+    .item__price {
+      margin: 24px 0 0;
+      text-align: center;
+      &__bold {
+      font-size: 50px;
+      font-weight: 550;
+      margin: 0 16px 0 0;
+      }
+      .item__fee {
+        font-size: 10px;
+      }
+      .item__total {
+        display: inline-block;
+        font-size: 16px;
+      }
+    }
+    .item__btn {
+      font-size: 24px;
+      line-height: 60px;
+      display: block;
+      margin-top: 16px;
+      background-color: #ea352d;
+      color: white;
+      text-align: center;
+      font-weight: 600;
+    }
+    .error__message {
+      margin-top:16px;
+      color:#ea352d;
+      line-height: 1.5;
+      text-align: center;
+      padding:0;
+    }
+    .item__explanation {
+      line-height: 1.5;
+      font-size: 18px;
+      white-space: pre-line;
+      &__inner {
+        padding: 0;
+      }
+    
+    }
+    .item__btn__content {
+      margin: 16px 0 0;
+      height: 35px;
+      .item__btn__like {
+        float: left;
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 40px;
+        background-color: #f5f5f5;
+        border: 1px solid #f5f5f5;
+        margin: 0 0 0 16px;
+      }
+      .item__btn__right {
+        margin: 5px 0 0;
+        float: right;
+        color:#0099e8;
+        
+      }
+    }
+  }
+  .item__message {
+    width: 700px;
+    margin: 8px auto;
+    background: #fff;
+    .comment__container {
+      
+      .comment__content {
+        padding: 24px;
+        .comment__form p {
+          padding: 8px;
+          font-size:14px;
+          background:#fff6de;
+        }
+        textarea {
+          margin: 8px 0 0;
+          display:block;
+          width: 100%;
+          min-height: 104px;
+          border: 1px solid #ccc;
+          font-size: 16px;
+          line-height: 1.5;
+          padding: 10px;
+        }
+        .comment__submit {
+          width: 100%;
+          line-height: 48px;
+          margin: 8px 0 0;
+          color: white;
+          background-color: #aaa;
+          border: 1px solid #aaa;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .item__nav {
+    width:700px;
+    margin:24px auto 0;
+    height: 14px;
+    padding:0;
+    
+    &__prev {
+      color:#0099e8;
+      text-decoration: none;
+      cursor: pointer;
+      float: left;
+      
+    }
+    &__next {
+      color:#0099e8;
+      text-align: right;
+     
+    }
+  }
+  .item__media__icon {
+    width: 700px;
+    margin: 24px auto;
+    padding:32px 0 24px;
+    background: #fff;
+    .media__icon {
+      margin:16px 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      li {
+        margin: 0 8px 8px 0;
+      }
+    }
+  }
+  .user__profile {
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    height: 1500px;
+    .user__items__head {
+      font-size: 22px;
+      margin: 24px 0 8px;
+      color:#0099e8;
+      padding: 0;
+    }
+    .user__items__content {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      .items__content {
+        width: 220px;
+        margin: 0 20px 20px 0;
+        background: #fff;
+        height:330px;
+        .items__photo {
+          width: 220px;
+          height: 220px;
+          margin: 0;
+          overflow: hidden;
+        }
+        .items__text {
+          padding: 16px;
+          height: 110px;
+          font-size: 16px;
+          h3 {
+            padding: 0;
+          }
+          .items__num {
+            margin: 8px 0 0 ;
+            display: flex;
+            .items__price {
+              font-size: 15px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .items__content:nth-child(3n) {
+        margin-right: 0;
+      }
+    }  
+  }
+  .bottom__crumbs {
+    background: #f5f5f5;
+    border-top: 1px solid #eee;
+    height: 48px;
+    ul {
+      width: 700px;
+      margin: 0 auto;
+      padding:16px 0;
+      .bottom__icon {
+        display: inline-block;
+        font-size: 14px;
+        color:#0099e8;
+        float: left; 
+      }
+      .bottom__text{
+        font-weight: 600; 
+      }
+    }
+  }
+}
