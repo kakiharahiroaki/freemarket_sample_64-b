@@ -18,6 +18,9 @@ class UsersController < ApplicationController
     def new_menber
     end
 
+    def sms_confirmation
+    end
+
     def payment
     end
 
