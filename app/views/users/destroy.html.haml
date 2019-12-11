@@ -1,0 +1,12 @@
+=render "users/header"
+.main__all.clearfix
+  .content__all
+    .right__content__container
+      %form.logout__form{action: "#", method: "POST", novalidate: "novalidate"}
+        .main__logout
+          %button.main__logout__btn{type: "submit"} ログアウト
+          %input.main__logout__input{name: "__csrf_value", type: "hidden", value: "#"}/
+    =render "users/kamera"
+  =render "users/left_side_bar"
+=render "users/footer"  
+

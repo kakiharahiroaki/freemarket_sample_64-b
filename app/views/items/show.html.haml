@@ -1,0 +1,44 @@
+= render "users/header"  
+.items__show-container
+  = render "show_items_container"
+  
+  .item__message
+    .comment__container
+      .comment__content
+        %form.comment__form
+          %p 相手のことを考え相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          %textarea
+          %button.comment__submit{type: "submit"} 
+            %span コメントする
+  %ul.item__nav
+    %li.item__nav__prev
+      =link_to "プレディア ファンゴWクレンズ300g2個" , "#", class: "item__nav__prev"
+    %li.item__nav__next
+      =link_to "ホークス 若鷹ガチャ デスパイネ レア 缶バッチ", "#", class: "item__nav__next"
+      %i.icon__left
+  .item__media__icon
+    .icon__center
+    %ul.media__icon
+      %li
+      =link_to "","#",class: "btn", target: "_blank"
+      =image_tag "facebook-icon.png", size: "44x44", alt: "facebookのアイコン画像", class: "btn"
+      %li
+      =link_to "","#",class: "btn", target: "_blank"
+      =image_tag "twitter-icon.png", size: "44x44", alt: "twitterのアイコン画像", class: "btn"
+      %li
+      =link_to "","#",class: "btn", target: "_blank"
+      =image_tag "line-icon.png", size: "44x44", alt: "lineのアイコン画像", class: "btn"
+      %li
+      =link_to "","#",class: "btn", target: "_blank"
+      =image_tag "red-icon.png", size: "44x44", alt: "ピンタレストのアイコン画像", class: "btn"
+
+  = render "show_user_profile"    
+          
+  %nav.bottom__crumbs
+    %ul
+      %li
+        =link_to "メルカリ", "#", class: "bottom__icon"
+        %i.icon-arrow
+      %li
+        %span.bottom__text ノーリーズ ソフィ セーター
+= render "users/footer"  

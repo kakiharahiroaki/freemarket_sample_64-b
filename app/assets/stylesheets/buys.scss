@@ -1,0 +1,175 @@
+
+.buy-index__single-wrapper {
+  background-color: #f5f5f5;
+  width: 100vw;
+  font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+  .header__single-wrapper {
+    height:128px;
+    width: 100%;
+    text-align: center;
+    h1 {
+      padding: 30px;
+    }
+  }
+  .main__contents {
+    width: 700px;
+    padding: 0;
+    margin:0 auto;
+    section {
+      margin: 0 auto;
+      background-color: white;
+      h2 {
+        font-size: 22px;
+        padding:32px;
+        text-align: center;
+        margin: 0;
+      }
+      .item__content {
+        padding:32px 16px;
+        border-top: 1px solid #f5f5f5;
+        &--inner {
+          margin: 0 auto; 
+          max-width: 343px;
+          h3 {
+            font-size: 14px;
+            padding:0;
+          }
+          .user__right {
+            color: #0099e8;
+          }
+          .item__info {
+            display: inline-block;
+            color: #0099e8;
+            .icon__text {
+              margin: 8px 0 0 ;
+              
+            }
+          }
+          .item__box {
+            display: flex;
+            .item__detail {
+              margin-left: 16px;
+              .item__name {
+                line-height: 1.5;
+                padding: 0 0 8px;
+                text-align: left;
+              }
+              .item__price {
+                font-size: 15px;
+                font-weight: 600;
+                .item__fee {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          form {
+            margin: 0;
+            padding: 0;
+            .item__price-table {
+              display: table;
+              border-collapse: collapse;
+              width: 100%;
+              .buy__you-pay {
+                font-size: 30px;
+                display: table-row;
+                .item__price-cell {
+                  text-align: right;
+                  font-size: 30px;
+                  display: table-cell;
+                }
+                .item__price-cell:first-child {
+                  text-align: left;
+                  font-size:18px;
+                  font-weight: bold;
+                }
+              }
+            }
+            .item__point {
+              color:#888;
+              margin: 24px 0 32px;
+              padding-left: 0;
+              line-height: 27px;
+              .item__use-point {
+                text-align: left;
+                #checkbox-id {
+                  color: #ccc;
+                  background-color: #ccc;
+                  width:20px;
+                  height:20px;
+                  line-height: 17px;
+                  border-radius: 2px;
+                  outline: none;
+                }
+              }
+            }
+            .content__error {
+              border-top: 1px solid #f5f5f5;
+              padding: 32px 0;
+              text-align: left;
+              .error__text {
+                padding-bottom:24px;
+                color: red;
+                font-size:14px;
+              }
+              .button__default {
+                border: 1px solid #888;
+                background-color: #888;
+                color: white;
+                display: block;
+                width:100%;
+                line-height: 48px;
+                font-size:14px;
+              }
+              .no__app-text {
+                margin-top: 40px;
+              }
+              .item__store-logos {
+                text-align: center;
+                
+              }
+            }
+           .address__content {
+             display: flex;
+             justify-content: space-between;
+             h3 {
+               padding: 0;
+             }
+           }
+           .icon__text-address {
+            font-style: normal;
+           }
+          }
+        }
+      }
+      .item__content:first-of-type {
+        margin: 0;
+      }
+      .item__content:last-of-type {
+        padding-bottom: 48px;
+      }
+    }
+  }
+  .content__footer {
+    width: 456px;
+    height:220px;
+    margin: 0 auto;
+    padding: 40px 0;
+    .footer__nav {
+      display: flex;
+      font-size: 12px;
+      li {
+        margin-left: 12px;
+      }
+    }
+    .footer__logo {
+      margin:40px 60px auto;
+      width: 80px;
+      height: 65px;
+    }
+    p {
+      text-align: center;
+      font-size: 13px;
+    }
+  }
+}
