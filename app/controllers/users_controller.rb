@@ -24,6 +24,9 @@ class UsersController < ApplicationController
     def sms_confirmation
     end
 
+    def input_address
+    end
+
     def payment
     end
 
