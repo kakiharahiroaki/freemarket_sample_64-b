@@ -367,6 +367,8 @@ DEPENDENCIES
   pry-byebug
   pry-doc
   pry-rails
+  omniauth-google-oauth2
+  omniauth-rails_csrf_protection
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
