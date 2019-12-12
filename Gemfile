@@ -77,3 +77,5 @@ gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth-google-oauth2'
