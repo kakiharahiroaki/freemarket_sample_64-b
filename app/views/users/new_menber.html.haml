@@ -16,21 +16,5 @@
           Facebookで登録する
         %button#google__login.btn__default.btn__sns.btn__sns__google
           Googleで登録する
-  -# %form#login_form_facebook{:action => "/jp/signup/facebook/", :method => "POST", :novalidate => "novalidate"}
-  -#   %input{:name => "__csrf_value", :type => "hidden", :value => "2b0bd02ba73e48c27fd16b34ab5e5da4b853da435eb59c088d73c317593574df77900fd4d81fb9e605c5b1a9711cea1f57bae3973930545a3d4ae550b7cc5db7a"}/
-  -#   %input{:name => "nickname", :type => "hidden", :value => ""}/
-  -#   %input{:name => "email", :type => "hidden", :value => ""}/
-  -#   %input{:name => "facebook_user_id", :type => "hidden", :value => ""}/
-  -#   %input{:name => "facebook_access_token", :type => "hidden", :value => ""}/
-  -#   %input{:name => "login_type", :type => "hidden", :value => "facebook"}/
-  -# %form#login_form_google{:action => "/jp/signup/google/", :method => "POST", :novalidate => "novalidate"}
-  -#   %input{:name => "__csrf_value", :type => "hidden", :value => "2b0bd02ba73e48c27fd16b34ab5e5da4b853da435eb59c088d73c317593574df77900fd4d81fb9e605c5b1a9711cea1f57bae3973930545a3d4ae550b7cc5db7a"}/
-  -#   %input{:name => "nickname", :type => "hidden", :value => ""}/
-  -#   %input{:name => "email", :type => "hidden", :value => ""}/
-  -#   %input{:name => "google_user_id", :type => "hidden", :value => ""}/
-  -#   %input{:name => "google_access_token", :type => "hidden", :value => ""}/
-  -#   %input{:name => "login_type", :type => "hidden", :value => "google"}/
-  -# %input#google_client_id{:type => "hidden", :value => "238694260676-l0gp5j3hs9p8l2hjmnt126q0b4iin34r.apps.googleusercontent.com"}/
-  -# %input#facebook_app_id{:type => "hidden", :value => "466308336793848"}/
 
   = render "shared/users/footer"

@@ -2,8 +2,8 @@
   .single-container
     %header.single-header
       %h1
-        %a{:href => "#"}
-          %img{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2356214421"}/
+        = link_to "#", target: "_blank" do
+          =image_tag "mercari_logo.png", class: "mercariLogo__img"
       %nav.progress-bar.signup-bar
         %ol.clearfix
           %li.active
