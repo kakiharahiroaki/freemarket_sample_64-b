@@ -1,0 +1,46 @@
+.signUp__complete{
+  main {
+    display: block;
+  }
+  .l-single-container {
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+  }
+  .l-chapter-head.registration{
+    color: black;
+    background-color: white;
+    border: none;
+  }
+  .l-single-content {
+    max-width: 343px;
+    margin: 0 auto;
+  }
+  .l-chapter-head.registration {
+    text-align: center;
+    font-size: 22px;
+    padding: 32px;
+  }
+  .l-single-inner.registration-form {
+    padding: 40px 40px 64px;
+  }
+  .btn-red {
+    margin-left: 25%;
+    margin-bottom: 20px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+  }
+  .btn-default {
+    display: block;
+    width: 50%;
+    line-height: 48px;
+    font-size: 14px;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+  }
+  .complete-text{
+    text-align: center;
+}
+}

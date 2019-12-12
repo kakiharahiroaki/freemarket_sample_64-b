@@ -1,0 +1,15 @@
+.signUp__complete
+  
+  = render "shared/users/headers"
+  
+  %main.single-main
+  %section.l-single-container
+    %h2.l-chapter-head.registration 会員登録完了
+    .complete-text
+      %p ありがとうございます。
+      %p 会員登録完了しました。
+      %button.btn-default.btn-red{type: "submit"} SMSを送信する
+      .advertisement__img
+        = image_tag 'advertisement.png'
+
+  = render "shared/users/footers"
