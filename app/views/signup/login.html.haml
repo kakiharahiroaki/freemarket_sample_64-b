@@ -13,8 +13,7 @@
         %i.icon-facebook
         Facebookでログイン
       %button#google-login.btn-default.btn-sns.btn-sns-google
-        Googleでログイン
-    %form{action: "#", method: "POST", novalidate: "novalidate"}
+        = link_to "Googleでログイン","user_google_oauth2_omniauth_authorize_path"
       .login-form-inner
         .form-group
           %input.login-input-text.input-default{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
