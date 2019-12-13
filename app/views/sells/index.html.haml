@@ -1,0 +1,196 @@
+.buy-index__single-wrapper
+  .header__single-wrapper
+    %h1
+      =link_to "", "https://www.mercari.com/jp/"
+      =image_tag "fmarket_logo_white.svg", size: "185x49", alt: "mercari"
+  %main.sells__single__main
+    %section.sells__single__container
+      #sells__sell__container
+        .sells__data__reactroot
+          .sells__sell__container__inner
+            %h2.sells__single__head 商品の情報を入力
+            %form.sells__sell__form
+              .sells__sell__upload__box
+                %h3.sells__sell__upload__head 出品画像
+                %span.sells__form__require  必須
+                %p 最大10枚までアップロードできます
+                .sells__sell__dropbox
+                  .sells__sell__upload__items__container
+                  .sells__sell__upload__drop__box
+                    %input.sells__sell__upload__drop__file
+                    .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
+                    %i.sells__icon__camera  
+              .sells__sell__content
+                .sells__sell__form__group
+                  %label 商品名
+                  %span.sells__form__require 必須
+                  .sells__input
+                    %input.sells__input__default{ placeholder: "40文字まで"}
+                    .sells__error__message 入力してください
+                .sells__sell__form__group
+                  %label 商品の説明
+                  %span.sells__form__require 必須
+                  %textarea.sells__textarea__default{ placeholder: "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入した購入したジャケットです。ライトグレーで傷はありませんライトグレーで傷はありません。合わせやすいのでおすすめです。"}
+                  .sells__style__counter
+                    %span 0/1000
+                    
+                  .sells__error__message 入力してください
+              .sells__sell__content.clearfix
+                %h3.sells__sell__sub__head 商品の詳細
+                .sells__sell__form__box
+                  .sells__sell__form__group
+                    %label カテゴリー
+                    %span.sells__form__require 必須
+                    .sells__select
+                      .sells__select__wrap
+                        %i.sells__icon__arrow
+                        %select.sells__select__default
+                          %option{ value: "", style: "display: none"} 選択してください
+                          %option{label: "選択してください", value: "1"} 選択してください
+                          %option{label: "レディース", value: "1"} レディース
+                        .sells__error__message 選択してください
+                      .sells__select__wrap
+                        %i.sells__icon__arrow
+                        %select.sells__select__default
+                          %option{ value: "", style: "display: none"} 選択してください
+                          %option{label: "選択してください", value: "1"} 選択してください
+                          %option{label: "トップス", value: "1"} トップス
+                      .sells__select__wrap
+                        %i.sells__icon__arrow
+                        %select.sells__select__default
+                          %option{ value: "", style: "display: none"} 選択してください
+                          %option{label: "選択してください", value: "1"} 選択してください
+                          %option{label: "ハイヒール/パンプス", value: "1"} ハイヒール/パンプス
+                  .sells__sell__form__group
+                    %label サイズ
+                    %span.sells__form__require 必須
+                    .sells__select
+                      .sells__select__wrap
+                        %i.sells__icon__arrow
+                        %select.sells__select__default
+                          %option{ value: "", style: "display: none"} 選択してください
+                          %option{label: "選択してください", value: "1"} 選択してください
+                          %option{label: "20cm以下", value: "1"} 20cm以下
+                        .sells__error__message 選択してください
+                  .sells__sell__form__group
+                    %label ブランド
+                    %span.sells__form__require--gray 任意
+                    .sells__input
+                      %input.sells__input__default{ placeholder: "例）シャネル"}
+                  .sells__sell__form__group
+                    %label 商品の状態
+                    %span.sells__form__require 必須
+                    .sells__select
+                      .sells__select__wrap
+                        %i.sells__icon__arrow
+                        %select.sells__select__default
+                          %option{ value: "", style: "display: none"} 選択してください
+                          %option{label: "選択してください", value: "1"} 選択してください
+                          %option{label: "新品、未使用", value: "1"} 新品、未使用
+                        .sells__error__message 選択してください
+              .sells__sell__content.clearfix
+                .sells__sell__sub
+                  %h3.sells__sell_sub__head 配送について
+                  .sells__form__question 
+                  -# =link_to "?", "#", class: "sells__form__question"
+                  =link_to "?", "#"
+                  .sells__sell__form__box
+                    .sells__sell__form__group
+                      %label 配送料の負担
+                      %span.sells__form__require 必須
+                      .sells__select
+                        .sells__select__wrap
+                          %i.sells__icon__arrow
+                          %select.sells__select__default
+                            %option{ value: "", style: "display: none"} 選択してください
+                            %option{label: "選択してください", value: "1"} 選択してください
+                            %option{label: "送料込み（出品者負担）", value: "1"} 送料込み（出品者負担）
+                          .sells__error__message 選択してください
+                    .sells__sell__form__group
+                      %label 配送の方法
+                      %span.sells__form__require 必須
+                      .sells__select
+                        .sells__select__wrap
+                          %i.sells__icon__arrow
+                          %select.sells__select__default
+                            %option{ value: "", style: "display: none"} 選択してください
+                            %option{label: "選択してください", value: "1"} 選択してください
+                            %option{label: "未定", value: "1"} 未定
+                          .sells__error__message 選択してください
+                    .sells__sell__form__group
+                      %label 発送元の地域
+                      %span.sells__form__require 必須
+                      .sells__select
+                        .sells__select__wrap
+                          %i.sells__icon__arrow
+                          %select.sells__select__default
+                            %option{ value: "", style: "display: none"} 選択してください
+                            %option{label: "選択してください", value: "1"} 選択してください
+                            %option{label: "北海道", value: "1"} 北海道
+                          .sells__error__message 選択してください
+                    .sells__sell__form__group
+                      %label 発送までの日数
+                      %span.sells__form__require 必須
+                      .sells__select
+                        .sells__select__wrap
+                          %i.sells__icon__arrow
+                          %select.sells__select__default
+                            %option{ value: "", style: "display: none"} 選択してください
+                            %option{label: "選択してください", value: "1"} 選択してください
+                            %option{label: "1~2日で発送", value: "1"} 1~2日で発送
+                          .sells__error__message 選択してください
+              .sells__sell__content.clearfix
+                .sells__sell__sub
+                  %h3.sells__sell_sub__head 価格(300~9,999,999)
+                  =link_to "?", "#", class: "sells__form__question"
+                  .sells__sell__form__box
+                    %ul.sells__sell__price
+                      %li.sells__sell__form__group
+                        .clearfix
+                          %label.sells__left 販売価格
+                          %span.sells__form__require 必須
+                          .sells__right 
+                            %span 
+                            %input.sells__input__default.last{ placeholder: "0", type: "number", name: "price"}
+                            .sells__error__message 300以上9999999以下で入力してください
+
+                      %li.sells__price.clearfix
+                        .sells__left--border 販売手数料（10％)
+                        %span.sells__right ー
+                      %li.sells__price.clearfix.bold
+                        .sells__left 販売利益
+                        .sells__right ー
+                    .sells__btn
+                      %button{type: "submit", class: "sells__btn__bottom"}出品する
+                      =link_to "もどる", "#", class: "sells__btn__bottom__back"
+              
+                  .sells__sell__btn__box
+                    %p
+                      禁止されている
+                      =link_to "行為", "#" , class: "sells__text__link"
+                      および
+                      =link_to "出品物", "#", class: "sells__text__link"
+                      を必ずご確認ください。
+                      =link_to "偽ブランド品", "#", class: "sells__text__link"
+                      や
+                      =link_to "盗品物" , "#", class: "sells__text__link"
+                      などの販売は犯罪であり、法律により処罰される可能性があります。また、出品を持ちまして
+                      =link_to "加盟店規約" , "#", class: "sells__text__link"
+                      に同意したことになります。
+
+
+
+
+  %footer.content__footer
+    %nav
+      %ul.footer__nav
+        %li
+        =link_to "プライバシーポリシー", "#"
+        %li
+        =link_to "メルカリ利用規約", "#"
+        %li
+        =link_to "特定商取引に関する表記" , "#"
+    =link_to "", "#", class: "footer__logo"
+    =image_tag "logo_gray.svg", size: "80x65", alt: "mercari",class: "footer__logo"
+    %p
+      %small © Mercari, Inc.

@@ -1,0 +1,240 @@
+.sells__single__container {
+  width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  .sells__single__head  {
+    padding: 32px 16px;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .sells__sell__form {
+    border-top: 1px solid #eee;
+    .sells__sell__upload__box {
+      width: 620px;
+      padding: 40px;
+      h3 {
+        font-size: 16px;
+        display: inline-block;
+      }
+      .p {
+        margin: 8px 0 0 ;
+        line-height: 1.5;
+        
+      }
+      .sells__sell__dropbox {
+        display: block;
+        width: 620px;
+        margin: 16px auto 0 ;
+        .sells__sell__upload__drop__box {
+          margin-left: 0;
+          padding: 40px;
+          position: relative;
+          min-height: 162px;
+          background-color: #f5f5f5;
+          border: 1px dashed #ccc;
+          cursor: pointer;
+          .sells__sell__upload__drop__file {
+            display: none;
+          }
+          .sells__visible__pc {
+            font-size: 12px;
+            text-align: center;
+          }
+          .sells__icon__camera {
+            position: absolute;
+            top: 50%;
+            font-size: 14px;
+            left:50%;
+            display: block;
+          }
+        }
+        
+      }
+    }
+    .sells__sell__content {
+      padding: 40px;
+      border-top: 1px solid #eee;
+      
+          .sells__sell__sub__head {
+            color: #888;
+            font-size: 14px;
+            padding:0 ;
+            margin-bottom: 24px;
+            
+          }
+        
+        
+        .sells__sell__form__box {
+          margin: 0;
+          .sells__sell__price li:first-child {
+            padding: 0 0 24px;
+            margin: 0;
+          }
+        }
+          .sells__btn {
+            // margin-bottom: 32px;
+            width: 360px;
+            margin: 0px auto 24px;
+            &__bottom {
+              background-color:#ea352d;
+              color: #fff;
+              width: 100%;
+              font-size: 17px;
+              min-height: 48px;
+              border-radius: 4px;
+              border: 1px solid transparent;
+              display: inline-block;
+              font-weight: 600;
+              text-align: center;
+              margin-bottom: 24px;
+              cursor: pointer;
+            }
+            &__bottom__back {
+              width: 100%;
+              font-size: 17px;
+              min-height: 48px;
+              border-radius: 4px;
+              border: 1px solid transparent;
+              display: inline-block;
+              font-weight: 600;
+              text-align: center;  
+              padding: 14px 24px;
+              background-color: #ccc;
+              border-color: transparent;
+              color:#222;
+              }
+            }
+            .sells__sell__btn__box{
+              font-size: 12px;
+              line-height: 1.4em;
+              .sells__text__link {
+                color:#0095ee;
+              }
+            }
+          
+          .sells__left--border {
+            float:left;
+          }
+          .sells__right{
+            float:right;
+            font-size: 14px;
+          }
+          .sells__price {
+            border-bottom: 1px solid #efefef;
+            padding: 12px 0;
+            height: 70px;
+          }  
+          .sells__price:last-child {
+            padding-bottom: 0;
+            border: none;
+          }
+        }
+        .sells__sell__form__group:first-child {
+          margin: 0;
+        }
+        .sells__form__question {
+          display: inline-block;
+          // float: left;
+        }
+          .sells__sell__form__group {
+            margin: 40px 0 0;
+            label {
+              font-weight: 600;
+              display: inline-block;
+            }
+            span {
+              font-size: 12px;
+            }
+            .sells__input__default {
+              width: 100%;
+              margin: 8px 0 0;
+              height: 48px;
+              font-size: 16px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              padding: 10px 16px 8px;
+            }
+            .sells__textarea__default {
+              margin: 8px 0 0;
+              display: block;
+              width: 100%;
+              padding:10px;
+              border: 1px solid #ccc;
+              background-color: #fff;
+              font-size: 16px;
+              line-height: 1.5;
+              min-height: 142px;
+              font-family: inherit;
+              border-radius: 4px;
+            }
+            .sells__select__wrap {
+              margin: 16px 0 0;
+              position: relative;
+              background: #fff;
+              .sells__icon__arrow {
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                z-index: 2;
+                color: #888;
+                font-size: 8px;
+              }
+              .sells__select__default {
+                width: 100%;
+                background-color: #fff;
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                padding: 0 16px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                line-height: 1.5;
+                cursor: pointer;
+              }
+            }
+            .sells__error__message {
+              margin-top: 16px;
+              color:#ff0211;
+            }
+            .sells__style__counter {
+              margin-top: 16px;
+              text-align: right;
+              color: #888;
+            }
+          }
+        
+        
+    }
+    .sells__form__require {
+      margin: 0 0 0 8px;
+       color: #fff;
+      font-size: 12px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      background-color: #ff0211;
+      border-radius: 2px;
+      font-weight: 600;
+      line-height: 1.4em;
+      }
+      .sells__form__require--gray {
+        background-color: #bfbfbf;
+        margin: 0 0 0 8px;
+       color: #fff;
+      font-size: 12px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      border-radius: 2px;
+      font-weight: 600;
+      line-height: 1.4em;
+       }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+}
+
+
+

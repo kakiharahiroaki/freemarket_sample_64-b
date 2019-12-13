@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root  'items#index'
   get "/items/show", to: "items#show"
   get  "/buys/index", to: "buys#index"
+  get "/sells/index", to: "sells#index"
   get  "/users/show", to: "users#show"
+
   resources :items, only: [:index]
   resources :users do
     collection do
