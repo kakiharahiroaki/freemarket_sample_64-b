@@ -1,0 +1,20 @@
+-# 新規会員登録ページ
+.menberSignup__wrapper
+
+  = render "shared/users/header"
+
+  %main.single__main
+  %section.l__single__container
+    %h2.l__single__head.registration 新規会員登録
+    .l__single__inner.registration__form
+      .l__single__content
+        .btn__default.btn__mail{href: "#"}
+          %i.icon-mail
+          =link_to  "メールアドレスで登録する", "#"
+        %button#facebook__login.btn__default.btn__sns.btn__sns--facebook
+          %i.icon-facebook
+          Facebookで登録する
+        %button#google__login.btn__default.btn__sns.btn__sns__google
+          Googleで登録する
+
+  = render "shared/users/footer"
