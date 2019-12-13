@@ -1,0 +1,66 @@
+.sms__confirmation__warraper{
+  
+main {
+  display: block;
+}
+.l-single-container {
+  width: 700px;
+  margin: 0 auto;
+  background: #fff;
+}
+.l-chapter-head.registration{
+  background: #fff;
+  color: black;
+  border: none;
+}
+.l-single-content {
+  max-width: 343px;
+  height: 220px;
+  margin: 0 auto;
+}
+.l-chapter-head.registration {
+  text-align: center;
+  font-size: 22px;
+  padding: 32px;
+}
+.l-single-inner.registration-form {
+  padding: 40px 40px 64px;
+}
+input {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 11px system-ui;
+  width: 100%;
+  height: 50px;
+  padding-left: 5px;
+  font-size: 16px;
+}
+.btn-red {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+}
+.btn-default {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+  color: rgb(8, 159, 219);
+}
+}

@@ -1,6 +1,10 @@
-// Place all the styles related to the cards controller here.
+// Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+}
 .foom{
   position: relative;
   width: 100%;
@@ -88,6 +92,9 @@
             color: #888;
           }
 }
+.category{
+  padding-right: 10px;
+}
 .search__box{
   height: 40px;
   width: 100%;
@@ -96,102 +103,215 @@
   padding-left: 10px;
   padding-right: 50px;
 }
-.content__all__view{
+.mypage__view{
   margin: 40px auto 0;
-  padding: 0 0 40px;
   width: 1020px;
-  min-height: 100vh;
-
-  .main__profile{
-    width: 700px;
-    float: right;
-    background: #fff;
-  }
-    .profile__all{
-      margin: 0;
+  padding: 0 0 40px;
+  &__all{
+  float: right;
+  width: 700px;
     }
-      .main__content__profile__head{
-        font-size: 24px;
-        padding: 8px 24px;
-        border-bottom: 1px solid #f5f5f5;
-        text-align: center;
-          &__form{
-            background: #f5f5f5;
-          }
-            &__input{
-              border: 0;
-              outline: 0;
-              font-family: inherit;
-              -webkit-appearance: none;
-            }
-      } 
-        .profile__main{
-          padding: 72px 16px 24px;
-          background: url("メルカリ.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          text-align: center;
+    &__user-icon{
+      position: relative;
+      height: 155px;
+      padding: 20px;
+      background: url(mypage.jpg);
+      background-size: cover;
+      text-align: center;
+      height: 200px;
+        }
+        figure{
+          position: relative;
+          overflow: hidden;
+          width: 48px;
+          height: 48px;
+        }
+      .user{
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        border-radius: 50%;
+        top: 50%;
+        }
+        &__user__name{
+          margin: 8px 0 0;
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__number{
+          margin: 8px 0 0;
           font-size: 0;
-          &__figure{
+          }
+          &__name{
             display: inline-block;
-            overflow: hidden;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            vertical-align: middle;   
-          }
-          &__input{
-            width: 220px;
-            margin: 0 0 0 8px;
-            vertical-align: middle;
-            height: 48px;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            line-height: 1.5;
-            font-size: 16px;
-          }
-            &__content{
-              padding: 40px 16px;
-              min-height: 216px; 
-            }
-          }
-        .extarea__main{
-          display: block;
-          width: 100%;
-          max-width: 100%;
-          min-height: 104px;
-          padding: 10px;
-          border: 1px solid #ccc;
-          background: #fff;
-          font-size: 16px;
-          line-height: 1.5;
-          &__btn{
-            margin: 16px 0 0;
-            background: #ea352d;
-            border: 1px solid #ea352d;
-            color: #fff;
-            display: block;
-            width: 100%;
-            line-height: 48px;
             font-size: 14px;
-            border: 1px solid transparent;
-            -webkit-transition: all ease-out .3s;
-            transition: all ease-out .3s;
-            cursor: pointer;
-            text-align: center;
+            }
+            &__tab{
+              margin: 0;
+              background: #fff;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              }
+          &__tabs{
+            border: 0;
+            background: #eee;
+            font-size: 0;
+            }
+            .active{
+              background: #fff;
+              width: 50%;
+              display: inline-block;
+              text-align: center;
+              vertical-align: top;
+            }
+            .informatiom{
+            font-size: 22px;
+            }
+          .active a{
+            border-top: 2px solid #ea352d;
+            position: relative;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            line-height: 72px;
           }
-        } 
-        .left__main{
+          .active__two{
+            width: 50%;
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+          }
+          .active__two a{
+            position: relative;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            line-height: 72px;
+            }
+            &__nav__number{
+              position: absolute;
+              top: 50%;
+              right: 32px;
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              background: #ea352d;
+              text-align: center;
+              line-height: 24px;
+              color: #fff;
+              display: none;
+              }
+          .tab__content__list{
+            display: block;
+            }
+            li{
+              border-bottom: 1px solid #eee;
+              }
+              .tab__content__link{
+                display: block;
+                min-height: 80px;
+                padding: 16px;
+                color: #333;
+               }
+                .lazyloaded{
+                  overflow: hidden;
+                  float: left;
+                  height: 48px;
+                  position: absolute;
+                  }
+                .mypage__view__body{
+                  margin: 0 40px 0 85px;
+                  }
+                  .mypage__view__text {
+                  overflow: hidden;
+                  display: block;
+                  max-height: 4.4em;
+                  line-height: 1.5;
+                  }
+              time{
+                display: inline-block;
+                color: #888;
+                }
+                .icon__time{
+                  margin: 0 8px 0 0;
+                }
+                span{
+                  vertical-align: middle;
+                }
+             .icon-arrow-right{
+              position: absolute;
+              top: 50%;
+              right: 16px;
+              transform: translate(0, -50%);
+              }
+            .list{
+              display: block;
+              height: 56px;
+              margin: 0 auto;
+              background: #eee;
+              color: #333;
+              line-height: 56px;
+              text-align: center;
+              }
+              .mypage__tab__footer{
+                margin: 40px 0 0;
+                background: #fff;
+              }
+            .mypage__tab__head{
+              background: #fafafa;
+              font-size: 16px;
+              line-height: 72px;
+              padding: 0 16px;
+            }
+            .transactions{
+              position: relative;
+              display: block;
+              color: #333;
+              font-size: 16px;
+              line-height: 72px;
+            }
+            .trading{
+            border-top: 2px solid #ea352d;
+            position: relative;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            line-height: 72px;
+            }
+            .tab__content__active{
+              display: block;
+              }
+              .tab__content__item{
+                padding: 160px 0 60px;
+                background: url(logo_gray.svg);
+                background-repeat: no-repeat;
+                background-position: center 40px;
+                background-size: 78px 85px;
+                text-align: center;
+                font-size: 16px;
+                color: #ccc;
+              }
+            // .tab__content__item__not{
+            //   padding: 160px 0 60px;
+            //   // background: url(logo_gray.svg);
+            //   background-repeat: no-repeat;
+            //   background-position: center 40px;
+            //   background-size: 78px 85px;
+            //   text-align: center;
+            //   font-size: 16px;
+            //   color: #ccc;
+            // }
+      .left__main{
         float: left;
         width: 280px;
         margin: 0 40px 0 0;
         display: block;
-        }
+          }
           .left__main__list{
           border-top: 1px solid #eee;
-          }
+            }
             .item{
             position: relative;
             display: block;
@@ -200,7 +320,7 @@
             background: #fff;
             font-size: 14px;
             color: #333;
-            }
+        }
         .main__list__head{ 
         display: block;
         font-size: 1.17em;
@@ -211,21 +331,17 @@
         font-weight: bold;
         margin: 40px 0 0;
         }
-  
 }
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
 }
-
 .contents{
   background-color: rgb(245, 245, 245);
   max-width: 1020px;
   width: 100%;
   margin: 60px auto 0;
-    &__image{
-    }
     &__category{
       background-color: white;
       padding-top: 56px;
@@ -241,7 +357,7 @@
         font-size: 28px;
         margin-bottom: 16px;
       }
-    }
+      }
       &__list{
       height: 40px;
       background-color: rgb(245, 245, 245);
@@ -251,7 +367,7 @@
       padding: 8px 10px;
       margin-top: 10px;
       margin-left: 10px;
-      }
+        }
         &__main{
           background-color: rgb(245, 245, 245);
         }
@@ -266,7 +382,7 @@
           display: flex;
           justify-content: space-between;
           margin-bottom: 16px;
-        }
+          }
   &__bottom__image{
     width: 100%;
     height: 260px;
@@ -304,7 +420,6 @@
     margin-top: 16px;
   }
   }
-
 .footer{
     nav{
       width: 80%;
@@ -322,17 +437,17 @@
       width: 75%;
       padding-left: 15px;
       text-align: center;
-    }
+      }
       a{
         color: #fff;
-      }
+    }
     &__list{
       margin-top: 16px;
       color: white;
-    }
+      }
       &__center__right{
         padding-top: 40px;
-      }
+    }
     &__bottom{
       width: 80%;
       margin: 30px auto;
@@ -347,13 +462,11 @@
   font-size: 22px;
   position: fixed;
   z-index: 1000;
-  width: 80px;
-  height: 80px;
   border-radius: 50%;
   background: #ea352d;
   color: #fff;
   text-align: center;
-&__name{
-margin: 32px 0 0;
-}
+  &__name{
+  margin: 32px 0 0;
+  }
 }

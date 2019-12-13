@@ -1,0 +1,67 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.menberSignup__wrapper{
+  main {
+  display: block;
+  text-align: center;
+  }
+    .l__single__head.registration{
+      color: black;
+      background-color: white;
+      border: none;
+    }
+    .l__single__container {
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    }
+      .l__chapter__head.registration {
+      font-size: 22px;
+      padding: 32px;
+      }
+      .l__single__inner.registration__form {
+      padding: 40px 40px 64px;
+      }
+        .l__single__content{
+        text-align: center;
+        }
+          .btn__default {
+          border-radius: 4px;
+          }
+          .btn__mail {
+          color: #fff;
+          text-decoration: none;
+          background-color: #ea352d;
+          }
+          a {
+            color: white;
+          }
+          .btn__sns {
+          position: relative;
+          }
+
+          .btn__sns--facebook {
+          margin: 16px 0 0;
+          background: #385185;
+          color: #fff;
+          }
+          .btn__sns--google {
+          margin: 16px 0 0;
+          background: #fff url("#") no-repeat 3px top;
+          border: #979797 solid 1px;
+          color: #333;
+          }
+          .btn__default {
+          display: block;
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+          -webkit-transition: all ease-out .3s;
+          transition: all ease-out .3s;
+          cursor: pointer;
+          text-align: center;
+          }
+}
