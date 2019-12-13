@@ -3,6 +3,7 @@ class SignupController < ApplicationController
   end
 
   def registration
+    @user = User.new
   end
 
   def sms_confirmation
