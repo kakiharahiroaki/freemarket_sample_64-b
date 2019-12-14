@@ -10,10 +10,10 @@
         新規会員登録
     .login-form-inner
       %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-        %i.icon-facebook
-        Facebookでログイン
+        = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, method: :post
       %button#google-login.btn-default.btn-sns.btn-sns-google
-        = link_to "Googleでログイン","user_google_oauth2_omniauth_authorize_path"
+        = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post
+
       .login-form-inner
         .form-group
           %input.login-input-text.input-default{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
