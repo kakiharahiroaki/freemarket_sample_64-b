@@ -5,7 +5,7 @@
   %main.single-main
     %section.l-single-container
       %h2.l-single-head.registration 住所入力
-      = form_with model: @users, local: true, url:payment_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
+      = form_with model: @user, local: true, url:payment_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
         -# %input{name: "__csrf_value", type: "hidden", value: ""}/
         .l-single-content
           .form-group
@@ -32,7 +32,7 @@
               都道府県
             %span.form-require 必須
             .prefectures-select.tab
-              %select{name: "pref"}
+              = f.select :prefecture, class:"select-default" do
                 %option{value: ""} 選択してください
                 %option{value: "北海道"} 北海道
                 %option{value: "青森県"} 青森県

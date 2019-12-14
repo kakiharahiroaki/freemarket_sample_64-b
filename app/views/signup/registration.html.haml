@@ -6,7 +6,7 @@
   %main.single-main
     %section.l-single-container
       %h2.l-single-head.registration 会員情報入力
-      = form_with model: @users, local: true, url: sms_confirmation_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
+      = form_with model: @user, local: true, url: sms_confirmation_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
         .l-single-content
           .form-group
             = f.label :nickname do
@@ -28,8 +28,9 @@
               .form-password-revelation-toggle
                 .checkbox-default
                   %i.icon-check
-                  = f.label :reveal_password do
-                    パスワードを表示する
+                  -# 後で実装
+                  -# = f.label :reveal_password do
+                  -#   パスワードを表示する
                 .form-password-revelation-revealed-password-container
                   %span.form-password-revelation-revealed-password
             .form-group
@@ -49,7 +50,7 @@
                   お名前カナ(全角)
                 %span.form-require 必須
               = f.text_field :family_name_kana, placeholder: "例) ヤマダ", class:"input-default"
-              = f.text_field :family_name_kana, placeholder: "例) アヤ", class:"input-default"
+              = f.text_field :first_name_kana, placeholder: "例) アヤ", class:"input-default"
             .form-group
               = f.label :birthdata_year do
                 生年月日
@@ -183,7 +184,7 @@
                 %span 年
                 .select-wrap.select-wrap__month
                   %i.icon-arrow-bottom
-                  = f.select :birthdata_mouth, class:"select-default" do
+                  = f.select :birthdata_month, class:"select-default" do
                     %option{value: ""} --
                     %option{value: "1"} 1
                     %option{value: "2"} 2

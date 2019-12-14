@@ -6,7 +6,7 @@
     .l-content
       %section.l-chapter-container
         %h2.l-chapter-head お支払い方法
-        = form_with model: @users, local: true, url:signup_complete_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
+        = form_with model: @user, local: true, url:signup_complete_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
           -# %input{name:"__csrf_value", type: "hidden", value: "#"}/
           .l-single-content
             .form-group
@@ -23,7 +23,7 @@
               %span.form-require 必須
               %br/
               .select-wrap.half
-                %select#payment_card_expire_mm.select-default
+                = f.select :expiration_date, class:"select-default" do
                   %option{value: "01"} 01
                   %option{value: "02"} 02
                   %option{value: "03"} 03
@@ -39,7 +39,7 @@
                 %i.icon-arrow-bottom
                 %span 月
               .select-wrap.half
-                %select#payment_card_expire_yy.select-default
+                = f.select :expiration_date, class:"select-default" do
                   %option{value: "19"} 19
                   %option{value: "20"} 20
                   %option{value: "21"} 21

@@ -5,12 +5,12 @@
   %main.single-main
   %section.l-single-container
     %h2.l-chapter-head.registration 電話番号の確認
-    = form_with model: @users, local: true, url:input_address_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
+    = form_with model: @user, local: true, url:input_address_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
       .l-single-content
         .form-group
           = f.label :phone_number do
             携帯電話の番号
-        = f.text_field :nickname, placeholder: "携帯電話の番号を入力", class:"input-default"
+        = f.text_field :phone_number, placeholder: "携帯電話の番号を入力", class:"input-default"
         %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
         = f.submit value: "SMSを送信する", class:"btn-default btn-red"
         %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
