@@ -6,7 +6,7 @@
   %main.single-main
     %section.l-single-container
       %h2.l-single-head.registration 会員情報入力
-      = form_with model: @users, local: true, url:"sms_confirmation_signup_index_path" do |f|
+      = form_with model: @users, local: true, url:"sms_confirmation_signup_index_path", class:"l-single-inner registration-form", method: :get do |f|
         .l-single-content
           .form-group
             = f.label :nickname do
@@ -45,7 +45,7 @@
               = f.text_field :first_name_kanji, placeholder: "例) 彩", class:"input-default"
             .form-group
               %div
-                = f.label :family_name_kanji do
+                = f.label :family_name_kana do
                   お名前カナ(全角)
                 %span.form-require 必須
               = f.text_field :family_name_kana, placeholder: "例) ヤマダ", class:"input-default"
