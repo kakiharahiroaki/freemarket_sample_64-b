@@ -37,9 +37,16 @@ class User < ApplicationRecord
           provider: auth.provider,
           uid: auth.uid,
           # user_id: user.id
+          nickname: auth.info.name,
+          last_name: auth.info.last_name,
+          first_name: auth.info.first_name,
+        )
+        SnsCredential.new(
+          provider: auth.provider,
+          uid: auth.uid,
+          user_id: user.id
         )
       end 
     user
     end
-
 end

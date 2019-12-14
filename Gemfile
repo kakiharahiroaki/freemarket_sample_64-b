@@ -83,6 +83,7 @@ gem 'devise'
 gem 'active_hash'
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem 'dotenv-rails'
 gem "omniauth-rails_csrf_protection"
