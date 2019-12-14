@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   get  "/users/show", to: "users#show"
 
   resources :items, only: [:index]
-  resources :users do
+  resources :signup do
     collection do
-      get 'new_menber'
+      get 'index'
       get 'registration'
       get 'sms_confirmation'
       get 'input_address'
@@ -19,6 +19,3 @@ Rails.application.routes.draw do
     end
   end
 end
-
-
-  
