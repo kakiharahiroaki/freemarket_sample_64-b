@@ -6,7 +6,7 @@
   %main.single-main
     %section.l-single-container
       %h2.l-single-head.registration 会員情報入力
-      = form_with model: @users, local: true, url:"sms_confirmation_signup_index_path", class:"l-single-inner registration-form", method: :get do |f|
+      = form_with model: @users, local: true, url: sms_confirmation_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
         .l-single-content
           .form-group
             = f.label :nickname do

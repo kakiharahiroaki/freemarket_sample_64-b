@@ -1,5 +1,5 @@
 class SignupController < ApplicationController
-  def new_menber
+  def index
   end
 
   def registration

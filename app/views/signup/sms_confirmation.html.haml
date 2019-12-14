@@ -5,7 +5,7 @@
   %main.single-main
   %section.l-single-container
     %h2.l-chapter-head.registration 電話番号の確認
-    = form_with model: @users, local: true, url:"input_address_signup_index", class:"l-single-inner registration-form", method: :get do |f|
+    = form_with model: @users, local: true, url:input_address_signup_index_path, class:"l-single-inner registration-form", method: :get do |f|
       .l-single-content
         .form-group
           = f.label :phone_number do

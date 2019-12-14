@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :items, only: [:index]
   resources :signup do
     collection do
-      get 'new_menber'
+      get 'index'
       get 'registration'
       get 'sms_confirmation'
       get 'input_address'
