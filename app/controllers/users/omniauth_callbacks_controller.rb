@@ -14,8 +14,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  def google_oauth2
-    @user = User.from_omniauth(request.env["omniauth.auth"])
+  def google_oauth
+    @user = User.from_omniauth(request.env["omniauth.auth"]
     if @user.persisted?
       sign_in_and_redirect @user, event: :authentication 
       set_flash_message(:notice, :success, kind: 'google') if is_navigational_format?
