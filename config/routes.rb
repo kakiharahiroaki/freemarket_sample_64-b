@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :items, only: [:index]
 
-  resources :users do
+  resources :users, only: [:create, :destroy, :show, :update] do
     collection do
       get 'create'
       get 'destroy'
