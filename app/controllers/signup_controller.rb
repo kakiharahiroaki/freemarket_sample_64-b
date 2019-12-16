@@ -24,23 +24,17 @@ class SignupController < ApplicationController
   def input_address
     session[:phone_number] = user_params[:phone_number]
     @user = User.new
-    
+    @user.build_address
   end
 
   def payment
-    session[:family_name_kanji] = user_params[:family_name_kanji]
-    session[:first_name_kanji] = user_params[:first_name_kanji]
-    session[:family_name_kana] = user_params[:family_name_kana]
-    session[:first_name_kana] = user_params[:first_name_kana]
-    session[:postcode] = user_params[:postcode]
-    session[:prefecture] = user_params[:prefecture]
-    session[:city] = user_params[:city]
-    session[:block] = user_params[:block]
-    session[:building] = user_params[:building]
+    session[:address_attributes] = user_params[:address_attributes]
     @user = User.new
+    @user.build_address
   end
 
   def signup_complete
+    @user = User.new
   end
 
   def login
@@ -63,7 +57,7 @@ class SignupController < ApplicationController
       :reset_password_token,
       :reset_password_sent_at,
       :remember_created_at,
-      address_attributes: [:id, :postcode, :prefecture, :city, :block, :building, :user]
+      address_attributes: [:id, :family_name, :first_name, :family_name_katakana, :first_name_katakana, :postcode, :prefecture, :city, :block, :building, :telephone_number]
     )
   end
 end
