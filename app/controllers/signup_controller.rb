@@ -5,7 +5,7 @@ class SignupController < ApplicationController
   def registration
     @user = User.new
   end
-
+  # registration(会員情報入力)で入力したデータをsessionで仮保存
   def sms_confirmation
     session[:nickname] = user_params[:nickname]
     session[:email] = user_params[:email]
@@ -20,25 +20,32 @@ class SignupController < ApplicationController
     @user = User.new
     
   end
-
+  # sms_confirmation（電話番号の確認）で入力したデータをsessionで仮保存
   def input_address
     session[:phone_number] = user_params[:phone_number]
     @user = User.new
     @user.build_address
   end
-
+# input_address（住所入力）で入力したデータをsessionで仮保存
   def payment
     session[:address_attributes] = user_params[:address_attributes]
     @user = User.new
     @user.build_address
   end
-
+# クレジットカードのテーブルを作りsessionで保存
   def signup_complete
+    
     @user = User.new
   end
 
   def login
   end
+
+  def create
+    # @user = User.new(session(user_params))
+    # @user = build_address(session[:])
+  end
+
   private
   def user_params
     params.require(:user).permit(
