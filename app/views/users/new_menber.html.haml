@@ -10,11 +10,18 @@
       .l__single__content
         .btn__default.btn__mail{href: "#"}
           %i.icon-mail
+
           =link_to  "メールアドレスで登録する", "#"
         %button#facebook__login.btn__default.btn__sns.btn__sns--facebook
+
+          = link_to "メールアドレスで登録する", registration_signup_index_path
+        %button#facebook__login.btn__default.btn__sns.btn__sns--facebook 
+
           %i.icon-facebook
-          Facebookで登録する
+          = link_to " Facebookで登録する", user_facebook_omniauth_authorize_path, method: :post
         %button#google__login.btn__default.btn__sns.btn__sns__google
-          Googleで登録する
+          %i.icon-google
+          = link_to "Googleで登録する", user_google_oauth2_omniauth_authorize_path, method: :post
+          
 
   = render "shared/users/footer"
