@@ -28,22 +28,31 @@ class SignupController < ApplicationController
   end
 # input_address（住所入力）で入力したデータをsessionで仮保存
   def payment
-    session[:address_attributes] = user_params[:address_attributes]
-    @user = User.new
-    @user.build_address
+    # session[:address_attributes] = user_params[:address_attributes]
+    # @user = User.new
+    # @user.build_address
   end
 # クレジットカードのテーブルを作りsessionで保存
   def signup_complete
-    
+    session[:address_attributes] = user_params[:address_attributes]
     @user = User.new
+    @user.build_address
+    @user = User.new
+    
   end
 
   def login
   end
 
   def create
-    # @user = User.new(session(user_params))
-    # @user = build_address(session[:])
+    @user = User.new(session(user_params))
+    @user = build_address(session[:address_attributes])
+
+    if @user.save
+      session[:id] = @user.id
+      redirect_to signup_complete_signup_index_path
+    else
+      render "/signup/registration"
   end
 
   private
