@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/items/show", to: "items#show"
   get  "/buys/index", to: "buys#index"
   get "/sells/index", to: "sells#index"
-  get "/cards/index"
+  get "/cards/index", to: "cards#index"
 
   resources :items, only: [:index]
 
