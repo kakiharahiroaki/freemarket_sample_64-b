@@ -22,8 +22,8 @@ class SignupController < ApplicationController
   end
 
   def input_address
-    session[:phone_number] = user_params[:phone_number]
-    @user = User.new
+    # session[:phone_number] = user_params[:phone_number]
+    # @user = User.new
     
   end
 
