@@ -1,19 +1,50 @@
-RSpec.describe SnsCredential, type: :model do
-  describe  '#facebook validation' do
+require 'rails_helper'
+
+describe SnsCredential, type: :model do
+  describe '#user_params' do
+
     before do
-      Rails.application.env_config['omniauth.auth'] = facebook_mock
+      user = create(:user, id: 1)
     end
-    context '認可サーバーから返ってきたメールアドレスを、すでに登録済みのuserが持っていた場合' do
-      before do
-        user = create(:user, email: 'sample@test.com')
+
+    context "can save" do
+
+      # 登録可能（全項目あり）
+      it "is valid with uid, provider and user_id" do
+        sns = build(:sns_credential)
+        expect(sns).to be_valid
       end
-      context '認可サーバーから帰ってきた情報とprovider名が異なるが、同じuidを持つSnsCredentialレコードがあった場合' do
-        before do
-          SnsCredential.create(provider: 'google_oauth2', uid: '12345', user_id: '1')
-        end
-          example 'uidのvalidation(unique制約）が機能するか' do
-            expect(SnsCredential.create(provider: 'facebook', uid: '12345', user_id: '1').errors[:uid]).to include('はすでに存在します')
-          end         
+    end
+
+    context "can not save" do
+
+      # 登録不可能（uid空欄）
+      it "is invalid without uid" do
+        sns = build(:sns_credential, uid: nil)
+        sns.valid?
+        expect(sns.errors[:uid]).to include("入力してください")
+      end
+
+      # 登録不可能（provider空欄）
+      it "is invalid without provider" do
+        sns = build(:sns_credential, provider: nil)
+        sns.valid?
+        expect(sns.errors[:provider]).to include("入力してください")
+      end
+
+      # 登録不可能（user_id空欄）
+      it "is invalid without user_id" do
+        sns = build(:sns_credential, user_id: nil)
+        sns.valid?
+        expect(sns.errors[:user_id]).to include("入力してください")
+      end
+
+      # 登録不可能（uid重複）
+      it "is invalid with not unique uid" do
+        sns1 = create(:sns_credential)
+        sns2 = build(:sns_credential)
+        sns2.valid?
+        expect(sns2.errors[:uid]).to include("既に存在しています")
       end
     end
   end
