@@ -7,7 +7,7 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :address
          
   has_many :sns_credentials, dependent: :destroy
-           
+
       def self.from_omniauth(auth)
       user = User.where(email: auth.info.email).first
       sns_credential_record = SnsCredential.where(users: auth.users,provider: auth.provider, uid: auth.uid,token: auth.token)
@@ -41,9 +41,11 @@ class User < ApplicationRecord
           first_name: auth.info.first_name,
         )
         SnsCredential.new(
+          users: auth.users,
+          token: auth.token,
           provider: auth.provider,
           uid: auth.uid,
-          user_id: user.id
+          # user_id: user.id
         )
       end 
     user
