@@ -1,0 +1,14 @@
+.bread__list {
+  position: relative;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  height: 48px;
+  ul {
+    overflow: visible;
+    margin: 0 auto;
+    padding: 16px 0;
+    li:last-child  span {
+      font-weight: 600;
+    }
+  }
+
+}

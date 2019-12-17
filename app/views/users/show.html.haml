@@ -1,4 +1,6 @@
+- breadcrumb :user_show
 =render "users/header"
+
 .mypage__view.clearfix
   .mypage__view__all
     %section.mypage__view__user-icon
@@ -17,12 +19,12 @@
       %ul.mypage__view__tabs
         %li.active
           .mypage__view__informatiom
-            = link_to "お知らせ", '#',class:"information"
+            = link_to "お知らせ", "#" ,class:"information"
             %span.mypage__view__nav__number
               38
         %li.active__two
           .mypage__view__informatiom
-            = link_to "やることリスト", '#',class:"information"
+            = link_to "やることリスト", "#",class:"information"
             %span.mypage__view__nav__number
               1
       .tab__content
