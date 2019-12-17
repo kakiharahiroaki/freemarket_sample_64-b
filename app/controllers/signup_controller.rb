@@ -9,6 +9,7 @@ class SignupController < ApplicationController
   def sms_confirmation
     session[:nickname] = user_params[:nickname]
     session[:email] = user_params[:email]
+    # パスワードは6文字以上じゃないと登録できない
     session[:password] = user_params[:password]
     session[:family_name_kanji] = user_params[:family_name_kanji]
     session[:first_name_kanji] = user_params[:first_name_kanji]
@@ -39,7 +40,7 @@ class SignupController < ApplicationController
     # @user.build_address
     
   end
-
+# createアクションでsessionをdbに保存
   def create
     @user = User.new(
       nickname: session[:nickname],
