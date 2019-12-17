@@ -116,7 +116,7 @@ GEM
       html2haml
     erubi (1.9.0)
     erubis (2.7.0)
-    excon (0.70.0)
+    excon (0.71.0)
     execjs (2.7.0)
     factory_bot (5.1.1)
       activesupport (>= 4.2.0)
@@ -386,17 +386,6 @@ DEPENDENCIES
   mini_magick
   mysql2 (>= 0.4.4, < 0.6.0)
   omniauth-facebook
-  omniauth-google-oauth2
-  omniauth-rails_csrf_protection
-  pry-byebug
-  pry-doc
-  pry-rails
-  omniauth-facebook
-  omniauth-google-oauth2
-  omniauth-rails_csrf_protection
-  pry-byebug
-  pry-doc
-  pry-rails
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   pry-byebug
