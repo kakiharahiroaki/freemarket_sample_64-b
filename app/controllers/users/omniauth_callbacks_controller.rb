@@ -11,6 +11,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to registration_signup_index_path
     end
   end
+    
 
   def google_oauth2
     @user = User.from_omniauth(request.env["omniauth.auth"])
@@ -23,4 +24,3 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 end
-
