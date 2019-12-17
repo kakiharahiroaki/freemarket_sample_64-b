@@ -7,15 +7,15 @@ Rails.application.routes.draw do
   get  "/users/show", to: "users#show"
 
   resources :items, only: [:index]
-  resources :signup do
+  resources :signup, only: [:index, :create] do
     collection do
-      get 'index'
+      get 'new_member'
       get 'registration'
       get 'sms_confirmation'
       get 'input_address'
-      get 'payment'
-      post 'signup_complete'
-      get 'login'
+      # get 'payment'
+      get 'signup_complete'
+
     end
   end
 end

@@ -5,7 +5,7 @@
   %main.single-main
     %section.l-single-container
       %h2.l-single-head.registration 住所入力
-      = form_with model: @user, local: true, url:signup_complete_signup_index_path, class:"l-single-inner registration-form", method: :post do |f|
+      = form_with model: @user, local: true, url: signup_index_path, class:"l-single-inner registration-form", method: :post do |f|
         = f.fields_for :address do |address_form|
           .l-single-content
             .form-group

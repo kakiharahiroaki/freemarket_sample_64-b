@@ -1,5 +1,5 @@
 class SignupController < ApplicationController
-  def index
+  def new_member
   end
 
   def registration
@@ -25,6 +25,7 @@ class SignupController < ApplicationController
     session[:phone_number] = user_params[:phone_number]
     @user = User.new
     @user.build_address
+    
   end
 # input_address（住所入力）で入力したデータをsessionで仮保存
   def payment
@@ -34,25 +35,32 @@ class SignupController < ApplicationController
   end
 # クレジットカードのテーブルを作りsessionで保存
   def signup_complete
-    session[:address_attributes] = user_params[:address_attributes]
-    @user = User.new
-    @user.build_address
-    @user = User.new
+    # session[:address_attributes] = user_params[:address_attributes]    @user = User.new
+    # @user.build_address
     
   end
 
-  def login
-  end
-
   def create
-    @user = User.new(session(user_params))
-    @user = build_address(session[:address_attributes])
-
-    if @user.save
+    @user = User.new(
+      nickname: session[:nickname],
+      email: session[:email],
+      password: session[:password],
+      family_name_kanji: session[:family_name_kanji],
+      first_name_kanji: session[:first_name_kanji],
+      family_name_kana: session[:family_name_kana],
+      first_name_kana: session[:first_name_kana],
+      birthdata_year: session[:birthdata_year],
+      birthdata_month: session[:birthdata_month],
+      birthdata_day: session[:birthdata_day],
+      phone_number: session[:phone_number],
+    )
+    @user.build_address(user_params[:address_attributes])
+    if @user.save!
       session[:id] = @user.id
       redirect_to signup_complete_signup_index_path
     else
-      render "/signup/registration"
+      render :new_member
+    end
   end
 
   private
