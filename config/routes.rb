@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/cards/index", to: "cards#index"
   get  "/users/show", to: "users#show"
  
+
   resources :items, only: [:index]
   resources :users, only: [:create, :destroy, :show, :update] do
     collection do
