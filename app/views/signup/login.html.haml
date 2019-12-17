@@ -13,7 +13,6 @@
         = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, method: :post
       %button#google-login.btn-default.btn-sns.btn-sns-google
         = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post
-        = link_to "Googleでログイン","user_google_oauth2_omniauth_authorize_path"
       .login-form-inner
         .form-group
           %input.login-input-text.input-default{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/

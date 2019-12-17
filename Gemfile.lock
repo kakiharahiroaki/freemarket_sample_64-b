@@ -354,8 +354,10 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.20)
+
 PLATFORMS
   ruby
+
 DEPENDENCIES
   active_hash
   bootsnap (>= 1.1.0)
@@ -383,14 +385,6 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
-  omniauth-facebook
-  omniauth-google-oauth2
-  omniauth-rails_csrf_protection
-  pry-byebug
-  pry-doc
-  pry-rails
-  omniauth-google-oauth2
-  omniauth-rails_csrf_protection
   pry-byebug
   pry-doc
   pry-rails
@@ -406,7 +400,9 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn (= 5.4.1)
   web-console (>= 3.3.0)
+
 RUBY VERSION
    ruby 2.5.1p57
+
 BUNDLED WITH
    2.0.2
