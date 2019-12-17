@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root  'items#index'
-  # resorces形式に要変更↓
+
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  root'items#index'
+
   get "/items/show", to: "items#show"
   get  "/buys/index", to: "buys#index"
   get "/sells/index", to: "sells#index"
   get "/cards/index", to: "cards#index"
-
+  get  "/users/show", to: "users#show"
+ 
 
   resources :items, only: [:index]
-
   resources :users, only: [:create, :destroy, :show, :update] do
     collection do
       get 'create'
