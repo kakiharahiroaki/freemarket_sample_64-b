@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/sells/index", to: "sells#index"
   get "/cards/index", to: "cards#index"
 
+
   resources :items, only: [:index]
 
   resources :users, only: [:create, :destroy, :show, :update] do
