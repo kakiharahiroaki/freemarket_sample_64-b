@@ -89,4 +89,5 @@ gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem 'gretel'
 gem "aws-sdk-s3", require: false
+gem "jquery-rails"
 
