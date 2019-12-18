@@ -9,31 +9,26 @@ class User < ApplicationRecord
   has_many :sns_credentials, dependent: :destroy
 
       def self.from_omniauth(auth)
-      user = User.where(email: auth.email).first
-      sns_credential_record = SnsCredential.where(provider: auth.provider, uid: auth.uid, token: auth.token)
-      if user.present?
-        unless sns_credential_record.present?
-          SnsCredential.create(
-            users: auth.users,
-            token: auth.token,
-            user_id: user.id,
-            provider: auth.provider,
-            uid: auth.uid
+        user = User.where(email: auth.info.email).first
+        sns_credential_record = SnsCredential.where(provider: auth.provider, uid: auth.uid)
+        if user.present?
+          unless sns_credential_record.present?
+            SnsCredential.create(
+              provider: auth.provider,
+              uid: auth.uid
+            )
+          end
+        elsif
+          user = User.new(
+            email: auth.info.email,
+            password: Devise.friendly_token[0, 20],
+            nickname: auth.info.name,
           )
-        end
-      elsif
-        user = User.new(
-          id: User.all.last.id + 1,
-          email: auth.info.email,
-          password: Devise.friendly_token[0, 20],
-        )
-        SnsCredential.new(
-          users: auth.users,
-          token: auth.token,
-          provider: auth.provider,
-          uid: auth.uid,
-        )
-      end 
-    user
+          SnsCredential.new(
+            provider: auth.provider,
+            uid: auth.uid,
+          )
+        end 
+      user
+      end
     end
-end
