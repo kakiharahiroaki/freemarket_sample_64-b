@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :sns_credentials, dependent: :destroy
 
       def self.from_omniauth(auth)
-        user = User.where(email: auth.info.email).first
+        user = User.find_by(email: auth.info.email)
         sns_credential_record = SnsCredential.where(provider: auth.provider, uid: auth.uid)
         if user.present?
           unless sns_credential_record.present?
