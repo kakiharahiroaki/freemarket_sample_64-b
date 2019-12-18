@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get  "/users/show", to: "users#show"
  
   resources :items, only: [:index]
-  resources :signup, only: [:index, :create] do
   resources :users, only: [:create, :destroy, :show, :update] do
     collection do
       get 'create'
@@ -26,7 +25,7 @@ Rails.application.routes.draw do
       get 'input_address'
       # get 'payment'
       get 'signup_complete'
-
+      get 'login'
+      end
     end
   end
-end

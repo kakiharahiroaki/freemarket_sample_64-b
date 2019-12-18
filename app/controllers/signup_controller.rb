@@ -113,6 +113,9 @@ class SignupController < ApplicationController
     end
   end
 
+  def login
+  end
+  
   private
   def user_params
     params.require(:user).permit(
