@@ -18,20 +18,11 @@
             %li.header__navi__link
             = link_to "いいね！一覧", '#',class:"link"
             %i.far.fa-heart
-            = link_to "お知らせ", '#',class:"menu"
+            = link_to "お知らせ", "#" ,class:"menu"
             %i.icon-bell
-            = link_to "やることリスト", '#',class:"link"
+            = link_to "やることリスト", "#" ,class:"link"
             %i.icon-check
-            = link_to "マイページ", '#',class:"link"
+            = link_to "マイページ", users_show_path ,class:"link"
   %nav.bread__list
     %ul
-      %li{itemscope: "", itemtype: "#"}
-        %a{href: "#", itemprop: "url"}
-          = link_to "メルカリ", '#'
-        %i.icon-arrow-right
-      %li{itemscope: "", itemtype: "#"}
-        %a{href: "#", itemprop: "url"}
-          = link_to "マイページ", '#'
-        %i.icon-arrow-right
-      %li{itemscope: "", itemtype: "#"}
-        = link_to "ログアウト", '#'
+      = render "shared/breadcrumbs"     
