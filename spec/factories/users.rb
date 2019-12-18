@@ -7,7 +7,7 @@ FactoryBot.define do
     family_name_kanji     {"山田"}
     first_name_kanji      {"太郎"}
     family_name_kana      {"ヤマダ"}
-    first_name_kana       {"太郎"}
+    first_name_kana       {"タロウ"}
     birthdata_year        {"2019"}
     birthdata_month       {"12"}
     birthdata_day         {"18"}

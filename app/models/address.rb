@@ -14,5 +14,5 @@ class Address < ApplicationRecord
   validates :city, presence: true
   validates :block, presence: true
   validates :building, presence: true
-  validates :telephone_number, presence: true, numericality: true, format: { with: VALID_TELEPHONE_REGEX }
+  validates :telephone_number, presence: true, format: { with: VALID_TELEPHONE_REGEX }
 end

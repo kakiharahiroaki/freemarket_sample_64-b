@@ -23,7 +23,7 @@ class User < ApplicationRecord
   validates :birthdata_month, presence: true, numericality: true
   validates :birthdata_day, presence: true, numericality: true
   # sms-confirmationのバリデーション
-  validates :phone_number, presence: true, numericality: true, format: { with: VALID_PHONE_REGEX }
+  validates :phone_number, presence: true, format: { with: VALID_PHONE_REGEX }
          
 
       def self.from_omniauth(auth)

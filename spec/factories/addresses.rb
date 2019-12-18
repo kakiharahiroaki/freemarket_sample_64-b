@@ -4,7 +4,7 @@ FactoryBot.define do
     first_name                {"太郎"}
     family_name_katakana      {"ヤマダ"}
     first_name_katakana       {"タロウ"}
-    postcode                  ("3212345")
+    postcode                  {"3212345"}
     prefecture                {"city"}
     block                     {"block"}
     building                  {"building"}
