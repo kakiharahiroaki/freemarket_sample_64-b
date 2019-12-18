@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_12_13_034326) do
     t.string "city", null: false
     t.string "block", null: false
     t.string "building"
-    t.integer "telephone_number"
+    t.string "telephone_number"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2019_12_13_034326) do
     t.integer "birthdata_year", null: false
     t.integer "birthdata_month", null: false
     t.integer "birthdata_day", null: false
-    t.integer "phone_number", null: false
+    t.string "phone_number", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

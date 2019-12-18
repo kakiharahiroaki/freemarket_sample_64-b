@@ -9,6 +9,6 @@ class AddlastNameTousers < ActiveRecord::Migration[5.2]
     add_column :users, :birthdata_year, :integer, :null => false
     add_column :users, :birthdata_month, :integer, :null => false
     add_column :users, :birthdata_day, :integer, :null => false
-    add_column :users, :phone_number, :integer, :null => false
+    add_column :users, :phone_number, :string, :null => false
   end
 end
