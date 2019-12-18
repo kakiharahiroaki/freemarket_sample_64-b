@@ -83,6 +83,7 @@ class SignupController < ApplicationController
     # @user.build_address
   end
 # クレジットカードのテーブルを作りsessionで保存
+# のちの作業で使用
   def signup_complete
     # session[:address_attributes] = user_params[:address_attributes]    @user = User.new
     # @user.build_address
@@ -115,7 +116,7 @@ class SignupController < ApplicationController
 
   def login
   end
-  
+
   private
   def user_params
     params.require(:user).permit(
