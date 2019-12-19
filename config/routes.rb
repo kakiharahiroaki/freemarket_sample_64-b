@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get  "/buys/index", to: "buys#index"
   get "/sells/index", to: "sells#index"
   get "/cards/index", to: "cards#index"
+  get "/users/create", to: "users#create"
+  get "/users/update", to: "users#update"
+  get "/users/destroy", to: "users#destroy"
   get  "/users/show", to: "users#show"
  
   resources :items, only: [:index]

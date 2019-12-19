@@ -16,10 +16,11 @@
                 %p 最大10枚までアップロードできます
                 .sells__sell__dropbox
                   .sells__sell__upload__items__container
-                  .sells__sell__upload__drop__box
-                    %input.sells__sell__upload__drop__file
-                    .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
-                    %i.sells__icon__camera  
+                  %label
+                    .sells__sell__upload__drop__box
+                      %input.sells__sell__upload__drop__file{type: "file",multiplename: "image"}
+                      .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
+                      %i.sells__icon__camera  
               .sells__sell__content
                 .sells__sell__form__group
                   %label 商品名
@@ -162,7 +163,7 @@
                         .sells__right ー
                     .sells__btn
                       %button{type: "submit", class: "sells__btn__bottom"}出品する
-                      =link_to "もどる", users_show_path, class: "sells__btn__bottom__back"
+                      =link_to "もどる", users_path, class: "sells__btn__bottom__back"
               
                   .sells__sell__btn__box
                     %p
