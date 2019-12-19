@@ -152,15 +152,15 @@
                           %span.sells__form__require 必須
                           .sells__right 
                             %span 
-                            %input.sells__input__default.last{ placeholder: "0", type: "number", name: "price"}
-                            .sells__error__message 300以上9999999以下で入力してください
+                            %input#sells__price.sells__input__default{type: "text", placeholder: " 例）300" }
+                            .sells__error__message.error__price 300以上9999999以下で入力してください
 
                       %li.sells__price.clearfix
                         .sells__left--border 販売手数料（10％)
-                        %span.sells__right ー
+                        %span.sells__right.sells__right1 -
                       %li.sells__price.clearfix.bold
                         .sells__left 販売利益
-                        .sells__right ー
+                        .sells__right.sells__right2#price -
                     .sells__btn
                       %button{type: "submit", class: "sells__btn__bottom"}出品する
                       =link_to "もどる", users_path, class: "sells__btn__bottom__back"
