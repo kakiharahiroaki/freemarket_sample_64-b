@@ -81,16 +81,34 @@ describe User do
       expect(user.errors[:family_name_kana]).to include("is invalid")
     end
 
+    it "family_name_kanaがカタカナで登録できる" do
+      user = build(:user, family_name_kana: "サンプル")
+      user.valid?
+      expect(user).to be_valid
+    end
+
     it "first_name_kanaがカタカナ以外では登録できないこと" do
       user = build(:user, first_name_kana: "あ")
       user.valid?
       expect(user.errors[:first_name_kana]).to include("is invalid")
     end
 
+    it "first_name_kanaがカタカナで登録できる" do
+      user = build(:user, first_name_kana: "サンプル")
+      user.valid?
+      expect(user).to be_valid
+    end
+
     it "passwordが7文字以下では登録できないこと" do
       user = build(:user, password: "aaa123")
       user.valid?
       expect(user.errors[:password]).to include("is too short (minimum is 7 characters)")
+    end
+
+    it "passwordが7文字以上で登録できる" do
+      user = build(:user, password: "aaa1234")
+      user.valid?
+      expect(user).to be_valid
     end
 
     it "重複したemailが存在する場合登録できないこと" do
