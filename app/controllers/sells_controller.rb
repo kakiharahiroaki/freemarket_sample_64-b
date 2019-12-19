@@ -1,7 +1,6 @@
 class SellsController < ApplicationController
 
-  #  def index
-  #  end
+
 
    def index
     @item = Item.find(params[:id])

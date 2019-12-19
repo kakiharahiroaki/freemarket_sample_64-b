@@ -116,14 +116,25 @@
           .sells__left--border {
             float:left;
           }
+          .sells__left {
+            font-size: 16px;
+            font-weight: bold;
+          }
           .sells__right{
             float:right;
             font-size: 14px;
           }
+          .sells__right2 {
+            font-size: 34px;
+          }
+          #sells__price {
+            text-align: right;
+          }
           .sells__price {
             border-bottom: 1px solid #efefef;
-            padding: 12px 0;
+            padding: 12px 0 ;
             height: 70px;
+            margin-bottom: 20px;
           }  
           .sells__price:last-child {
             padding-bottom: 0;
