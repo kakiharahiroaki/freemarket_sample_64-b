@@ -2,12 +2,8 @@ $(function() {
   $("#sells__price").on("input", function(e) {
     e.preventDefault()
     let input = $("#sells__price").val();
-    
-    
-    console.log(input);
     if ((input >= 300 ) && (input <= 9999999 )) {
       let fee = Math.floor(input*0.1);
-      console.log(fee);
       let profit = (input - fee);
       $(".sells__right1").html(fee);
       $(".sells__right1").prepend("¥");
