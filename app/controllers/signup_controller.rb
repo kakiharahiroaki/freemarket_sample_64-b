@@ -79,6 +79,7 @@ class SignupController < ApplicationController
   end
 # input_address（住所入力）で入力したデータをsessionで仮保存
   def payment
+    # のちの作業（payjpを使うとき））で使用予定
     # session[:address_attributes] = user_params[:address_attributes]
     # @user = User.new
     # @user.build_address
@@ -86,9 +87,7 @@ class SignupController < ApplicationController
 # クレジットカードのテーブルを作りsessionで保存
 # のちの作業で使用
   def signup_complete
-    # session[:address_attributes] = user_params[:address_attributes]    @user = User.new
-    # @user.build_address
-    
+
   end
 # createアクションでsessionをdbに保存
   def create

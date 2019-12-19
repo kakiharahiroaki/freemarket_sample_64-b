@@ -23,7 +23,6 @@ Rails.application.routes.draw do
       get 'registration'
       get 'sms_confirmation'
       get 'input_address'
-      # get 'payment'
       get 'signup_complete'
       get 'login'
       end
