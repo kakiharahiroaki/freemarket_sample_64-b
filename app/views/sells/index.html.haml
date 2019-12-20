@@ -17,12 +17,14 @@
                 %p 最大10枚までアップロードできます
                 .sells__sell__dropbox
                   .sells__sell__upload__items__container
+
                 = f.label :images, class: 'sells__sell__dropbox', id: 'dropArea' do
                   .sells__sell__upload__drop__box
                     = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
       
                     .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
                     %i.sells__icon__camera  
+
               .sells__sell__content
                 .sells__sell__form__group
                   = f.label :products do
@@ -146,18 +148,20 @@
                           %span.sells__form__require 必須
                           .sells__right 
                             %span 
-                            %input.sells__input__default.last{ placeholder: "0", type: "number", name: "price"}
-                            .sells__error__message 300以上9999999以下で入力してください
+                            %input#sells__price.sells__input__default{type: "text", placeholder: " 例）300" }
+                            .sells__error__message.error__price 300以上9999999以下で入力してください
 
                       %li.sells__price.clearfix
                         .sells__left--border 販売手数料（10％)
-                        %span.sells__right ー
+                        %span.sells__right.sells__right1 -
                       %li.sells__price.clearfix.bold
                         .sells__left 販売利益
-                        .sells__right ー
+                        .sells__right.sells__right2#price -
                     .sells__btn
+
                     = f.submit '出品する', class: 'sells__btn__bottom sell-main__btn-default sell-main__btn-red'
                     =link_to "もどる", users_show_path, class: "sells__btn__bottom__back"
+
               
                   .sells__sell__btn__box
                     %p
