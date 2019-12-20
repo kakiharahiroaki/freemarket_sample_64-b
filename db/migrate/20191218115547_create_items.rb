@@ -11,6 +11,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :shipping_origin, null: false
       t.string :condition, null: false
       t.references :user, null:false, foreign_key: true
+      t.references :brand, foreign_key: true
       t.timestamps
     end
   end

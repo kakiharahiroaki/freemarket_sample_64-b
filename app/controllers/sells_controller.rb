@@ -5,8 +5,8 @@ class SellsController < ApplicationController
   end
   
   def create
-    @item = Item.new(item_params)
-    if @item.save!
+    @item = Item.new(item_params) 
+    if @item.save
       redirect_to root_path, notice: '商品を出品しました'
     else
       render :new
@@ -27,7 +27,7 @@ class SellsController < ApplicationController
       :shipping_origin,
       # :brand_id,
       # :category_id,
-      image: []
+      images: []
     ).merge(user_id: current_user.id)
   end
 end
