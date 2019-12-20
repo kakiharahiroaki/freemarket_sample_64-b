@@ -147,8 +147,9 @@
                           %label.sells__left 販売価格
                           %span.sells__form__require 必須
                           .sells__right 
-                            %span 
-                            %input#sells__price.sells__input__default{type: "text", placeholder: " 例）300" }
+                            %span
+                            = f.text_field :price, { class:'sells__input__default', placeholder: " 例）300" } 
+                            -# %input#sells__price.sells__input__default{type: "text", placeholder: " 例）300" }
                             .sells__error__message.error__price 300以上9999999以下で入力してください
 
                       %li.sells__price.clearfix
