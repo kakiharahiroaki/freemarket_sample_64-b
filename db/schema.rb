@@ -81,8 +81,10 @@ ActiveRecord::Schema.define(version: 2019_12_18_115547) do
     t.string "shipping_origin", null: false
     t.string "condition", null: false
     t.bigint "user_id", null: false
+    t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -124,5 +126,6 @@ ActiveRecord::Schema.define(version: 2019_12_18_115547) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "users"
+  add_foreign_key "items", "brands"
   add_foreign_key "items", "users"
 end

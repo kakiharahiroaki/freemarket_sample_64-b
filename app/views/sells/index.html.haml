@@ -15,8 +15,7 @@
                 %h3.sells__sell__upload__head 出品画像
                 %span.sells__form__require  必須
                 %p 最大10枚までアップロードできます
-                .sells__sell__dropbox
-                
+                .sells__sell__dropbox               
                   .sells__sell__upload__items__container
                   = f.label :images, class: 'sells__sell__dropbox' do
                     .sells__sell__upload__drop__box
@@ -73,11 +72,11 @@
                         = f.select :size, [['選択してください',1],['20㎝以下',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                   .sells__sell__form__group
-                    -# = f.label :brand_id do
+                    = f.label :brand_id do
                       ブランド
                     %span.sells__form__require--gray 任意
                     .sells__input
-                      -# = f.text_field :brand_id, { class:'sells__input__default', placeholder: '例）シャネル' }
+                      = f.text_field :brand_id, { class:'sells__input__default', placeholder: '例）シャネル' }
                   .sells__sell__form__group
                     = f.label :condition do
                       商品の状態
