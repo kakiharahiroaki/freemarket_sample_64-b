@@ -33,7 +33,6 @@ class SignupController < ApplicationController
       birthdata_day: session[:birthdata_day],
       phone_number: '09012112362'
     )
-    
     render 'registration' unless @user.valid?
   end
   
@@ -110,9 +109,6 @@ class SignupController < ApplicationController
     else
       render :new_member
     end
-  end
-
-  def login
   end
   
   def signup_complete
