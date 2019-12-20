@@ -1,5 +1,6 @@
 %section.item__show-container
-  %h1.item__name ノーリーズ ソフィ セーター
+  %h1.item__name
+    = @item.products
   .item__content
     .buy__photo
       .photo__area
@@ -48,7 +49,7 @@
         %tr
           %th 出品者
           %td
-            =link_to "kogumi", "#", class: "table__link"
+            =link_to @item.user.nickname, users_show_path, class: "table__link"
             .item__user__face 
               .item__user__face__icon
                 %i.icon__laugh
@@ -71,28 +72,36 @@
             =link_to "ノーリーズソフィ", "#",class: "table__link"
         %tr
           %th 商品のサイズ
-          %td M
+          %td 
+            = @item.size
         %tr
           %th 商品の状態
-          %td 目立った傷や汚れなし
+          %td 
+            = @item.condition
         %tr
           %th 配送料の負担
-          %td 送料込み(出品者負担)
+          %td 
+            = @item.postage
         %tr
           %th 配送の方法
-          %td らくらくメルカリ便
+          %td 
+            = @item.shipping_method
         %tr
           %th 配送元地域
-          %td 未定
+          %td 
+            = @item.shipping_origin
         %tr
           %th 発送日の目安
-          %td 1~2日で発送
+          %td 
+            = @item.shipping_date
   .item__price
-    %span.item__price__bold ¥1,300
-    %span.item__fee (税込)
-    %span.item__total 送料込み
-  =link_to "購入画面に進む", buys_index_path, class: "item__btn"
-  %p.error__message この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+    .item__price__bold 
+      ¥
+      = @item.price
+      %span.item__fee (税込)
+      %span.item__total 送料込み
+    =link_to "購入画面に進む", buys_index_path, class: "item__btn"
+    %p.error__message この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
   .item__explanation
     %p.item__explanation__inner 
       昨年に購入したノーリーズソフィのサンプル品です。今の季節にピッタリです！

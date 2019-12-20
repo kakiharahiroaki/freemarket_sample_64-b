@@ -44,24 +44,24 @@
                 %h3.sells__sell__sub__head 商品の詳細
                 .sells__sell__form__box
                   .sells__sell__form__group
-                    -# = f.label :category_id do
+                    = f.label :category_id do
                       カテゴリー
                     %span.sells__form__require 必須
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         -# %select.sells__select__default
-                        -# = f.select :category_id, [['選択してください',1],['レディース',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                        = f.select :category_id, [['選択してください'],['レディース',1]], { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         -# %select.sells__select__default
-                        -# = f.select :category_id, [['選択してください',1],['トップス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                        = f.select :category_id, [['選択してください'],['トップス',1]], { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         -# %select.sells__select__default
-                        -# = f.select :category_id, [['選択してください',1],['ハイヒール/パンプス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                        = f.select :category_id, [['選択してください'],['ハイヒール/パンプス',1]], { autofocus: 'true'}, {class:"sells__select__default"}
                   .sells__sell__form__group
                     %label サイズ
                     %span.sells__form__require 必須
@@ -69,7 +69,7 @@
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         -# %select.sells__select__default
-                        = f.select :size, [['選択してください',1],['20㎝以下',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                        = f.select :size, [['選択してください'],['20㎝以下',1]], { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                   .sells__sell__form__group
                     = f.label :brand_id do
@@ -85,7 +85,7 @@
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         -# %select.sells__select__default
-                        = f.select :condition, [['選択してください',1],['新品',2]], { autofocus: 'true' }, {class:"sells__select__default"}                         
+                        = f.select :condition, [['選択してください'],['新品',1]], { autofocus: 'true' }, {class:"sells__select__default"}                         
                         .sells__error__message 選択してください
               .sells__sell__content.clearfix
                 .sells__sell__sub
@@ -102,7 +102,7 @@
                         .sells__select__wrap
                           %i.sells__icon__arrow
                           -# %select.sells__select__default
-                          = f.select :postage, [['選択してください',1],['送料込み（出品者負担）',2]], { autofocus: 'true' }, {class:"sells__select__default"}
+                          = f.select :postage, [['選択してください'],['送料込み（出品者負担）',1]], { autofocus: 'true' }, {class:"sells__select__default"}
                           .sells__error__message 選択してください
                     .sells__sell__form__group
                       = f.label :shipping_method do
@@ -112,7 +112,7 @@
                         .sells__select__wrap
                           %i.sells__icon__arrow
                           -# %select.sells__select__default
-                          = f.select :shipping_method, [['選択してください',1],['未定',2]], { autofocus: 'true' }, {class:"sells__select__default"}
+                          = f.select :shipping_method, [['選択してください'],['未定',1]], { autofocus: 'true' }, {class:"sells__select__default"}
                           .sells__error__message 選択してください
                     .sells__sell__form__group
                       = f.label :shipping_origin do
@@ -122,7 +122,7 @@
                         .sells__select__wrap
                           %i.sells__icon__arrow
                           -# %select.sells__select__default
-                          = f.select :shipping_origin, [['選択してください',1],['北海道',2]], { autofocus: 'true' }, {class:"sells__select__default"}
+                          = f.select :shipping_origin, [['選択してください'],['北海道',1]], { autofocus: 'true' }, {class:"sells__select__default"}
                           .sells__error__message 選択してください
                     .sells__sell__form__group
                       = f.label :shipping_date do
@@ -132,7 +132,7 @@
                         .sells__select__wrap
                           %i.sells__icon__arrow
                           -# %select.sells__select__default
-                          = f.select :shipping_date, [['選択してください',1],['1~2日で発送',2]], { autofocus: 'true' }, {class:"sells__select__default"}
+                          = f.select :shipping_date, [['選択してください'],['1~2日で発送',1]], { autofocus: 'true' }, {class:"sells__select__default"}
                           .sells__error__message 選択してください
               .sells__sell__content.clearfix
                 .sells__sell__sub
