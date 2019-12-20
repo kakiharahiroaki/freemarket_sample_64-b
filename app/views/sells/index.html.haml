@@ -10,28 +10,34 @@
           .sells__sell__container__inner
             %h2.sells__single__head 商品の情報を入力
             %form.sells__sell__form
+            = form_with model: @item, url: sells_path, local:true, method: :post, class: 'sells__sell__form' do |f|
               .sells__sell__upload__box
                 %h3.sells__sell__upload__head 出品画像
                 %span.sells__form__require  必須
                 %p 最大10枚までアップロードできます
                 .sells__sell__dropbox
                   .sells__sell__upload__items__container
-                  %label
-                    .sells__sell__upload__drop__box
-                      %input.sells__sell__upload__drop__file{type: "file",multiplename: "image"}
-                      .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
-                      %i.sells__icon__camera  
+
+                = f.label :images, class: 'sells__sell__dropbox', id: 'dropArea' do
+                  .sells__sell__upload__drop__box
+                    = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
+      
+                    .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
+                    %i.sells__icon__camera  
+
               .sells__sell__content
                 .sells__sell__form__group
-                  %label 商品名
+                  = f.label :products do
+                    商品名
                   %span.sells__form__require 必須
                   .sells__input
-                    %input.sells__input__default{ placeholder: "40文字まで"}
+                    = f.text_field :products, { class:'sells__input__default', placeholder: '商品名（必須 40文字まで)' }
                     .sells__error__message 入力してください
                 .sells__sell__form__group
-                  %label 商品の説明
+                  = f.label :description_of_item do
+                    商品の説明
                   %span.sells__form__require 必須
-                  %textarea.sells__textarea__default{ placeholder: "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入した購入したジャケットです。ライトグレーで傷はありませんライトグレーで傷はありません。合わせやすいのでおすすめです。"}
+                  = f.text_area :description_of_item, { class: 'sells__textarea__default', placeholder: '商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入した購入したジャケットです。ライトグレーで傷はありませんライトグレーで傷はありません。合わせやすいのでおすすめです。' }
                   .sells__style__counter
                     %span 0/1000
                     
@@ -40,54 +46,48 @@
                 %h3.sells__sell__sub__head 商品の詳細
                 .sells__sell__form__box
                   .sells__sell__form__group
-                    %label カテゴリー
+                    -# = f.label :category_id do
+                      カテゴリー
                     %span.sells__form__require 必須
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        %select.sells__select__default
-                          %option{ value: "", style: "display: none"} 選択してください
-                          %option{label: "選択してください", value: "1"} 選択してください
-                          %option{label: "レディース", value: "1"} レディース
+                        -# %select.sells__select__default
+                        -# = f.select :category_id, [['選択してください',1],['レディース',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        %select.sells__select__default
-                          %option{ value: "", style: "display: none"} 選択してください
-                          %option{label: "選択してください", value: "1"} 選択してください
-                          %option{label: "トップス", value: "1"} トップス
+                        -# %select.sells__select__default
+                        -# = f.select :category_id, [['選択してください',1],['トップス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                        .sells__error__message 選択してください
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        %select.sells__select__default
-                          %option{ value: "", style: "display: none"} 選択してください
-                          %option{label: "選択してください", value: "1"} 選択してください
-                          %option{label: "ハイヒール/パンプス", value: "1"} ハイヒール/パンプス
+                        -# %select.sells__select__default
+                        -# = f.select :category_id, [['選択してください',1],['ハイヒール/パンプス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                   .sells__sell__form__group
                     %label サイズ
                     %span.sells__form__require 必須
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        %select.sells__select__default
-                          %option{ value: "", style: "display: none"} 選択してください
-                          %option{label: "選択してください", value: "1"} 選択してください
-                          %option{label: "20cm以下", value: "1"} 20cm以下
+                        -# %select.sells__select__default
+                        = f.select :size, [['選択してください',1],['20㎝以下',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                   .sells__sell__form__group
-                    %label ブランド
+                    -# = f.label :brand_id do
+                      ブランド
                     %span.sells__form__require--gray 任意
                     .sells__input
-                      %input.sells__input__default{ placeholder: "例）シャネル"}
+                      -# = f.text_field :brand_id, { class:'sells__input__default', placeholder: '例）シャネル' }
                   .sells__sell__form__group
-                    %label 商品の状態
+                    = f.label :condition do
+                      商品の状態
                     %span.sells__form__require 必須
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        %select.sells__select__default
-                          %option{ value: "", style: "display: none"} 選択してください
-                          %option{label: "選択してください", value: "1"} 選択してください
-                          %option{label: "新品、未使用", value: "1"} 新品、未使用
+                        -# %select.sells__select__default
+                        = f.select :condition, [['選択してください',1],['新品',2]], { autofocus: 'true' }, {class:"sells__select__default"}                         
                         .sells__error__message 選択してください
               .sells__sell__content.clearfix
                 .sells__sell__sub
@@ -97,48 +97,44 @@
                   =link_to "?", "#"
                   .sells__sell__form__box
                     .sells__sell__form__group
-                      %label 配送料の負担
+                      = f.label :postage do
+                        配送料の負担
                       %span.sells__form__require 必須
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          %select.sells__select__default
-                            %option{ value: "", style: "display: none"} 選択してください
-                            %option{label: "選択してください", value: "1"} 選択してください
-                            %option{label: "送料込み（出品者負担）", value: "1"} 送料込み（出品者負担）
+                          -# %select.sells__select__default
+                          = f.select :postage, [['選択してください',1],['送料込み（出品者負担）',2]], { autofocus: 'true' }, {class:"sells__select__default"}
                           .sells__error__message 選択してください
                     .sells__sell__form__group
-                      %label 配送の方法
+                      = f.label :shipping_method do
+                        配送の方法
                       %span.sells__form__require 必須
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          %select.sells__select__default
-                            %option{ value: "", style: "display: none"} 選択してください
-                            %option{label: "選択してください", value: "1"} 選択してください
-                            %option{label: "未定", value: "1"} 未定
+                          -# %select.sells__select__default
+                          = f.select :shipping_method, [['選択してください',1],['未定',2]], { autofocus: 'true' }, {class:"sells__select__default"}
                           .sells__error__message 選択してください
                     .sells__sell__form__group
-                      %label 発送元の地域
+                      = f.label :shipping_origin do
+                        発送元の地域
                       %span.sells__form__require 必須
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          %select.sells__select__default
-                            %option{ value: "", style: "display: none"} 選択してください
-                            %option{label: "選択してください", value: "1"} 選択してください
-                            %option{label: "北海道", value: "1"} 北海道
+                          -# %select.sells__select__default
+                          = f.select :shipping_origin, [['選択してください',1],['北海道',2]], { autofocus: 'true' }, {class:"sells__select__default"}
                           .sells__error__message 選択してください
                     .sells__sell__form__group
-                      %label 発送までの日数
+                      = f.label :shipping_date do
+                        発送までの日数
                       %span.sells__form__require 必須
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          %select.sells__select__default
-                            %option{ value: "", style: "display: none"} 選択してください
-                            %option{label: "選択してください", value: "1"} 選択してください
-                            %option{label: "1~2日で発送", value: "1"} 1~2日で発送
+                          -# %select.sells__select__default
+                          = f.select :shipping_date, [['選択してください',1],['1~2日で発送',2]], { autofocus: 'true' }, {class:"sells__select__default"}
                           .sells__error__message 選択してください
               .sells__sell__content.clearfix
                 .sells__sell__sub
@@ -162,8 +158,10 @@
                         .sells__left 販売利益
                         .sells__right.sells__right2#price -
                     .sells__btn
-                      %button{type: "submit", class: "sells__btn__bottom"}出品する
-                      =link_to "もどる", users_path, class: "sells__btn__bottom__back"
+
+                    = f.submit '出品する', class: 'sells__btn__bottom sell-main__btn-default sell-main__btn-red'
+                    =link_to "もどる", users_show_path, class: "sells__btn__bottom__back"
+
               
                   .sells__sell__btn__box
                     %p

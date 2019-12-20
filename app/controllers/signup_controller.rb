@@ -86,9 +86,7 @@ class SignupController < ApplicationController
   end
 # クレジットカードのテーブルを作りsessionで保存
 # のちの作業で使用
-  def signup_complete
-
-  end
+  
 # createアクションでsessionをdbに保存
   def create
     @user = User.new(
@@ -116,7 +114,10 @@ class SignupController < ApplicationController
 
   def login
   end
-
+  
+  def signup_complete
+    sign_in User.find(session[:id]) unless user_signed_in?
+  end
   private
   def user_params
     params.require(:user).permit(
