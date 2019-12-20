@@ -16,14 +16,13 @@
                 %span.sells__form__require  必須
                 %p 最大10枚までアップロードできます
                 .sells__sell__dropbox
+                
                   .sells__sell__upload__items__container
-
-                = f.label :images, class: 'sells__sell__dropbox', id: 'dropArea' do
-                  .sells__sell__upload__drop__box
-                    = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
-      
-                    .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
-                    %i.sells__icon__camera  
+                  = f.label :images, class: 'sells__sell__dropbox' do
+                    .sells__sell__upload__drop__box
+                      = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
+                      .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
+                      %i.sells__icon__camera  
 
               .sells__sell__content
                 .sells__sell__form__group
