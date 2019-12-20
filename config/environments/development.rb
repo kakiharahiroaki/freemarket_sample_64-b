@@ -58,5 +58,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  
+  # S3に保存する場合は:localを:amazonに変更
   config.active_storage.service = :local
+  # config.active_storage.service = :amazon 
 end
