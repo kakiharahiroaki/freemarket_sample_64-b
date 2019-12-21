@@ -1,7 +1,7 @@
 .user__profile
   %section.user__items
     %h2.user__items__head
-      =link_to "kogumiさんのその他の出品", "#", class: "user__items__head"
+      =link_to "#{@item.user.nickname}さんのその他の商品", "#", class: "user__items__head"
     .user__items__content
       %section.items__content
         =link_to "", "#", class: "items__content"
