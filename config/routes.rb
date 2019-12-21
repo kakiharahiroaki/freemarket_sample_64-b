@@ -28,7 +28,6 @@ Rails.application.routes.draw do
       get 'sms_confirmation'
       get 'input_address'
       get 'signup_complete'
-      get 'login'
       end
     end
   end
