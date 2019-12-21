@@ -6,10 +6,10 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :price, null: false
       t.integer :size, null: false
       t.integer :shipping_date, null:false
-      t.string :shipping_method, null:false
+      t.integer :shipping_method, null:false
       t.integer :postage, null:false
-      t.string :shipping_origin, null: false
-      t.string :condition, null: false
+      t.integer :shipping_origin, null: false
+      t.integer :condition, null: false
       t.references :user, null:false, foreign_key: true
       t.references :brand, foreign_key: true
       t.timestamps

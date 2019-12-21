@@ -85,10 +85,10 @@ ActiveRecord::Schema.define(version: 2019_12_20_060016) do
     t.integer "price", null: false
     t.integer "size", null: false
     t.integer "shipping_date", null: false
-    t.string "shipping_method", null: false
+    t.integer "shipping_method", null: false
     t.integer "postage", null: false
-    t.string "shipping_origin", null: false
-    t.string "condition", null: false
+    t.integer "shipping_origin", null: false
+    t.integer "condition", null: false
     t.bigint "user_id", null: false
     t.bigint "brand_id"
     t.datetime "created_at", null: false
