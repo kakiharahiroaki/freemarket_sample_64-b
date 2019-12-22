@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       get 'destroy'
       get 'show'
       get 'update'
+      get 'sell_item'
     end
   end
   resources :signup do
