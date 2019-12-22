@@ -1,0 +1,30 @@
+=render "users/header"
+
+.user__sell__l-container
+  .user__sell__myitem
+    %section.user__sell__myitem--title
+      %h2.user__sell__myitem--head 出品した商品
+      %ul.user__sell__myitem--status
+        %li.user__sell__myitem--status--title.active
+          %h3
+            =link_to "出品中" , "#", data: {toggle: "tab"}
+        %li.user__sell__myitem--status--title
+          %h3
+            =link_to "取引中" , "#", data: {toggle: "tab"}
+        %li.user__sell__myitem--status--title
+          %h3
+            =link_to "売却済み" , "#" ,data: {toggle: "tab"}
+      .user__sell__myitem--tab
+        %ul#transaction__now.active
+          %li
+            =link_to "", "#", class: "sell__item__link" 
+            = image_tag  "ファーコート.jpg", class: "sell__photo",size: "48x48"
+            .user__sell__myitem--body
+              .user__sell__myitem--body--text ファーコートです
+              .user__sell__myitem--body--status
+                .sell__status 
+                  =link_to "出品中" , "#", class: "sell__status "
+                
+    =render "users/kamera"
+  =render "users/left_side_bar"
+=render "users/footer" 
