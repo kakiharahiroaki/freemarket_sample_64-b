@@ -10,14 +10,14 @@
               .photo__item__inner
               -if @item.images.attached?
                 - @item.images.each do |image|  
-                  =image_tag image, size: "300x225", class: "photo__item__inner"    
+                  =image_tag image,  class: "photo__item__inner"    
         .photo__nav.disabled    
         .photo__dots
           .photo__dot.active
             .photo__dot__inner
-            -if @item.images.attached?
-              - @item.images.each do |image|  
-                =image_tag image, size: "60x60", class: "photo__dot__inner"
+              -if @item.images.attached?
+                - @item.images.each do |image|  
+                  =image_tag image, class: "photo__dot__inner"
        
     .item__table
       %table

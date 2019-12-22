@@ -41,6 +41,7 @@
               position: absolute;
               top:10px;
               bottom:0;
+              width: 300px;
               }
             }
           }
@@ -50,12 +51,14 @@
           width: 300px;
           .photo__dot {
             opacity: 4;
-            width: 60px;
-            height: 60px;
             display:block;
             overflow: hidden;
             cursor: pointer;
             float:left;
+            &__inner {
+            width: 60px;
+            height: 60px;
+            }
           }
         }
       }
