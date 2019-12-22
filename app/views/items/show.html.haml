@@ -10,6 +10,7 @@
           %textarea
           %button.comment__submit{type: "submit"} 
             %span コメントする
+- if user_signed_in? && current_user.id != @item.user.id
   %ul.item__nav
     %li.item__nav__prev
       = fa_icon "angle-left 1.5x"

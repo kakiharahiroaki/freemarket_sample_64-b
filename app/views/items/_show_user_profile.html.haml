@@ -1,89 +1,90 @@
-.user__profile
-  %section.user__items
-    %h2.user__items__head
-      =link_to "#{@item.user.nickname}さんのその他の商品", "#", class: "user__items__head"
-    .user__items__content
-      - @items.each do |item|
+- if user_signed_in? && current_user.id != @item.user.id
+  .user__profile
+    %section.user__items
+      %h2.user__items__head
+        =link_to "#{@item.user.nickname}さんのその他の商品", "#", class: "user__items__head"
+      .user__items__content
+        - @items.each do |item|
+          %section.items__content
+            =link_to "", "#", class: "items__content" 
+            %figure.items__photo
+              = image_tag item.images[0] ,size: "220x220",alt: "服の画像" , class: "items__photo"
+            .items__text
+              %h3.items__name 
+              = item.products
+              .items__num
+                .items__price 
+                  = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+                .items__heart__icon
+                  %i.icon__like
+          
+    %section.user__items
+      %h2.user__items__head
+        =link_to "ノーリーズソフィのニット/セーターその他の商品", "#", class: "user__items__head"
+      .user__items__content
         %section.items__content
-          =link_to "", "#", class: "items__content" 
+          =link_to "", "#", class: "items__content"
           %figure.items__photo
-            = image_tag item.images[0] ,size: "220x220",alt: "服の画像" , class: "items__photo"
+            = image_tag "ワンピース.jpg" ,alt: "服の画像" , class: "items__photo"
           .items__text
             %h3.items__name 
-            = item.products
+            【NOLLEY'S sophi】ワンピース
             .items__num
-              .items__price 
-                = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+              .items__price ¥4,730
               .items__heart__icon
                 %i.icon__like
-        
-  %section.user__items
-    %h2.user__items__head
-      =link_to "ノーリーズソフィのニット/セーターその他の商品", "#", class: "user__items__head"
-    .user__items__content
-      %section.items__content
-        =link_to "", "#", class: "items__content"
-        %figure.items__photo
-          = image_tag "ワンピース.jpg" ,alt: "服の画像" , class: "items__photo"
-        .items__text
-          %h3.items__name 
-          【NOLLEY'S sophi】ワンピース
-          .items__num
-            .items__price ¥4,730
-            .items__heart__icon
-              %i.icon__like
-      %section.items__content
-        =link_to "", "#", class: "items__content"
-        %figure.items__photo
-          = image_tag "コート.jpg" ,alt: "服の画像" , class: "items__photo"
-        .items__text
-          %h3.items__name 
-          新品ノーリーズ  ノーカラーコート
-          .items__num
-            .items__price ¥20,800
-            .items__heart__icon
-              %i.icon__like
-      %section.items__content
-        =link_to "", "#", class: "items__content"
-        %figure.items__photo
-          = image_tag "クロップドパンツ.jpg" ,alt: "服の画像" , class: "items__photo"
-        .items__text
-          %h3.items__name 
-          ノーリーズソフィ クロップドパンツ
-          .items__num
-            .items__price ¥2,200
-            .items__heart__icon
-              %i.icon__like
-      %section.items__content
-        =link_to "", "#", class: "items__content"
-        %figure.items__photo
-          = image_tag "フレアスカート.jpg" ,alt: "服の画像" , class: "items__photo"
-        .items__text
-          %h3.items__name 
-          美品♪秋冬ミディ丈フレアスカート/ダークグリーン
-          .items__num
-            .items__price ¥8,100
-            .items__heart__icon
-              %i.icon__like
-      %section.items__content
-        =link_to "", "#", class: "items__content"
-        %figure.items__photo
-          = image_tag "切り替えワンピース.jpg" ,alt: "服の画像" , class: "items__photo"
-        .items__text
-          %h3.items__name 
-          ノーリーズ 切替ワンピース 38
-          .items__num
-            .items__price ¥3,000
-            .items__heart__icon
-              %i.icon__like
-      %section.items__content
-        =link_to "", "#", class: "items__content"
-        %figure.items__photo
-          = image_tag "ファーコート.jpg" ,alt: "服の画像" , class: "items__photo"
-        .items__text
-          %h3.items__name 
-          ♡ ノーリーズ コート ファー ノーカラー ベージュ 36 ♡
-          .items__num
-            .items__price ¥27,000
-            .items__heart__icon
-              %i.icon__like            
+        %section.items__content
+          =link_to "", "#", class: "items__content"
+          %figure.items__photo
+            = image_tag "コート.jpg" ,alt: "服の画像" , class: "items__photo"
+          .items__text
+            %h3.items__name 
+            新品ノーリーズ  ノーカラーコート
+            .items__num
+              .items__price ¥20,800
+              .items__heart__icon
+                %i.icon__like
+        %section.items__content
+          =link_to "", "#", class: "items__content"
+          %figure.items__photo
+            = image_tag "クロップドパンツ.jpg" ,alt: "服の画像" , class: "items__photo"
+          .items__text
+            %h3.items__name 
+            ノーリーズソフィ クロップドパンツ
+            .items__num
+              .items__price ¥2,200
+              .items__heart__icon
+                %i.icon__like
+        %section.items__content
+          =link_to "", "#", class: "items__content"
+          %figure.items__photo
+            = image_tag "フレアスカート.jpg" ,alt: "服の画像" , class: "items__photo"
+          .items__text
+            %h3.items__name 
+            美品♪秋冬ミディ丈フレアスカート/ダークグリーン
+            .items__num
+              .items__price ¥8,100
+              .items__heart__icon
+                %i.icon__like
+        %section.items__content
+          =link_to "", "#", class: "items__content"
+          %figure.items__photo
+            = image_tag "切り替えワンピース.jpg" ,alt: "服の画像" , class: "items__photo"
+          .items__text
+            %h3.items__name 
+            ノーリーズ 切替ワンピース 38
+            .items__num
+              .items__price ¥3,000
+              .items__heart__icon
+                %i.icon__like
+        %section.items__content
+          =link_to "", "#", class: "items__content"
+          %figure.items__photo
+            = image_tag "ファーコート.jpg" ,alt: "服の画像" , class: "items__photo"
+          .items__text
+            %h3.items__name 
+            ♡ ノーリーズ コート ファー ノーカラー ベージュ 36 ♡
+            .items__num
+              .items__price ¥27,000
+              .items__heart__icon
+                %i.icon__like            
