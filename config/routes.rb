@@ -30,4 +30,11 @@ Rails.application.routes.draw do
       get 'signup_complete'
       end
     end
+    resources :cards, only: [:create, :show, :destroy, :new] do
+      collection do
+        post 'new'
+        post 'show'
+        get 'confirmation'
+      end
+    end
   end
