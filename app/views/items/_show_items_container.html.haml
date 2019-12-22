@@ -89,13 +89,13 @@
   -else
     =link_to "購入画面に進む", buys_index_path, class: "item__btn"
     %p.error__message この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
-- if user_signed_in? && current_user.id != @item.user.id 
-  .item__explanation
-    %p.item__explanation__inner 
-    = @item.description_of_item
-  .item__btn__content
-    .item__btn__left
-      =link_to "いいね！", "#", class: "item__btn__like"
-      =link_to "不適切な商品の報告", "#", class: "item__btn__like" 
-    .item__btn__right
-      =link_to "あんぜん・あんしんへの取り組み", "#", class: "item__btn__right"
+  - if user_signed_in? && current_user.id != @item.user.id 
+    .item__explanation
+      %p.item__explanation__inner 
+      = @item.description_of_item
+    .item__btn__content
+      .item__btn__left
+        =link_to "いいね！", "#", class: "item__btn__like"
+        =link_to "不適切な商品の報告", "#", class: "item__btn__like" 
+      .item__btn__right
+        =link_to "あんぜん・あんしんへの取り組み", "#", class: "item__btn__right"
