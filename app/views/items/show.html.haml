@@ -36,11 +36,11 @@
   - if user_signed_in? && current_user.id != @item.user.id
     = render "show_user_profile"    
           
-  %nav.bottom__crumbs
-    %ul
-      %li
-        =link_to "メルカリ", "#", class: "bottom__icon"
-        %i.icon-arrow
-      %li
-        %span.bottom__text ノーリーズ ソフィ セーター
+    %nav.bottom__crumbs
+      %ul
+        %li
+          =link_to "メルカリ", "#", class: "bottom__icon"
+          %i.icon-arrow
+        %li
+          %span.bottom__text ノーリーズ ソフィ セーター
 = render "users/footer"  
