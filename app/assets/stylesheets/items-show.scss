@@ -41,6 +41,7 @@
               position: absolute;
               top:10px;
               bottom:0;
+              width: 300px;
               }
             }
           }
@@ -50,12 +51,14 @@
           width: 300px;
           .photo__dot {
             opacity: 4;
-            width: 60px;
-            height: 60px;
             display:block;
             overflow: hidden;
             cursor: pointer;
             float:left;
+            &__inner {
+            width: 60px;
+            height: 60px;
+            }
           }
         }
       }
@@ -96,6 +99,20 @@
               &__icon {
                 display: inline-block;
                 height:30px;
+                margin: 5px 5px 0;
+                font-size: 16px;
+                .icon__laugh {
+                  color:#ef5185;
+                  font-weight: 400;
+                }
+                .icon__nomal {
+                  color: #fba933;
+                  font-weight: 400;
+                }
+                .icon__sad {
+                  color: #6ab5d8;
+                  font-weight: 400;
+                }
               }
             }
           }
