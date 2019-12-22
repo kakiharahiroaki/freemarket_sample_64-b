@@ -8,42 +8,17 @@
           .photo__stage
             .photo__item.active
               .photo__item__inner
-                =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo__item__inner"
-            .photo__item
-              .photo__item__inner
-                =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo__item__inner"
-            .photo__item
-              .photo__item__inner
-                =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo__item__inner"
-            .photo__item
-              .photo__item__inner
-                =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo__item__inner"
-            .photo__item
-              .photo__item__inner
-                =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo__item__inner"
-            .photo__item
-              .photo__item__inner
-                =image_tag "gray-cloth.jpg", size: "300x225", alt: "灰色の服の画像", class: "photo__item__inner"
+              -if @item.images.attached?
+                - @item.images.each do |image|  
+                  =image_tag image, size: "300x225", class: "photo__item__inner"    
         .photo__nav.disabled    
         .photo__dots
           .photo__dot.active
             .photo__dot__inner
-              =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
-          .photo__dot
-            .photo__dot__inner
-              =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
-          .photo__dot
-            .photo__dot__inner
-              =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
-          .photo__dot
-            .photo__dot__inner
-              =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
-          .photo__dot
-            .photo__dot__inner
-              =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
-          .photo__dot
-            .photo__dot__inner
-              =image_tag "gray-cloth.jpg", size: "60x60", alt: "灰色の服の画像"
+            -if @item.images.attached?
+              - @item.images.each do |image|  
+                =image_tag image, size: "60x60", class: "photo__dot__inner"
+       
     .item__table
       %table
         %tr
@@ -53,12 +28,15 @@
             .item__user__face 
               .item__user__face__icon
                 %i.icon__laugh
+                  = fa_icon "smile-o", class: "icon__laugh"
                 %span 18
               .item__user__face__icon
                 %i.icon__nomal
+                  = fa_icon "meh-o", class: "icon__nomal"
                 %span 0
               .item__user__face__icon
                 %i.icon__sad
+                  = fa_icon "frown-o", class: "icon__sad"
                 %span 0
         %tr
           %th カテゴリー
@@ -97,7 +75,7 @@
   .item__price
     .item__price__bold 
       ¥
-      = @item.price
+      = @item.price.to_s(:delimited, delimiter: ',')
       %span.item__fee (税込)
       %span.item__total 送料込み
     =link_to "購入画面に進む", buys_index_path, class: "item__btn"

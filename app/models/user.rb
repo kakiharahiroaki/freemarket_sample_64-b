@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :sns_credentials, dependent: :destroy
   has_one :card
   accepts_nested_attributes_for :address
+  has_many :items
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i

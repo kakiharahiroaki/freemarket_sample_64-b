@@ -96,6 +96,20 @@
               &__icon {
                 display: inline-block;
                 height:30px;
+                margin: 5px 5px 0;
+                font-size: 16px;
+                .icon__laugh {
+                  color:#ef5185;
+                  font-weight: 400;
+                }
+                .icon__nomal {
+                  color: #fba933;
+                  font-weight: 400;
+                }
+                .icon__sad {
+                  color: #6ab5d8;
+                  font-weight: 400;
+                }
               }
             }
           }
