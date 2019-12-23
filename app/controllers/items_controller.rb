@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
+    @items = Item.limit(10).order("created_at DESC")
   end
   
   def show
@@ -7,5 +8,4 @@ class ItemsController < ApplicationController
     @items = Item.where(user_id: @item.user.id).includes(:user).limit(6).order("created_at DESC")
   end
 
-  
 end
