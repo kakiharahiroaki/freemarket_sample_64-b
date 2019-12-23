@@ -5,8 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-p "create Images"
-Image.create!(
-  img: open("#{Rails.root}/app/assete/images/メンズ.jpg")
-)
