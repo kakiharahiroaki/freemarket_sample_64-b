@@ -10,36 +10,37 @@
           %textarea
           %button.comment__submit{type: "submit"} 
             %span コメントする
-  %ul.item__nav
-    %li.item__nav__prev
-      = fa_icon "angle-left 1.5x"
-    = link_to "プレディア ファンゴWクレンズ300g2個" , "#", class: "item__nav__prev"
-    %li.item__nav__next
-      =link_to "ホークス 若鷹ガチャ デスパイネ レア 缶バッチ", "#", class: "item__nav__next"
-      = fa_icon "angle-right 1.5x"
-  .item__media__icon
-    .icon__center
-    %ul.media__icon
-      %li
-      =link_to "","#",class: "btn", target: "_blank"
-      =image_tag "facebook-icon.png", size: "44x44", alt: "facebookのアイコン画像", class: "btn"
-      %li
-      =link_to "","#",class: "btn", target: "_blank"
-      =image_tag "twitter-icon.png", size: "44x44", alt: "twitterのアイコン画像", class: "btn"
-      %li
-      =link_to "","#",class: "btn", target: "_blank"
-      =image_tag "line-icon.png", size: "44x44", alt: "lineのアイコン画像", class: "btn"
-      %li
-      =link_to "","#",class: "btn", target: "_blank"
-      =image_tag "red-icon.png", size: "44x44", alt: "ピンタレストのアイコン画像", class: "btn"
-
-  = render "show_user_profile"    
+  - if user_signed_in? && current_user.id != @item.user.id
+    %ul.item__nav
+      %li.item__nav__prev
+        = fa_icon "angle-left 1.5x"
+      = link_to "プレディア ファンゴWクレンズ300g2個" , "#", class: "item__nav__prev"
+      %li.item__nav__next
+        =link_to "ホークス 若鷹ガチャ デスパイネ レア 缶バッチ", "#", class: "item__nav__next"
+        = fa_icon "angle-right 1.5x"
+    .item__media__icon
+      .icon__center
+      %ul.media__icon
+        %li
+        =link_to "","#",class: "btn", target: "_blank"
+        =image_tag "facebook-icon.png", size: "44x44", alt: "facebookのアイコン画像", class: "btn"
+        %li
+        =link_to "","#",class: "btn", target: "_blank"
+        =image_tag "twitter-icon.png", size: "44x44", alt: "twitterのアイコン画像", class: "btn"
+        %li
+        =link_to "","#",class: "btn", target: "_blank"
+        =image_tag "line-icon.png", size: "44x44", alt: "lineのアイコン画像", class: "btn"
+        %li
+        =link_to "","#",class: "btn", target: "_blank"
+        =image_tag "red-icon.png", size: "44x44", alt: "ピンタレストのアイコン画像", class: "btn"
+  - if user_signed_in? && current_user.id != @item.user.id
+    = render "show_user_profile"    
           
-  %nav.bottom__crumbs
-    %ul
-      %li
-        =link_to "メルカリ", "#", class: "bottom__icon"
-        %i.icon-arrow
-      %li
-        %span.bottom__text ノーリーズ ソフィ セーター
+    %nav.bottom__crumbs
+      %ul
+        %li
+          =link_to "メルカリ", "#", class: "bottom__icon"
+          %i.icon-arrow
+        %li
+          %span.bottom__text ノーリーズ ソフィ セーター
 = render "users/footer"  
