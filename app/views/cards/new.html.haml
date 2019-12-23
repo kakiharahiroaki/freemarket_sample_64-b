@@ -6,14 +6,14 @@
     .l-content
       %section.l-chapter-container
         %h2.l-chapter-head お支払い方法
-        = form_with model: @card, local: true, action: "create", class:"l-single-inner registration-form", method: :post do |f|
+        = form_with model: @card, url: cards_path, local: true, class:"l-single-inner registration-form", name: "inputForm", id: "charge-form", method: :post do |f|
           -# %input{name:"__csrf_value", type: "hidden", value: "#"}/
           .l-single-content
             .form-group
               = f.label :number do
                 カード番号
               %span.form-require 必須
-              = f.text_field :number, placeholder: "半角数字のみ", class:"input-default", datainputtype:"card", id: "card_number"
+              = f.text_field :card_number, placeholder: "半角数字のみ", class:"input-default", datainputtype:"card", id: "card_number"
               %ul#card-no-error-wrapper.has-error-text
               %ul.signup-card-list
                 = image_tag 'creditCard_img.png'
@@ -23,11 +23,36 @@
               %span.form-require 必須
               %br/
               .select-wrap.half
-                = f.select :exp_month, [*1..12], { prompt: "--"}, class:"select-default"
+                = f.select :exp_month, type:"text", class:"select-default" do
+                  %option{value: ""} --
+                  %option{value: "1"}01
+                  %option{value: "2"}02
+                  %option{value: "3"}03
+                  %option{value: "4"}04
+                  %option{value: "5"}05
+                  %option{value: "6"}06
+                  %option{value: "7"}07
+                  %option{value: "8"}08
+                  %option{value: "9"}09
+                  %option{value: "10"}10
+                  %option{value: "11"}11
+                  %option{value: "12"}12
                 %i.icon-arrow-bottom
                 %span 月
               .select-wrap.half
-                = f.select :exp_year, [*19..29], { prompt: "--"}, class:"select-default"
+                = f.select :exp_year, class:"select-default" do
+                  %option{value: ""} --
+                  %option{value: "2019"}19
+                  %option{value: "2020"}20
+                  %option{value: "2021"}21
+                  %option{value: "2022"}22
+                  %option{value: "2023"}23
+                  %option{value: "2024"}24
+                  %option{value: "2025"}25
+                  %option{value: "2026"}26
+                  %option{value: "2027"}27
+                  %option{value: "2028"}28
+                  %option{value: "2029"}29
                 %i.icon-arrow-bottom
                 %span 年
               %ul#expire-mm-error-wrapper.has-error-text
@@ -46,11 +71,7 @@
                   カードの裏面をご参照ください。
                   %br/
                   = image_tag 'creditCard_back_img.png', size:'200x100'
-            -# 後から使うかも
-            -# %input#user_id{name: "user_id", type: "hidden", value: "642311628"}/
-            -# %input#encrypted_card_data{name: "encrypted_card_data", type: "hidden"}/
-            -# %p#primary-error.has-error-text
-            -# %input{name: "after_save_callback", type: "hidden", value: ""}/
+            #card_token
             = f.submit value: "追加する", class:"btn-default btn-red", id: 'token_submit'
   .payment__footer  
     = render "shared/users/footers"
