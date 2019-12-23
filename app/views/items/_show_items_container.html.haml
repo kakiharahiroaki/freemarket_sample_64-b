@@ -84,9 +84,8 @@
       %p.text__center or
       %form
         %input{type: "hidden"}
-        %button.btn__default.btn__gray{type: "submit"} 出品を停止する
-      
-      = link_to 'この商品を削除する', "/items/#{@item.id}", class:"btn__default btn__gray", method: :delete
+        %button.btn__default.btn__gray{type: "submit"} 出品を停止する   
+      = link_to 'この商品を削除する', item_path(@item.id), class:"btn__default btn__gray", method: :delete
   -else
     =link_to "購入画面に進む", buys_index_path, class: "item__btn"
     %p.error__message この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
