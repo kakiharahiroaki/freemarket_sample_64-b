@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root'items#index'
-  # get "/items/show", to: "items#show"
+  get "/items/show", to: "items#show"
   get  "/buys/index", to: "buys#index"
   get "/sells/index", to: "sells#index"
   get "/cards/index", to: "cards#index"
