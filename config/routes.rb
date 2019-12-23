@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/users/update", to: "users#update"
   get "/users/destroy", to: "users#destroy"
   get  "/users/show", to: "users#show"
+  get  "/sells/show", to: "sellss#show"
  
   resources :items, only: [:index, :new, :create, :show]
   resources :sells, only: :create
