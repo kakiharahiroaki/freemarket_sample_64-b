@@ -1,7 +1,8 @@
 class Item < ApplicationRecord
   has_many_attached :images
   belongs_to :user, optional: true
-  
+  # accepts_nested_attributes_for :brand
+  enum category:  {'選択してください':0,'レディース':1, 'ベビー・キッズ':2,'インテリア・住まい・小物':3,'本音楽・ゲーム':4,'おもちゃ・ホビー・グッズ':5,'コスメ・香水・美容':6,'家電・スマホ・カメラ':7,'スポーツ・レジャー':8,'ハンドメイド':9,'チケット':10,'自転車・オートバイ':11,'その他':12},_suffix: true
   enum shipping_date:  {'選択してください':0,'1~2日で配送':1, '2~3日で配送':2,'4~7日で配送':3},_suffix: true
   enum shipping_method:  {'選択してください':0,'未定':1, 'らくらくメルカリ便':2,'ゆうメール':3, 'レターパック': 4, '普通郵便（定形、定形外）':5, 'クロネコヤマト': 6, 'ゆうパック': 7, 'クリックポスト':8, 'ゆうパケット': 9},_suffix: true
   enum postage:  {'選択してください':0,'送料込み（出品者負担）':1, '着払い（購入者負担）':2},_suffix: true

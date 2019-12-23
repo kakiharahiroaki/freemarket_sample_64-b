@@ -321,4 +321,32 @@
       }
     }
   }
+  .item__change__box {
+    width:670px;
+    height: 250px;
+    margin: 50px auto;
+    .btn__default {
+      display: block;
+      width: 90%;
+      line-height: 48px;
+      font-size: 14px;
+      text-align: center;
+      margin: 16px 0 16px 0;
+    }
+    .btn__red {
+      background-color: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+    }
+    .text__center {
+      font-size: 14px;
+      text-align: center;
+      width: 90%;
+    }
+    .btn__gray {
+      background: #aaa;
+      border: 1px solid #aaa;
+      color: #fff;
+    }
+  }
 }
