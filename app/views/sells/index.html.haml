@@ -51,7 +51,7 @@
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         -# %select.sells__select__default
-                        = f.select :category_id, [['選択してください',1],['レディース',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                        = f.select :category_id, Item.categories.keys.to_a, { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                       .sells__select__wrap
                         %i.sells__icon__arrow

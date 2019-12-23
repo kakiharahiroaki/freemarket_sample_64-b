@@ -10,9 +10,8 @@ Rails.application.routes.draw do
   get "/users/update", to: "users#update"
   get "/users/destroy", to: "users#destroy"
   get  "/users/show", to: "users#show"
-  get  "/sells/show", to: "sellss#show"
- 
-  resources :items, only: [:index, :new, :create, :show]
+  
+  resources :items, only: [:index, :new, :create, :show, :destroy]
   resources :sells, only: :create
   resources :users, only: [:create, :destroy, :show, :update] do
     collection do

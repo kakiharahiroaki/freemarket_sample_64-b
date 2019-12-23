@@ -78,14 +78,24 @@
       = @item.price.to_s(:delimited, delimiter: ',')
       %span.item__fee (税込)
       %span.item__total 送料込み
+  - if user_signed_in? && current_user.id == @item.user.id
+    .item__change__box
+      =link_to "商品の編集", "#", class: "btn__default btn__red "
+      %p.text__center or
+      %form
+        %input{type: "hidden"}
+        %button.btn__default.btn__gray{type: "submit"} 出品を停止する   
+      = link_to 'この商品を削除する', item_path(@item.id), class:"btn__default btn__gray", method: :delete
+  -else
     =link_to "購入画面に進む", buys_index_path, class: "item__btn"
     %p.error__message この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
-  .item__explanation
-    %p.item__explanation__inner 
-    = @item.description_of_item
-  .item__btn__content
-    .item__btn__left
-      =link_to "いいね！", "#", class: "item__btn__like"
-      =link_to "不適切な商品の報告", "#", class: "item__btn__like" 
-    .item__btn__right
-      =link_to "あんぜん・あんしんへの取り組み", "#", class: "item__btn__right"
+  - if user_signed_in? && current_user.id != @item.user.id 
+    .item__explanation
+      %p.item__explanation__inner 
+      = @item.description_of_item
+    .item__btn__content
+      .item__btn__left
+        =link_to "いいね！", "#", class: "item__btn__like"
+        =link_to "不適切な商品の報告", "#", class: "item__btn__like" 
+      .item__btn__right
+        =link_to "あんぜん・あんしんへの取り組み", "#", class: "item__btn__right"
