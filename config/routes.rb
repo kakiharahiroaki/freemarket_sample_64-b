@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root'items#index'
-  # get "/items/show", to: "items#show"
+  get "/items/show", to: "items#show"
   get  "/buys/index", to: "buys#index"
   get "/sells/index", to: "sells#index"
   get "/cards/index", to: "cards#index"
@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get "/users/destroy", to: "users#destroy"
   get  "/users/show", to: "users#show"
   
-  resources :items, only: [:index, :new, :create, :show ,:edit, :update]
+
+  resources :items, only: [:index, :new, :create, :show,:edit, :update, :destroy]
+
   resources :sells, only: :create
   resources :users, only: [:create, :destroy, :show, :update] do
     collection do
