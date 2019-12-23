@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   get "/users/destroy", to: "users#destroy"
   get  "/users/show", to: "users#show"
   
-  resources :items, only: [:index, :new, :create, :show]
+  resources :items, only: [:index, :new, :create, :show, :destroy]
+  # delete 'items/:id' => 'items#destroy'
   resources :sells, only: :create
   resources :users, only: [:create, :destroy, :show, :update] do
     collection do
