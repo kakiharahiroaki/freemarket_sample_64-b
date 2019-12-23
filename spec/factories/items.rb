@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :product do
+  factory :item do
 
 id                    {1}
 user_id               {4}
@@ -12,6 +12,7 @@ shipping_method       {2}
 postage               {1}
 shipping_origin       {3}
 condition             {1}
-  
+association :user, factory: :user
+
   end
 end

@@ -32,57 +32,70 @@ describe Item do
         expect(item.errors[:price]).to include("を入力してください")
     end
 
-    it "is invalid without a condition_id" do
+    it "is invalid without a size" do
         item = build(:item, size: "")
         item.valid?
         expect(item.errors[:size]).to include("を入力してください")
     end
 
-    it "is invalid without a delivery_charge_id" do
+    it "is invalid without a shipping_date" do
+        item = build(:item, shipping_date: "")
+        item.valid?
+        expect(item.errors[:shipping_date]).to include("を入力してください")
+    end
+
+    it "is invalid without a shipping_method" do
         item = build(:item, shipping_method: "")
         item.valid?
         expect(item.errors[:shipping_method]).to include("を入力してください")
     end
 
-    it "is invalid without a prefecture_id" do
-        item = build(:item, prefecture_id: "")
+    it "is invalid without a postage" do
+        item = build(:item, postage: "")
         item.valid?
-        expect(item.errors[:prefecture_id]).to include("を入力してください")
+        expect(item.errors[:postage]).to include("を入力してください")
     end
 
-    it "is invalid without a delivery_days_id" do
-        item = build(:item, delivery_days_id: "")
+    it "is invalid without a shipping_origin" do
+        item = build(:item, shipping_origin: "")
         item.valid?
-        expect(item.errors[:delivery_days_id]).to include("を入力してください")
+        expect(item.errors[:shipping_origin]).to include("を入力してください")
     end
 
-    it "is invalid without a price" do
-        item = build(:item, price: "")
+    it "is invalid without a condition" do
+        item = build(:item, condition: "")
         item.valid?
-        expect(item.errors[:price]).to include("を入力してください")
+        expect(item.errors[:condition]).to include("を入力してください")
     end
 
+    it "is invalid without a user_id" do
+        item = build(:item, user_id: "")
+        item.valid?
+        expect(item.errors[:user_id]).to include("を入力してください")
+    end
+
+    
     #nameの文字が40文字以上と以下の場合
-    it "is invalid name is too long maximum 40 characters" do
-        item = build(:item, name: "a" * 41)
+    it "is invalid products is too long maximum 40 characters" do
+        item = build(:item, products: "a" * 41)
         item.valid?
-        expect(item.errors[:name]).to include("は40文字以内で入力してください")
+        expect(item.errors[:products]).to include("は40文字以内で入力してください")
     end
 
-    it "is valid with a name that has less than 40 characters" do
-        item = build(:item, name: "a" * 39)
+    it "is valid with a products that has less than 40 characters" do
+        item = build(:item, products: "a" * 39)
         expect(item).to be_valid
     end
 
     #descriptionの文字が1000文字以上と以下の場合
-    it "is invalid description is too long maximum 40 characters" do
-        item = build(:item, description: "a" * 1001)
+    it "is invalid description_of_item is too long maximum 40 characters" do
+        item = build(:item, description_of_item: "a" * 1001)
         item.valid?
-        expect(item.errors[:description]).to include("は1000文字以内で入力してください")
+        expect(item.errors[:description_of_item]).to include("は1000文字以内で入力してください")
     end
 
-    it "is valid with a description that has less than 1000 characters" do
-        item = build(:item, description: "a" * 1000)
+    it "is valid with a description_of_item that has less than 1000 characters" do
+        item = build(:item, description_of_item: "a" * 1000)
         expect(item).to be_valid
     end
 
@@ -113,8 +126,8 @@ describe Item do
     end
 
     #brandが無くても保存できる
-    it "is valid without a brand" do
-        item = build(:item, brand: "")
+    it "is valid without a brand_id" do
+        item = build(:item, brand_id: "")
         expect(item).to be_valid
     end
   end
