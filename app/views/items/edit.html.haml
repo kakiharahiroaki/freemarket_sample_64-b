@@ -50,17 +50,14 @@
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        -# %select.sells__select__default
                         = f.select :category_id, [['選択してください',1],['レディース',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        -# %select.sells__select__default
                         = f.select :category_id, [['選択してください',1],['トップス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        -# %select.sells__select__default
                         = f.select :category_id, [['選択してください',1],['ハイヒール/パンプス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                   .sells__sell__form__group
                     %label サイズ
@@ -68,7 +65,6 @@
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        -# %select.sells__select__default
                         = f.select :size, Item.sizes.keys.to_a, {},autofocus: 'true', class:"sells__select__default"
                         .sells__error__message 選択してください
                   .sells__sell__form__group
@@ -84,14 +80,12 @@
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        -# %select.sells__select__default
                         = f.select :condition, Item.conditions.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"                       
                         .sells__error__message 選択してください
               .sells__sell__content.clearfix
                 .sells__sell__sub
                   %h3.sells__sell_sub__head 配送について
                   .sells__form__question 
-                  -# =link_to "?", "#", class: "sells__form__question"
                   =link_to "?", "#"
                   .sells__sell__form__box
                     .sells__sell__form__group
@@ -101,7 +95,6 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          -# %select.sells__select__default
                           = f.select :postage, Item.postages.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
                           .sells__error__message 選択してください
                     .sells__sell__form__group
@@ -111,7 +104,6 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          -# %select.sells__select__default
                           = f.select :shipping_method, Item.shipping_methods.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
                           .sells__error__message 選択してください
                     .sells__sell__form__group
@@ -121,7 +113,6 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          -# %select.sells__select__default
                           = f.select :shipping_origin, Item.shipping_origins.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
                           .sells__error__message 選択してください
                     .sells__sell__form__group
@@ -131,7 +122,6 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          -# %select.sells__select__default
                           = f.select :shipping_date, Item.shipping_dates.keys.to_a, {},  autofocus: 'true' , class:"sells__select__default"
                           .sells__error__message 選択してください
               .sells__sell__content.clearfix
@@ -147,7 +137,6 @@
                           .sells__right 
                             %span
                             = f.text_field :price, { id: 'sells__price', class:'sells__input__default', placeholder: " 例）300" } 
-                            -# %input#sells__price.sells__input__default{type: "text", placeholder: " 例）300" }
                             .sells__error__message.error__price 300以上9999999以下で入力してください
 
                       %li.sells__price.clearfix
