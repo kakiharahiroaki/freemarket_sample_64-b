@@ -10,14 +10,16 @@
         新規会員登録
     .login-form-inner
       %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-        = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, method: :post
+        = fa_icon "facebook-square", class: "fontawesome_icon"
+        = link_to "Facebookでログイン", user_facebook_omniauth_authorize_path, method: :post, class: "facebook_login"
       %button#google-login.btn-default.btn-sns.btn-sns-google
-        = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post
-      .login-form-inner
-        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          = f.email_field :email, autofocse: true, placeholder: "メールアドレス", autocomplete: "email", class: "login-input-text input-default"
-          = f.password_field :password, placeholder: "パスワード", autocomplete: "current-password", class: "login-input-text input-default"
-          = f.submit "ログイン", class: "login-submit btn-default btn-red"
+        = image_tag 'google_icon.png',class: "google"
+        = link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, method: :post, class: "google_login"
+    .login-form-inner
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = f.email_field :email, autofocse: true, placeholder: "メールアドレス", autocomplete: "email", class: "login-input-text input-default"
+        = f.password_field :password, placeholder: "パスワード", autocomplete: "current-password", class: "login-input-text input-default"
+        = f.submit "ログイン", class: "login-submit btn-default btn-red"
         %p.password__link 
           = link_to "#" do 
             パスワードをお忘れの方

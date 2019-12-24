@@ -30,7 +30,7 @@
                   都道府県
                 %span.form-require 必須
                 .prefectures-select.tab
-                  = address_form.select :prefecture, class:"select-default" do
+                  = address_form.select :prefecture, class:"prefecture-select-default" do
                     %option{value: ""} 選択してください
                     %option{value: "北海道"} 北海道
                     %option{value: "青森県"} 青森県
@@ -101,6 +101,6 @@
                 = address_form.text_field :telephone_number, placeholder: "例）123456789", class:"input-default"
               = f.submit value: "次へ進む", class:"btn-default btn-red"
       
-      = render "shared/users/footers"     
+    = render "shared/users/footers"     
       
         
