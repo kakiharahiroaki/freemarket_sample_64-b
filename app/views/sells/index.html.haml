@@ -1,8 +1,8 @@
 .buy-index__single-wrapper
   .header__single-wrapper
     %h1
-      =link_to "", "https://www.mercari.com/jp/"
-      =image_tag "fmarket_logo_white.svg", size: "185x49", alt: "mercari"
+      =link_to root_path do
+        =image_tag "fmarket_logo_white.svg", size: "185x49", alt: "mercari"
   %main.sells__single__main
     %section.sells__single__container
       #sells__sell__container
