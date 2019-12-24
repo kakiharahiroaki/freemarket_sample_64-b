@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     if @item.user_id == current_user.id
-      @item.destroy #destroyメソッドを使用し対象のツイートを削除する。
+      @item.destroy
       redirect_to root_path
     end
   end
