@@ -4,7 +4,8 @@
       .header__box
         .header__input__box
           %a.header--image
-            = image_tag "fmarket_logo_red.svg", size: "134x36"
+            = link_to root_path, class: "header--image" do
+              = image_tag "fmarket_logo_red.svg", size: "134x36"
           .foom
             %input.search__box{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
             %button.header--btn

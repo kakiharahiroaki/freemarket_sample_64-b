@@ -60,15 +60,15 @@
                 .select-wrap
                   %i.icon-arrow-bottom
                   = f.select :birthdata_year, [*1900..2019].reverse, { prompt: "--"}, class:"select-default"
-                  %span 年
+                %span_span 年
                 .select-wrap.select-wrap__month
                   %i.icon-arrow-bottom
                   = f.select :birthdata_month, [*1..12], { prompt: "--"}, class:"select-default" 
-                %span 月
+                %span_span 月
                 .select-wrap.select-wrap__day
                   %i.icon-arrow-bottom
                   = f.select :birthdata_day, [*1..31], { prompt: "--"}, class:"select-default"
-                %span 日
+                %span_span 日
               -# %input{name: "birthday", type: "hidden", value: ""}/
               .clearfix
             %p.form-info-text

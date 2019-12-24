@@ -1,4 +1,7 @@
 = render "shared/header"
 = render "contents"
 = render "shared/footer"
-= render "users/kamera"
+- if user_signed_in?
+  = render "users/kamera"
+- else
+  = render "users/kameras"
