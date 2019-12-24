@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resources :cards, only: [:new, :create, :show, :destroy] do
       collection do
         post 'create'
+        post 'new'
         post 'show'
         get 'confirmation'
       end
