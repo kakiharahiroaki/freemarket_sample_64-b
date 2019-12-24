@@ -8,13 +8,17 @@
     %h2.l__single__head.registration 新規会員登録
     .l__single__inner.registration__form
       .l__single__content
-        .btn__default.btn__mail{href: "#"}
+        .btn__default.btn__mail
           %i.icon-mail
-          = link_to "メールアドレスで登録する", registration_signup_index_path
+          = fa_icon "envelope", class: "fontawesome_icon"
+          = link_to "メールアドレスで登録する", registration_signup_index_path, class:"signup__mail"
         %button#facebook__login.btn__default.btn__sns.btn__sns--facebook
           %i.icon-facebook
-          = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, method: :post
+          = fa_icon "facebook-square", class: "fontawesome_icon"
+          = link_to "Facebookで登録する", user_facebook_omniauth_authorize_path, class:"signup__facebook", method: :post
         %button#google__login.btn__default.btn__sns.btn__sns__google
-          = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post
+          %i.icon-google
+          = image_tag 'google_icon.png',class: "google"
+          = link_to "Googleで登録する", user_google_oauth2_omniauth_authorize_path, method: :post
 
   = render "shared/users/footer"
