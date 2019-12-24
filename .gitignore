@@ -29,3 +29,4 @@ config/secrets.yml
 
 
 /.env
+/config/credentials.yml.enc

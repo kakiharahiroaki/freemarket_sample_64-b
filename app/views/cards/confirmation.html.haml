@@ -11,9 +11,8 @@
           %ul.settings__payment__list
         %section.settings__add__card
           .single__content
-            %a.submit__button{href: "#"}
-              %i.icon-card
-              クレジットカードを追加する
+            .submit__button
+              = link_to "クレジットカードを追加する", new_card_path
         .settings__not__regist
           %a{href: "#", target: "_blank"}
             %span 支払い方法について
