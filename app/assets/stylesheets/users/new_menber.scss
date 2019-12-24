@@ -31,30 +31,36 @@
           .btn__default {
           border-radius: 4px;
           }
-          .btn__mail {
-          color: #fff;
-          text-decoration: none;
-          background-color: #ea352d;
-          }
-          a {
-            color: black;
-          }
+          
           .btn__sns {
           position: relative;
           }
 
-          .btn__sns--facebook {
-          margin: 16px 0 0;
-          background: #385185;
-          color: #fff;
+          .btn__mail {
+            text-decoration: none;
+            background-color: #ea352d;
+            }
+          .signup__mail{
+            color: #fff;
           }
+          .fontawesome_icon{
+            color:#fff;
+          }
+
+          .btn__sns--facebook {
+          background: #385185;
+          }
+          .signup__facebook{
+            color: #fff;
+          }
+          
           .btn__sns--google {
-          margin: 16px 0 0;
-          background: #fff url("#") no-repeat 3px top;
+          background: #fff  no-repeat 3px top;
           border: #979797 solid 1px;
           color: #333;
           }
           .btn__default {
+          margin: 16px 0 0;
           display: block;
           width: 100%;
           line-height: 48px;

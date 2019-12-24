@@ -18,13 +18,17 @@
         - if user_signed_in?
           %ul.header__navi
           %li.header__navi__link
-          = link_to "いいね！一覧", '#',class:"link"
-          %i.far.fa-heart
+          =fa_icon "heart", class:"hert_icon"
+          = link_to "いいね！一覧", '#',class:"good"
+          -# %i.far.fa-heart
+          =fa_icon "bell", class:"bell_icon"
           = link_to "お知らせ", "#" ,class:"menu"
-          %i.icon-bell
-          = link_to "やることリスト", "#" ,class:"link"
-          %i.icon-check
-          = link_to "マイページ", users_show_path ,class:"link"
+          -# %i.icon-bell
+          =fa_icon "check", class:"check_icon"
+          = link_to "やることリスト", "#" ,class:"list"
+          -# %i.icon-check
+          =fa_icon "user", class:"user_icon"
+          = link_to "マイページ", users_show_path ,class:"mypage"
         - else
           = link_to new_member_signup_index_path, class: "registration" do
             新規会員登録

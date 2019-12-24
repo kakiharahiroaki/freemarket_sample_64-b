@@ -16,12 +16,16 @@
           .header__bottom__right
             %ul.header__navi
             %li.header__navi__link
+            =fa_icon "heart", class:"hert_icon"
             = link_to "いいね！一覧", '#',class:"link"
-            %i.far.fa-heart
+            -# %i.far.fa-heart
+            =fa_icon "bell", class:"bell_icon"
             = link_to "お知らせ", "#" ,class:"menu"
-            %i.icon-bell
+            -# %i.icon-bell
+            =fa_icon "check", class:"check_icon"
             = link_to "やることリスト", "#" ,class:"link"
             %i.icon-check
+            =fa_icon "user", class:"user_icon"
             = link_to "マイページ", users_show_path ,class:"link"
   %nav.bread__list
     %ul
