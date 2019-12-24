@@ -27,28 +27,28 @@ class CardsController < ApplicationController
 
   def destroy
     
-     if  card.present?
+     if  @card.present?
       Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_PRIVATE_KEY)
-      customer = Payjp::Customer.retrieve(card.customer_id)
+      customer = Payjp::Customer.retrieve(@card.customer_id)
       customer.delete
-      card.delete
+      @card.delete
      end
       redirect_to action: "new"
   end
 
   def show
     
-    if card.blank?
+    if @card.blank?
       redirect_to action: "new" 
     else
       Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_PRIVATE_KEY)
-      customer = Payjp::Customer.retrieve(card.customer_id)
-      @default_card_information = customer.cards.retrieve(card.card_id)
+      customer = Payjp::Customer.retrieve(@card.customer_id)
+      @default_card_information = customer.cards.retrieve(@card.card_id)
     end
   end
   private
 
   def set_card
-    @card = Card.where(current_user.cards.first)
+    @card = current_user.card
   end
 end
