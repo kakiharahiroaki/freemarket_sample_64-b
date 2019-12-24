@@ -1,9 +1,8 @@
 class CardsController < ApplicationController
   require "payjp"
-  before_action :set_card
+  before_action :set_card, only: [:new, :show]
   def new
-    card = Card.where(user_id: current_user.id)
-    redirect_to action: "show" if card.exists?
+    redirect_to action: "show" if current_user.card.present?
   end
 
   def create
@@ -50,6 +49,6 @@ class CardsController < ApplicationController
   private
 
   def set_card
-    @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
+    card = Card.where(user_id: current_user.id).first
   end
 end
