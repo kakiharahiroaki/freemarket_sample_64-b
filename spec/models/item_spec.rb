@@ -71,15 +71,12 @@ describe Item do
         expect(item.errors[:description_of_item]).to include("is too long (maximum is 1000 characters)")
     end
 
-
-    #priceが9999999円以上の場合
     it "priceが9999999以上だと出品できないこと" do
         item = build(:item, price: 10000000)
         item.valid?
         expect(item.errors[:price]).to include("is not included in the list")
     end
 
-    #priceが300円以下の場合
     it "priceが300円以下だと出品できないこと" do
         item = build(:item, price: 299)
         item.valid?
