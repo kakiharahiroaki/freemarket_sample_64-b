@@ -1,117 +1,91 @@
 require 'rails_helper'
 
 describe Item do
-  describe '#create' do
-    it "全て揃っている時保存できる" do
-        item = build(:item)
-        expect(item).to be_valid
-    end
-    
-    #空の場合のテスト
-    # it "is invalid without a products" do
-    #     item = build(:item, products )
-    #     item.valid?
-    #     expect(item.errors[:products]).to include("を入力してください")
-    # end
+    describe '#create' do
 
-    it "is invalid without a products" do
+    it "productsが空では出品ができないこと" do
         item = build(:item, products: "")
         item.valid?
+        expect(item.errors[:products]).to include("can't be blank")
     end
 
-    it "is invalid without a description_of_item" do
+    it "description_of_itemが空では出品できないこと" do
         item = build(:item, description_of_item: "")
         item.valid?
+        expect(item.errors[:description_of_item]).to include("can't be blank")
     end
 
-    it "is invalid without a price" do
+    it "priceが空では出品できないこと" do
         item = build(:item, price: "")
         item.valid?
+        expect(item.errors[:price]).to include("can't be blank")
     end
 
-    it "is invalid without a size" do
+    it "sizeが空では出品できないこと" do
         item = build(:item, size: "")
         item.valid?
+        expect(item.errors[:size]).to include("can't be blank")
     end
 
-    it "is invalid without a shipping_date" do
+    it "shipping_dateが空では出品できないこと" do
         item = build(:item, shipping_date: "")
         item.valid?
+        expect(item.errors[:shipping_date]).to include("can't be blank")
     end
 
-    it "is invalid without a shipping_method" do
+    it "shipping_methodが空では出品できないこと" do
         item = build(:item, shipping_method: "")
         item.valid?
+        expect(item.errors[:shipping_method]).to include("can't be blank")
     end
 
-    it "is invalid without a postage" do
+    it "postageが空では出品できないこと" do
         item = build(:item, postage: "")
         item.valid?
+        expect(item.errors[:postage]).to include("can't be blank")
     end
 
-    it "is invalid without a shipping_origin" do
+    it "shipping_originが空では出品できないこと" do
         item = build(:item, shipping_origin: "")
         item.valid?
+        expect(item.errors[:shipping_origin]).to include("can't be blank")
     end
 
-    it "is invalid without a condition" do
-        item = build(:item, condition: "")
-        item.valid?
-    end
-
-    it "is invalid without a user_id" do
+    it "user_idが空では出品できないこと" do
         item = build(:item, user_id: "")
         item.valid?
+        expect(item.errors[:user_id]).to include("can't be blank")
     end
 
     
-    #nameの文字が40文字以上と以下の場合
-    it "is invalid products is too long maximum 40 characters" do
+    it "productsが40文字以上だと出品できないこと" do
         item = build(:item, products: "a" * 41)
         item.valid?
+        expect(item.errors[:products]).to include("is too long (maximum is 40 characters)")
     end
 
-    it "is valid with a products that has less than 40 characters" do
-        item = build(:item, products: "a" * 39)
-    end
 
-    #descriptionの文字が1000文字以上と以下の場合
-    it "is invalid description_of_item is too long maximum 40 characters" do
+    it "description_of_itemが1000文字以上だと出品できないこと" do
         item = build(:item, description_of_item: "a" * 1001)
         item.valid?
+        expect(item.errors[:description_of_item]).to include("is too long (maximum is 1000 characters)")
     end
 
-    it "is valid with a description_of_item that has less than 1000 characters" do
-        item = build(:item, description_of_item: "a" * 1000)
-    end
 
     #priceが9999999円以上の場合
-    it "is invalid price is too much maximum 9999999" do
+    it "priceが9999999以上だと出品できないこと" do
         item = build(:item, price: 10000000)
         item.valid?
-    end
-
-    #priceが9999999円の場合
-    it "is valid price is too much maximum 9999999" do
-        item = build(:item, price: 9999999)
+        expect(item.errors[:price]).to include("is not included in the list")
     end
 
     #priceが300円以下の場合
-    it "is invalid with a that has less than 300" do
+    it "priceが300円以下だと出品できないこと" do
         item = build(:item, price: 299)
         item.valid?
-        expect(item.errors[:price]).to include("は一覧にありません")
+        expect(item.errors[:price]).to include("is not included in the list")
     end
 
-    #priceが300円の場合
-    it "is valid with a that has less than 300" do
-        item = build(:item, price: 300)
-    end
 
-    #brandが無くても保存できる
-    it "is valid without a brand_id" do
-        item = build(:item, brand_id: "")
-
-    end
   end
 end
