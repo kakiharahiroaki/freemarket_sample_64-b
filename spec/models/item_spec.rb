@@ -8,10 +8,10 @@ describe Item do
     end
     
     #空の場合のテスト
-    # it "is invalid without a images" do
-    #     item = build(:item, images:[] )
+    # it "is invalid without a products" do
+    #     item = build(:item, products )
     #     item.valid?
-    #     expect(item.errors[:images]).to include("を入力してください")
+    #     expect(item.errors[:products]).to include("を入力してください")
     # end
 
     it "is invalid without a products" do
