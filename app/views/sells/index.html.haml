@@ -15,13 +15,18 @@
                 %h3.sells__sell__upload__head 出品画像
                 %span.sells__form__require  必須
                 %p 最大10枚までアップロードできます
-                .sells__sell__dropbox               
+                .sells__sell__dropbox.clearfix.state-image-number-10          
                   .sells__sell__upload__items__container
-                  = f.label :images, class: 'sells__sell__dropbox' do
-                    .sells__sell__upload__drop__box
-                      = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
-                      .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
-                      %i.sells__icon__camera  
+                    = f.label :images, class: 'sells__sell__dropbox'do
+                      .sells__sell__upload__drop__box.have-item-0
+                        -# = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
+                        = f.file_field :image, multiple: true, name:"item[item_images_attributes][][image]",class: 'sell-main__upload-drop-file',id: 'post_img_last',accept: "image/*",type:"file"
+                        -# = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file
+
+
+
+                        .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
+                        %i.sells__icon__camera 
 
               .sells__sell__content
                 .sells__sell__form__group

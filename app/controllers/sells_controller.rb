@@ -1,5 +1,5 @@
 class SellsController < ApplicationController
-
+  
   def new
     @item = Item.new
   end
