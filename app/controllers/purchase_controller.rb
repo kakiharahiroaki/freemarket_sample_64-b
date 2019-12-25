@@ -1,7 +1,7 @@
 class PurchaseController < ApplicationController
   require 'payjp'
   before_action :set_card
-  before_action :set_item, only: [:index, :pay]
+  before_action :set_item
   before_action :address_info
   before_action :full_name
   def index
@@ -30,7 +30,8 @@ class PurchaseController < ApplicationController
   end
 
   def done
-    
+    customer = Payjp::Customer.retrieve(@card.customer_id)
+    @default_card_information = customer.cards.retrieve(@card.card_id)
   end
   
   private
