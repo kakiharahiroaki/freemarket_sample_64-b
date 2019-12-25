@@ -2,8 +2,8 @@ class PurchaseController < ApplicationController
   require 'payjp'
   before_action :set_card
   before_action :set_item
-  before_action :address_info
-  before_action :full_name
+  before_action :address_info, only: [:index, :done]
+  before_action :full_name, only: [:index, :done]
   def index
     # blank?でcardが空かどうか判定
     if @card.blank?
@@ -25,7 +25,7 @@ class PurchaseController < ApplicationController
     :amount => @item.price, #支払金額を入力（
     :customer => @card.customer_id, #顧客ID
     :currency => 'jpy', #日本円
-  )
+    )
   redirect_to action: 'done' #完了画面に移動
   end
 
