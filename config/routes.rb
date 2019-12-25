@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root'items#index'
   get "/items/show", to: "items#show"
@@ -37,6 +36,13 @@ Rails.application.routes.draw do
         post 'new'
         post 'show'
         get 'confirmation'
+      end
+    end
+    resources :purchase, only: [:index] do
+      member do
+        get 'index'
+        post 'pay'
+        get 'done'
       end
     end
   end

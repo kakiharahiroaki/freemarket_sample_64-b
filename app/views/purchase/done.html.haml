@@ -1,0 +1,46 @@
+.header--product
+  = image_tag "fmarket_logo_red.svg", size: "134x36"
+.product__content
+  .product__content__header
+    .product__content__header__comment
+      発送をお待ちください
+    .product__content__header--notification
+      出品者からの発送通知をお待ちください
+  .product__content--done
+    .product__content--done__comment
+      購入が完了しました
+  .product__content__image
+    = image_tag @item.images[0], class: "item__image", size: "128x128"
+    .product__content__image--name
+      = @item.products
+  .product__content--price
+    ¥
+    = @item.price
+  .product__content--address
+    .product__content--address__text
+      配送先
+    = @address.postcode
+    %br 
+    = @address.city
+    = @address.block
+    = @address.building
+    %br 
+    = @full_name
+  .product__content--card
+    .product__content--card__text
+      支払い方法
+    = "**** **** **** " + @default_card_information.last4
+    - exp_month = @default_card_information.exp_month.to_s
+    - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+    %br
+    = exp_month + " / " + exp_year
+  .product__content__end
+    .product__content__end__header
+      発送通知後の流れ
+    商品を受け取ったら
+    %br
+    出品者の評価をしましょう
+    %br
+    = link_to "#" do
+      マイページへ戻る
+      
