@@ -112,15 +112,7 @@
                 color: red;
                 font-size:14px;
               }
-              .button__default {
-                border: 1px solid #888;
-                background-color: #888;
-                color: white;
-                display: block;
-                width:100%;
-                line-height: 48px;
-                font-size:14px;
-              }
+              
               .no__app-text {
                 margin-top: 40px;
               }
@@ -172,4 +164,13 @@
       font-size: 13px;
     }
   }
+}
+.button__default {
+  border: 1px solid #888;
+  background-color: #888;
+  color: white;
+  display: block;
+  width:100%;
+  line-height: 48px;
+  font-size:14px;
 }

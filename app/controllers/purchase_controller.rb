@@ -1,6 +1,9 @@
 class PurchaseController < ApplicationController
   require 'payjp'
   before_action :set_card
+  before_action :set_item, only: [:index, :pay]
+  before_action :address_info
+  before_action :full_name
   def index
     # blank?でcardが空かどうか判定
     if @card.blank?
@@ -12,6 +15,7 @@ class PurchaseController < ApplicationController
       customer = Payjp::Customer.retrieve(@card.customer_id)
       #保管したカードIDでpayjpから情報取得、カード情報表示のためインスタンス変数に代入
       @default_card_information = customer.cards.retrieve(@card.card_id)
+      
     end
   end
 
@@ -19,34 +23,32 @@ class PurchaseController < ApplicationController
     Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_PRIVATE_KEY)
     Payjp::Charge.create(
     :amount => @item.price, #支払金額を入力（
-    :customer => card.customer_id, #顧客ID
+    :customer => @card.customer_id, #顧客ID
     :currency => 'jpy', #日本円
   )
   redirect_to action: 'done' #完了画面に移動
   end
 
-  
+  def done
+    
+  end
   
   private
 
   def set_card
     @card = current_user.card
   end
-  
-  def item_params
-    params.require(:item).permit(
-      :products,
-      :condition,
-      :description_of_item,
-      :price,
-      :size,
-      :shipping_date,
-      :shipping_method,
-      :postage,
-      :shipping_origin,
-      images: []
-    ).merge(user_id: current_user.id)
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
-  
+  def address_info
+    @address = Address.find(current_user.id)
+  end
+
+  def full_name
+    @full_name = current_user.family_name_kanji + current_user.first_name_kanji
+  end
+
 end
