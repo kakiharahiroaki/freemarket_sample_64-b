@@ -38,7 +38,7 @@
                   %option{value: "11"}11
                   %option{value: "12"}12
                 %i.icon-arrow-bottom
-                %span 月
+                %span_span 月
               .select-wrap.half
                 = f.select :exp_year, class:"select-default" do
                   %option{value: ""} --
@@ -54,7 +54,7 @@
                   %option{value: "2028"}28
                   %option{value: "2029"}29
                 %i.icon-arrow-bottom
-                %span 年
+                %span_span 年
               %ul#expire-mm-error-wrapper.has-error-text
               %ul#expire-yy-error-wrapper.has-error-text
             .form-group
@@ -65,7 +65,7 @@
               %ul#security-code-error-wrapper.has-error-text
               .signup-seqcode
                 .signup-seqcode-text{"data-js":"show-tips-toggle"}
-                  %span.form-question> ?
+                  -# %span.form-question> ?
                   カード裏面の番号とは？
                 .signup-seqcode-info{"data-js":"show-tips-content"}
                   カードの裏面をご参照ください。
