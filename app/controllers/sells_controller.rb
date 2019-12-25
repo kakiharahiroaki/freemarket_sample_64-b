@@ -27,8 +27,6 @@ class SellsController < ApplicationController
       :shipping_method,
       :postage,
       :shipping_origin,
-      # :brand_id,
-      # :category_id,
       images: []
     ).merge(user_id: current_user.id)
   end
