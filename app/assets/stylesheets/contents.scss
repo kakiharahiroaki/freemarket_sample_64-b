@@ -76,9 +76,8 @@
     color: white;
     vertical-align: bottom;
     line-height: 0em;
-    background-color: black;
-    background-image: url("イギリス.jpg");
     background-size: cover;
+    background-image: url("イギリス.jpg");
   }
   
   &__bottom__image__detail{
@@ -86,7 +85,6 @@
     justify-content: space-between;
     width: 750px;
     margin: 0 auto;
-    
   }
   &__bottom__left__text{
     font-size: 24px;
