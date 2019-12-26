@@ -6,7 +6,8 @@ class SellsController < ApplicationController
   
   def create
     
-    @item = Item.new(item_params) 
+    @item = Item.new(item_params)
+    binding.pry
     if @item.save!
       redirect_to root_path, notice: '商品を出品しました'
     else
