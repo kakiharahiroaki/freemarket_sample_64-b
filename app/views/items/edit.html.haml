@@ -21,6 +21,17 @@
                     .sells__sell__upload__drop__box
                       = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
                       .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
+                      .images__field.clearfix
+                        .field
+                          = f.label :images 
+                          = f.file_field :images, multiple: true, class: "file__input" 
+                          -if @item.images.attached? 
+                            - @item.images.each do |image|
+                              = image_tag image.variant(resize: "150x150"), class: "edit__item__photo"
+                              = f.hidden_field :images , name: "item[images][]", value: "#{image.blob.id}", style: "display: none;", class: "item__images__input"
+                              = link_to "編集", "", class: "btn__edit"
+                              = file_field "edit-image","" , class: "edit__image__file__input file__input", style: "display: none;"
+                              = link_to "削除", "", class: "btn__delete"
                       %i.sells__icon__camera  
 
               .sells__sell__content

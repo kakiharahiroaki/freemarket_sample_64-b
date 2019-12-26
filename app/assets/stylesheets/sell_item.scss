@@ -27,7 +27,7 @@
       justify-content: center;
     }
     &--status li {
-      width: 33%;
+      width: 33.3%;
       display: inline-block;
       text-align: center;
       font-size: 14px;
@@ -53,11 +53,13 @@
     }
    .sell__photo {
      position: absolute;
-     left: 550px;
-     top: 360px;
+     padding-left: 10px;
+     width: 60px;
+     height: 60px;
    }
     &--body {
       margin:0 40px 0 68px;
+      width: 20%;
     }
     .sell__status {
       margin:8px 0 0 0;

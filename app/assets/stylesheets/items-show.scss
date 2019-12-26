@@ -156,9 +156,11 @@
     .item__explanation {
       line-height: 1.5;
       font-size: 18px;
-      white-space: pre-line;
+      padding:32px 0 0;
+      // white-space: pre-line;
       &__inner {
         padding: 0;
+        white-space: pre-wrap;
       }
     
     }

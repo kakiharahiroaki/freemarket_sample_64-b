@@ -16,14 +16,16 @@
             =link_to "売却済み" , "#" ,data: {toggle: "tab"}
       .user__sell__myitem--tab
         %ul#transaction__now.active
-          %li
-            =link_to "", "#", class: "sell__item__link" 
-            = image_tag  "ファーコート.jpg", class: "sell__photo",size: "48x48"
-            .user__sell__myitem--body
-              .user__sell__myitem--body--text ファーコートです
-              .user__sell__myitem--body--status
-                .sell__status 
-                  =link_to "出品中" , item_path(@item), class: "sell__status "
+          - @items.each do |item|
+            %li
+              =link_to "", "#", class: "sell__item__link" 
+              = image_tag  item.images[0], class: "sell__photo",size: "48x48"
+              .user__sell__myitem--body
+                .user__sell__myitem--body--text 
+                  = item.description_of_item
+                  .user__sell__myitem--body--status
+                    .sell__status 
+                      =link_to "出品中" , item_path(item.id), class: "sell__status "
                 
     =render "users/kamera"
   =render "users/left_side_bar"

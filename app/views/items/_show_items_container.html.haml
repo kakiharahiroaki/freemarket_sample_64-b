@@ -14,10 +14,11 @@
         .photo__nav.disabled    
         .photo__dots
           .photo__dot.active
+          - if user_signed_in? && current_user.id != @item.user.id
             .photo__dot__inner
-            -if @item.images.attached?
-              - @item.images.each do |image|  
-                =image_tag image, class: "photo__dot__inner"
+              -if @item.images.attached?
+                - @item.images.each do |image|  
+                  =image_tag image, class: "photo__dot__inner"
        
     .item__table
       %table
@@ -90,8 +91,8 @@
     =link_to "購入画面に進む", buys_index_path, class: "item__btn"
     %p.error__message この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
   .item__explanation
-  %p.item__explanation__inner 
-  = @item.description_of_item
+    %p.item__explanation__inner 
+    = @item.description_of_item
   - if user_signed_in? && current_user.id != @item.user.id 
     .item__btn__content
       .item__btn__left

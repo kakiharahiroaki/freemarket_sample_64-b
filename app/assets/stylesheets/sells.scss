@@ -48,6 +48,21 @@
             left:50%;
             display: block;
           }
+          .edit__item__photo {
+            display: block;
+          }
+          .btn__edit {
+            width: 15%;
+            display: inline-block;
+            padding:10px;
+            text-align: center;
+          }
+          .btn__delete {
+            width: 15%;
+            display: inline-block;
+            padding:10px;
+            text-align: center;
+          }
         }
         
       }

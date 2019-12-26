@@ -36,155 +36,155 @@
                   .pricetag
                     %span.price{"aria-label" => "Price"}
                       = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
-    .contents__main__top
-      %h3 メンズ新着アイテム
-      .contents__list
-        = link_to "#", target: "_blank" do
-          もっと見る
-    .contents--product
-      .product__image
-        - @items.each do |item|
-          .product__img
-            .product__imgview
-              = link_to item_path(item.id), target: "_blank" do
-                = image_tag item.images[0], class: "product__image", size: "184x188"
-              %figure.explanation
-                %figcaption.photo__contents
-                  .product__view__name
-                    = item.products
-                  .pricetag
-                    %span.price{"aria-label" => "Price"}
-                      = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
-    .contents__main__top
-      %h3 家電・スマホ・カメラ新着アイテム
-      .contents__list
-        = link_to "#", target: "_blank" do
-          もっと見る
-    .contents--product
-      .product__image
-        - @items.each do |item|
-          .product__img
-            .product__imgview
-              = link_to item_path(item.id), target: "_blank" do
-                = image_tag item.images[0], class: "product__image", size: "184x188"
-              %figure.explanation
-                %figcaption.photo__contents
-                  .product__view__name
-                    = item.products
-                  .pricetag
-                    %span.price{"aria-label" => "Price"}
-                      = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
-    .contents__main__top
-      %h3 おもちゃ・ホビー・グッズ新着アイテム
-      .contents__list
-        = link_to "#", target: "_blank" do
-          もっと見る
-    .contents--product
-      .product__image
-        - @items.each do |item|
-          .product__img
-            .product__imgview
-              = link_to item_path(item.id), target: "_blank" do
-                = image_tag item.images[0], class: "product__image", size: "184x188"
-              %figure.explanation
-                %figcaption.photo__contents
-                  .product__view__name
-                    = item.products
-                  .pricetag
-                    %span.price{"aria-label" => "Price"}
-                      = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
-  .contents__category__center
-    %h2 人気のブランド
-    .contents__group
-      .contents__list
-        = link_to "#" do
-          シャネル
-      .contents__list
-        = link_to "#" do
-          ルイヴィトン
-      .contents__list
-        = link_to "#" do
-          シュプリーム
-      .contents__list
-        = link_to "#" do
-          ナイキ
-  .contents__main
-    .contents__main__top
-      %h3 シャネル新着アイテム
-      .contents__list
-        = link_to "#", target: "_blank" do
-          もっと見る
-    .contents--product
-      .product__image
-        - @items.each do |item|
-          .product__img
-            .product__imgview
-              = link_to item_path(item.id), target: "_blank" do
-                = image_tag item.images[0], class: "product__image", size: "184x188"
-              %figure.explanation
-                %figcaption.photo__contents
-                  .product__view__name
-                    = item.products
-                  .pricetag
-                    %span.price{"aria-label" => "Price"}
-                      = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
-    .contents__main__top
-      %h3 ルイヴィトン新着アイテム
-      .contents__list
-        = link_to "#", target: "_blank" do
-          もっと見る
-    .contents--product
-      .product__image
-        - @items.each do |item|
-          .product__img
-            .product__imgview
-              = link_to item_path(item.id), target: "_blank" do
-                = image_tag item.images[0], class: "product__image", size: "184x188"
-              %figure.explanation
-                %figcaption.photo__contents
-                  .product__view__name
-                    = item.products
-                  .pricetag
-                    %span.price{"aria-label" => "Price"}
-                      = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
-    .contents__main__top
-      %h3 シュプリーム新着アイテム
-      .contents__list
-        = link_to "#", target: "_blank" do
-          もっと見る
-    .contents--product
-      .product__image
-        - @items.each do |item|
-          .product__img
-            .product__imgview
-              = link_to item_path(item.id), target: "_blank" do
-                = image_tag item.images[0], class: "product__image", size: "184x188"
-              %figure.explanation
-                %figcaption.photo__contents
-                  .product__view__name
-                    = item.products
-                  .pricetag
-                    %span.price{"aria-label" => "Price"}
-                      = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
-    .contents__main__top
-      %h3 ナイキ新着アイテム
-      .contents__list
-        = link_to "#", target: "_blank" do
-          もっと見る
-    .contents--product
-      .product__image
-        - @items.each do |item|
-          .product__img
-            .product__imgview
-              = link_to item_path(item.id), target: "_blank" do
-                = image_tag item.images[0], class: "product__image", size: "184x188"
-              %figure.explanation
-                %figcaption.photo__contents
-                  .product__view__name
-                    = item.products
-                  .pricetag
-                    %span.price{"aria-label" => "Price"}
-                      = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+    -# .contents__main__top
+    -#   %h3 メンズ新着アイテム
+    -#   .contents__list
+    -#     = link_to "#", target: "_blank" do
+    -#       もっと見る
+    -# .contents--product
+    -#   .product__image
+    -#     - @items.each do |item|
+    -#       .product__img
+    -#         .product__imgview
+    -#           = link_to item_path(item.id), target: "_blank" do
+    -#             = image_tag item.images[0], class: "product__image", size: "184x188"
+    -#           %figure.explanation
+    -#             %figcaption.photo__contents
+    -#               .product__view__name
+    -#                 = item.products
+    -#               .pricetag
+    -#                 %span.price{"aria-label" => "Price"}
+    -#                   = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+    -# .contents__main__top
+    -#   %h3 家電・スマホ・カメラ新着アイテム
+    -#   .contents__list
+    -#     = link_to "#", target: "_blank" do
+    -#       もっと見る
+    -# .contents--product
+    -#   .product__image
+    -#     - @items.each do |item|
+    -#       .product__img
+    -#         .product__imgview
+    -#           = link_to item_path(item.id), target: "_blank" do
+    -#             = image_tag item.images[0], class: "product__image", size: "184x188"
+    -#           %figure.explanation
+    -#             %figcaption.photo__contents
+    -#               .product__view__name
+    -#                 = item.products
+    -#               .pricetag
+    -#                 %span.price{"aria-label" => "Price"}
+    -#                   = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+  -#   .contents__main__top
+  -#     %h3 おもちゃ・ホビー・グッズ新着アイテム
+  -#     .contents__list
+  -#       = link_to "#", target: "_blank" do
+  -#         もっと見る
+  -#   .contents--product
+  -#     .product__image
+  -#       - @items.each do |item|
+  -#         .product__img
+  -#           .product__imgview
+  -#             = link_to item_path(item.id), target: "_blank" do
+  -#               = image_tag item.images[0], class: "product__image", size: "184x188"
+  -#             %figure.explanation
+  -#               %figcaption.photo__contents
+  -#                 .product__view__name
+  -#                   = item.products
+  -#                 .pricetag
+  -#                   %span.price{"aria-label" => "Price"}
+  -#                     = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+  -# .contents__category__center
+  -#   %h2 人気のブランド
+  -#   .contents__group
+  -#     .contents__list
+  -#       = link_to "#" do
+  -#         シャネル
+  -#     .contents__list
+  -#       = link_to "#" do
+  -#         ルイヴィトン
+  -#     .contents__list
+  -#       = link_to "#" do
+  -#         シュプリーム
+  -#     .contents__list
+  -#       = link_to "#" do
+  -#         ナイキ
+  -# .contents__main
+  -#   .contents__main__top
+  -#     %h3 シャネル新着アイテム
+  -#     .contents__list
+  -#       = link_to "#", target: "_blank" do
+  -#         もっと見る
+  -#   .contents--product
+  -#     .product__image
+  -#       - @items.each do |item|
+  -#         .product__img
+  -#           .product__imgview
+  -#             = link_to item_path(item.id), target: "_blank" do
+  -#               = image_tag item.images[0], class: "product__image", size: "184x188"
+  -#             %figure.explanation
+  -#               %figcaption.photo__contents
+  -#                 .product__view__name
+  -#                   = item.products
+  -#                 .pricetag
+  -#                   %span.price{"aria-label" => "Price"}
+  -#                     = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+  -#   .contents__main__top
+  -#     %h3 ルイヴィトン新着アイテム
+  -#     .contents__list
+  -#       = link_to "#", target: "_blank" do
+  -#         もっと見る
+  -#   .contents--product
+  -#     .product__image
+  -#       - @items.each do |item|
+  -#         .product__img
+  -#           .product__imgview
+  -#             = link_to item_path(item.id), target: "_blank" do
+  -#               = image_tag item.images[0], class: "product__image", size: "184x188"
+  -#             %figure.explanation
+  -#               %figcaption.photo__contents
+  -#                 .product__view__name
+  -#                   = item.products
+  -#                 .pricetag
+  -#                   %span.price{"aria-label" => "Price"}
+  -#                     = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+  -#   .contents__main__top
+  -#     %h3 シュプリーム新着アイテム
+  -#     .contents__list
+  -#       = link_to "#", target: "_blank" do
+  -#         もっと見る
+  -#   .contents--product
+  -#     .product__image
+  -#       - @items.each do |item|
+  -#         .product__img
+  -#           .product__imgview
+  -#             = link_to item_path(item.id), target: "_blank" do
+  -#               = image_tag item.images[0], class: "product__image", size: "184x188"
+  -#             %figure.explanation
+  -#               %figcaption.photo__contents
+  -#                 .product__view__name
+  -#                   = item.products
+  -#                 .pricetag
+  -#                   %span.price{"aria-label" => "Price"}
+  -#                     = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
+  -#   .contents__main__top
+  -#     %h3 ナイキ新着アイテム
+  -#     .contents__list
+  -#       = link_to "#", target: "_blank" do
+  -#         もっと見る
+  -#   .contents--product
+  -#     .product__image
+  -#       - @items.each do |item|
+  -#         .product__img
+  -#           .product__imgview
+  -#             = link_to item_path(item.id), target: "_blank" do
+  -#               = image_tag item.images[0], class: "product__image", size: "184x188"
+  -#             %figure.explanation
+  -#               %figcaption.photo__contents
+  -#                 .product__view__name
+  -#                   = item.products
+  -#                 .pricetag
+  -#                   %span.price{"aria-label" => "Price"}
+  -#                     = "¥#{item.price.to_s(:delimited, delimiter: ',')}"
 -# イギリスのところ
 %aside.contents__bottom__image
   .contents__bottom__image__detail

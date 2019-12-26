@@ -7,14 +7,18 @@ class ItemsController < ApplicationController
   end
   
   def show
+   
     @items = Item.where(user_id: @item.user.id).includes(:user).limit(6).order("created_at DESC")
   end
 
 
   def edit
+    
   end
 
   def update
+    
+    @item.images.detach 
     if @item.update(item_params)
       redirect_to item_path
     else
