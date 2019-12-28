@@ -15,6 +15,7 @@ class SellsController < ApplicationController
     
   end
 
+   
     private
   def item_params
     params.permit(
@@ -27,6 +28,8 @@ class SellsController < ApplicationController
       :shipping_method,
       :postage,
       :shipping_origin,
+      :brand,
+      :category,
       images: []
     ).merge(user_id: current_user.id)
   end

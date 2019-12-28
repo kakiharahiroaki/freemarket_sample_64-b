@@ -30,6 +30,21 @@ class ItemsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def stopExhibit
+    @item = Item.find(params[:id])
+    @item.update(status: "出品停止中")
+    redirect_to item_path
+  end
+
+  def resumeExhibit
+    @item = Item.find(params[:id])
+    @item.update(status: "出品中")
+    redirect_to item_path
+  end
+
+
+  
   
   private
   def item_params
@@ -43,8 +58,8 @@ class ItemsController < ApplicationController
       :shipping_method,
       :postage,
       :shipping_origin,
-      # :brand_id,
-      # :category_id,
+      :brand,
+      :category,
       images: []
     ).merge(user_id: current_user.id)
   end
@@ -52,5 +67,8 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
+
+  
+
   
 end

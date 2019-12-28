@@ -44,24 +44,24 @@
                 %h3.sells__sell__sub__head 商品の詳細
                 .sells__sell__form__box
                   .sells__sell__form__group
-                    = f.label :category_id do
+                    = f.label :category do
                       カテゴリー
                     %span.sells__form__require 必須
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         -# %select.sells__select__default
-                        = f.select :category_id, Item.categories.keys.to_a, { autofocus: 'true'}, {class:"sells__select__default"}
+                        = f.select :category, Item.categories.keys.to_a, { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
-                      .sells__select__wrap
-                        %i.sells__icon__arrow
-                        -# %select.sells__select__default
-                        = f.select :category_id, [['選択してください',1],['トップス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
-                        .sells__error__message 選択してください
-                      .sells__select__wrap
-                        %i.sells__icon__arrow
-                        -# %select.sells__select__default
-                        = f.select :category_id, [['選択してください',1],['ハイヒール/パンプス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                      -# .sells__select__wrap
+                      -#   %i.sells__icon__arrow
+                      -#   -# %select.sells__select__default
+                      -#   = f.select :category, [['選択してください',1],['トップス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                      -#   .sells__error__message 選択してください
+                      -# .sells__select__wrap
+                      -#   %i.sells__icon__arrow
+                      -#   -# %select.sells__select__default
+                      -#   = f.select :category, [['選択してください',1],['ハイヒール/パンプス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                   .sells__sell__form__group
                     %label サイズ
                     %span.sells__form__require 必須
@@ -72,11 +72,11 @@
                         = f.select :size, Item.sizes.keys.to_a, {},autofocus: 'true', class:"sells__select__default"
                         .sells__error__message 選択してください
                   .sells__sell__form__group
-                    = f.label :brand_id do
+                    = f.label :brand do
                       ブランド
                     %span.sells__form__require--gray 任意
                     .sells__input
-                      = f.text_field :brand_id, { class:'sells__input__default', placeholder: '例）シャネル' }
+                      = f.text_field :brand, { class:'sells__input__default', placeholder: '例）シャネル' }
                   .sells__sell__form__group
                     = f.label :condition do
                       商品の状態
@@ -158,6 +158,7 @@
                     .sells__btn
 
                     = f.submit '出品する', class: 'sells__btn__bottom sell-main__btn-default sell-main__btn-red'
+
                     =link_to "もどる", users_show_path, class: "sells__btn__bottom__back"
 
               

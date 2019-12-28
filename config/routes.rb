@@ -10,7 +10,12 @@ Rails.application.routes.draw do
   get "/users/destroy", to: "users#destroy"
   get  "/users/show", to: "users#show"
   
-  resources :items
+  resources :items  do
+    member do
+      get :stopExhibit
+      get :resumeExhibit
+    end
+  end
   resources :sells, only: :create
   resources :users, only: [:create, :destroy, :show, :update] do
     collection do

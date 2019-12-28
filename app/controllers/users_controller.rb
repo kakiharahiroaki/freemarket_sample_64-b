@@ -13,6 +13,6 @@ class UsersController < ApplicationController
     end
 
     def sell_item
-        @item = Item.where(user_id: current_user.id)
+        @items = Item.where(user_id: current_user.id)
     end
 end
