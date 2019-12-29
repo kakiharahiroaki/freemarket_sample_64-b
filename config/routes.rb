@@ -1,16 +1,22 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root'items#index'
+  get "/items/show", to: "items#show"
   get  "/buys/index", to: "buys#index"
+  get "/sells/index", to: "sells#index"
   get "/cards/index", to: "cards#index"
+  get "/users/create", to: "users#create"
+  get "/users/update", to: "users#update"
+  get "/users/destroy", to: "users#destroy"
+  get  "/users/show", to: "users#show"
   
   resources :items  do
     member do
-      get :stopExhibit
-      get :resumeExhibit
-    end
+     get :stopExhibit
+     get :resumeExhibit
+   end
   end
-  resources :sells, only: [:index, :create]
+  resources :sells, only: :create
   resources :users, only: [:create, :destroy, :show, :update] do
     collection do
       get 'create'
