@@ -21,6 +21,12 @@ describe Item do
         expect(item.errors[:price]).to include("can't be blank")
     end
 
+    it "categoryが空では出品できないこと" do
+        item = build(:item, category: "")
+        item.valid?
+        expect(item.errors[:category]).to include("can't be blank")
+    end
+
     it "sizeが空では出品できないこと" do
         item = build(:item, size: "")
         item.valid?
