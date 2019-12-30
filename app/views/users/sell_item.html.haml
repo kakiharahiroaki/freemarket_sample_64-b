@@ -15,15 +15,17 @@
           %h3
             =link_to "売却済み" , "#" ,data: {toggle: "tab"}
       .user__sell__myitem--tab
+      - @items.each do |item|
         %ul#transaction__now.active
           %li
             =link_to "", "#", class: "sell__item__link" 
-            = image_tag  "ファーコート.jpg", class: "sell__photo",size: "48x48"
+            = image_tag  item.images[0], class: "sell__photo",size: "48x48"
             .user__sell__myitem--body
-              .user__sell__myitem--body--text ファーコートです
+              .user__sell__myitem--body--text 
+              = item.products
               .user__sell__myitem--body--status
                 .sell__status 
-                  =link_to "出品中" , item_path(@item), class: "sell__status "
+                  =link_to item.status , item_path(item), class: "sell__status "
                 
     =render "users/kamera"
   =render "users/left_side_bar"

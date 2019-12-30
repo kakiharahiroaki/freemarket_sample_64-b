@@ -44,39 +44,35 @@
                 %h3.sells__sell__sub__head 商品の詳細
                 .sells__sell__form__box
                   .sells__sell__form__group
-                    = f.label :category_id do
+                    = f.label :category do
                       カテゴリー
                     %span.sells__form__require 必須
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        -# %select.sells__select__default
-                        = f.select :category_id, Item.categories.keys.to_a, { autofocus: 'true'}, {class:"sells__select__default"}
+                        = f.select :category, Item.categories.keys.to_a, { autofocus: 'true'}, {class:"sells__select__default"}
                         .sells__error__message 選択してください
-                      .sells__select__wrap
-                        %i.sells__icon__arrow
-                        -# %select.sells__select__default
-                        = f.select :category_id, [['選択してください',1],['トップス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
-                        .sells__error__message 選択してください
-                      .sells__select__wrap
-                        %i.sells__icon__arrow
-                        -# %select.sells__select__default
-                        = f.select :category_id, [['選択してください',1],['ハイヒール/パンプス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                      -# .sells__select__wrap
+                      -#   %i.sells__icon__arrow
+                      -#   = f.select :category, [['選択してください',1],['トップス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
+                      -#   .sells__error__message 選択してください
+                      -# .sells__select__wrap
+                      -#   %i.sells__icon__arrow
+                      -#   = f.select :category, [['選択してください',1],['ハイヒール/パンプス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
                   .sells__sell__form__group
                     %label サイズ
                     %span.sells__form__require 必須
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        -# %select.sells__select__default
                         = f.select :size, Item.sizes.keys.to_a, {},autofocus: 'true', class:"sells__select__default"
                         .sells__error__message 選択してください
                   .sells__sell__form__group
-                    = f.label :brand_id do
+                    = f.label :brand do
                       ブランド
                     %span.sells__form__require--gray 任意
                     .sells__input
-                      = f.text_field :brand_id, { class:'sells__input__default', placeholder: '例）シャネル' }
+                      = f.text_field :brand, { class:'sells__input__default', placeholder: '例）シャネル' }
                   .sells__sell__form__group
                     = f.label :condition do
                       商品の状態
@@ -84,7 +80,6 @@
                     .sells__select
                       .sells__select__wrap
                         %i.sells__icon__arrow
-                        -# %select.sells__select__default
                         = f.select :condition, Item.conditions.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"                       
                         .sells__error__message 選択してください
               .sells__sell__content.clearfix
@@ -100,7 +95,6 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          -# %select.sells__select__default
                           = f.select :postage, Item.postages.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
                           .sells__error__message 選択してください
                     .sells__sell__form__group
@@ -110,7 +104,6 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          -# %select.sells__select__default
                           = f.select :shipping_method, Item.shipping_methods.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
                           .sells__error__message 選択してください
                     .sells__sell__form__group
@@ -120,7 +113,6 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          -# %select.sells__select__default
                           = f.select :shipping_origin, Item.shipping_origins.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
                           .sells__error__message 選択してください
                     .sells__sell__form__group
@@ -130,7 +122,6 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          -# %select.sells__select__default
                           = f.select :shipping_date, Item.shipping_dates.keys.to_a, {},  autofocus: 'true' , class:"sells__select__default"
                           .sells__error__message 選択してください
               .sells__sell__content.clearfix
@@ -146,7 +137,6 @@
                           .sells__right 
                             %span
                             = f.text_field :price, { id: 'sells__price', class:'sells__input__default', placeholder: " 例）300" } 
-                            -# %input#sells__price.sells__input__default{type: "text", placeholder: " 例）300" }
                             .sells__error__message.error__price 300以上9999999以下で入力してください
 
                       %li.sells__price.clearfix
@@ -156,11 +146,8 @@
                         .sells__left 販売利益
                         .sells__right.sells__right2#price -
                     .sells__btn
-
                     = f.submit '出品する', class: 'sells__btn__bottom sell-main__btn-default sell-main__btn-red'
                     =link_to "もどる", users_show_path, class: "sells__btn__bottom__back"
-
-              
                   .sells__sell__btn__box
                     %p
                       禁止されている
@@ -174,10 +161,6 @@
                       などの販売は犯罪であり、法律により処罰される可能性があります。また、出品を持ちまして
                       =link_to "加盟店規約" , "#", class: "sells__text__link"
                       に同意したことになります。
-
-
-
-
   %footer.content__footer
     %nav
       %ul.footer__nav

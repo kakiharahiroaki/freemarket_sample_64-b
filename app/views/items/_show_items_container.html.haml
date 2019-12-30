@@ -24,7 +24,7 @@
         %tr
           %th 出品者
           %td
-            =link_to @item.user.nickname, users_show_path, class: "table__link"
+            =link_to @item.user.nickname, users_path, class: "table__link"
             .item__user__face 
               .item__user__face__icon
                 %i.icon__laugh
@@ -41,13 +41,13 @@
         %tr
           %th カテゴリー
           %td
-            =link_to "レディース" , "#" , class: "table__link"
+            =link_to @item.category , "#" , class: "table__link"
             =link_to "トップス" , "#", class: "table__link"
             =link_to "ニット/セーター" , "#", class: "table__link"
         %tr
           %th ブランド
           %td 
-            =link_to "ノーリーズソフィ", "#",class: "table__link"
+            =link_to @item.brand, "#",class: "table__link"
         %tr
           %th 商品のサイズ
           %td 
@@ -84,7 +84,10 @@
       %p.text__center or
       %form
         %input{type: "hidden"}
-        %button.btn__default.btn__gray{type: "submit"} 出品を停止する   
+      - if user_signed_in? && @item.status == "出品中"
+        = link_to "出品を一旦停止する", stopExhibit_item_path(@item), class: "btn__default btn__gray" 
+      - else 
+        = link_to "出品を再開", resumeExhibit_item_path(@item) , class: "btn__default btn__red"  
       = link_to 'この商品を削除する', item_path(@item.id), class:"btn__default btn__gray", method: :delete
   -else
     =link_to "購入画面に進む", purchase_path(@item.id), class: "item__btn"
