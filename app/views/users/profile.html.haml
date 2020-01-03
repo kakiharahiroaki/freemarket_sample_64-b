@@ -1,4 +1,4 @@
-- breadcrumb :user_update
+- breadcrumb :user_profile
 =render "users/header"
 .content__all__view.clearfix
   .main__profile
@@ -9,7 +9,7 @@
         .profile__main
           %figure.profile__main__figure
             = image_tag "プロフィール.jpg", size: "60x60"
-          %input.profile__main__input{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: "永瀬翔吾"}/
+          %input.profile__main__input{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: @user.nickname}/
         .profile__main__content
           %textarea.extarea__main{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
           %input.extarea__main__input{name: "after_save_callback", type: "hidden", value: "#"}/

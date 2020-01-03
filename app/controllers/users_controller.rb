@@ -1,18 +1,28 @@
 
 class UsersController < ApplicationController
-    def show
-    end
+    before_action :set_user , only: [:personal,:profile,:mypage]
 
-    def create
+    def personal
     end
    
-    def destroy
+
+    def profile
     end
 
-    def update
+    def mypage
+    end
+
+    def logout
     end
 
     def sell_item
         @items = Item.where(user_id: current_user.id)
     end
+
+    private
+
+    def set_user
+        @user = User.find(params[:id])
+    end
+
 end
