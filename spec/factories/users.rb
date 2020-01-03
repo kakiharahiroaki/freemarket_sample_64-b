@@ -13,8 +13,6 @@ FactoryBot.define do
     birthdata_month       {"12"}
     birthdata_day         {"18"}
     phone_number          {"08056784321"}
-    created_at            {"2019-12-30 21:47:58"}
-    updated_at            {"2019-12-30 21:47:58"}
   end
 
 end
