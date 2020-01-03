@@ -28,7 +28,7 @@
           = link_to "やることリスト", "#" ,class:"list"
           -# %i.icon-check
           =fa_icon "user", class:"user_icon"
-          = link_to "マイページ", users_show_path ,class:"mypage"
+          = link_to "マイページ", mypage_user_path(current_user.id) ,class:"mypage"
         - else
           = link_to new_member_signup_index_path, class: "registration" do
             新規会員登録

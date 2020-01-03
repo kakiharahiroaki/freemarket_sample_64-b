@@ -27,7 +27,7 @@
             = link_to "やることリスト", "#" ,class:"link"
             %i.icon-check
             =fa_icon "user", class:"user_icon"
-            = link_to "マイページ", users_show_path ,class:"link"
+            = link_to "マイページ",   mypage_user_path(current_user.id) ,class:"link"
   %nav.bread__list
     %ul
       = render "shared/breadcrumbs"     

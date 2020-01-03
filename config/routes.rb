@@ -5,10 +5,9 @@ Rails.application.routes.draw do
   get  "/buys/index", to: "buys#index"
   get "/sells/index", to: "sells#index"
   get "/cards/index", to: "cards#index"
-  get "/users/create", to: "users#create"
-  get "/users/update", to: "users#update"
   
-  get  "/users/show", to: "users#show"
+  
+  
   
   resources :items  do
     member do
@@ -17,14 +16,17 @@ Rails.application.routes.draw do
    end
   end
   resources :sells, only: :create
-  resources :users, only: [:create, :destroy, :show, :update] do
+  resources :users, only: [:destroy, :show, :update] do
     collection do
-      get 'create'
-      get 'destroy'
-      get 'show'
-      get 'update'
+      get 'logout'
+    end
+    member do
+      get 'mypage'
+      get 'profile'
+      get 'personal'
       get 'sell_item'
     end
+    
   end
   resources :signup do
     collection do

@@ -3,29 +3,29 @@ crumb :root do
   link "メルカリ", root_path
 end
 
-crumb :user_show do 
-  link "マイページ" , users_show_path
+crumb :user_mypage do 
+  link "マイページ" , mypage_user_path(current_user.id)
   parent :root
 end
 
-crumb :user_create do
-  link "本人情報の登録" , users_create_path
-  parent :user_show
+crumb :user_personal do
+  link "本人情報の登録" ,  personal_user_path(current_user.id)
+  parent :user_mypage
 end
 
-crumb :user_update do
-  link "プロフィール" , users_update_path
-  parent :user_show
+crumb :user_profile do
+  link "プロフィール" ,  profile_user_path(current_user.id)
+  parent :user_mypage
 end
 
 crumb :card_index do
   link "支払い方法" , cards_index_path
-  parent :user_show
+  parent :user_mypage
 end
 
 crumb :logout do
-  link "ログアウト" , users_destroy_path
-  parent :user_show
+  link "ログアウト" ,  logout_users_path
+  parent :user_mypage
 end
 
 

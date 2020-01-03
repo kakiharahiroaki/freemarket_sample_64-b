@@ -1,7 +1,7 @@
 .left__main
   %ul.left__main
     %li.left__main__list
-      = link_to "マイページ", users_show_path ,class:"item"
+      = link_to "マイページ", mypage_user_path(current_user.id) ,class:"item"
       %i.icon-arrow-right
     %li.left__main__list
       = link_to "お知らせ", '#',class:"item"
@@ -16,7 +16,7 @@
       = link_to "出品する", sells_index_path ,class:"item"
       %i.icon-arrow-right
     %li.left__main__list
-      = link_to "出品した商品 - 出品中", sell_item_users_path,class:"item"
+      = link_to "出品した商品 - 出品中", sell_item_user_path(current_user.id),class:"item"
       %i.icon-arrow-right
     %li.left__main__list
       = link_to "出品した商品 - 取引中", '#',class:"item"
@@ -53,7 +53,7 @@
     %h3.main__list__head 設定
     %ul.mypage__list
     %li.left__main__list
-      = link_to "プロフィール", users_update_path ,class:"item"
+      = link_to "プロフィール", profile_user_path(current_user.id),class:"item"
       %i.icon-arrow-right
     %li.left__main__list
       = link_to " 発送元・お届け先住所変更", '#',class:"item"
@@ -65,11 +65,11 @@
       = link_to "メール/パスワード", '#',class:"item"
       %i.icon-arrow-right
     %li.left__main__list
-      = link_to " 本人情報",  users_create_path ,class:"item"
+      = link_to " 本人情報", personal_user_path(current_user.id) ,class:"item"
       %i.icon-arrow-right
     %li.left__main__list
       = link_to "電話番号の確認", '#',class:"item"
       %i.icon-arrow-right
     %li.left__main__list
-      = link_to " ログアウト", users_destroy_path ,class:"item"
+      = link_to " ログアウト",  logout_users_path ,class:"item"
       %i.icon-arrow-right

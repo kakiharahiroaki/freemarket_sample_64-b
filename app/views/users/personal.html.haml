@@ -1,4 +1,4 @@
-- breadcrumb :user_create
+- breadcrumb :user_personal
 =render "users/header"
 .identification__all.clearfix
   .identification__all__content
@@ -16,13 +16,16 @@
             %i.icon-arrow-right
       .identification__all__form
         %label お名前
-        %p ナナシ
+        %p
+        = "#{@user.family_name_kanji} #{@user.first_name_kanji}"
       .identification__all__form
         %label お名前カナ
-        %p ナナシ
+        %p
+        = "#{@user.family_name_kana} #{@user.first_name_kana}"
       .identification__all__form
         %label{for: "birthday"} 生年月日
-        %p 2019/12/10
+        %p 
+        = "#{@user.birthdata_year}/#{@user.birthdata_month}/#{@user.birthdata_day}"
       .identification__all__form
         %label{for: "zip_code"} 郵便番号
         %span.identification__all__arbitrary 任意
