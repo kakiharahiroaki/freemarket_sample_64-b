@@ -18,6 +18,7 @@ class Item < ApplicationRecord
   validates :products, presence: true, length: { maximum: 40 }
   validates :description_of_item, presence: true, length: { maximum: 1000 }
   validates :price, presence: true, inclusion: 300..9999999
+  validates :category, presence: true
   validates :size, presence: true
   validates :shipping_date, presence: true
   validates :shipping_method, presence: true
