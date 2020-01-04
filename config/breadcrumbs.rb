@@ -8,6 +8,11 @@ crumb :user_mypage do
   parent :root
 end
 
+crumb :user_sell_item do 
+  link "出品した商品 - 出品中" , sell_item_user_path(current_user.id)
+  parent :user_mypage
+end
+
 crumb :user_personal do
   link "本人情報の登録" ,  personal_user_path(current_user.id)
   parent :user_mypage
