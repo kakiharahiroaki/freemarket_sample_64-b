@@ -17,14 +17,30 @@ class Item < ApplicationRecord
   #validation
   validates :products, presence: true, length: { maximum: 40 }
   validates :description_of_item, presence: true, length: { maximum: 1000 }
-  validates :price, presence: true, inclusion: 300..9999999
+  validates :price,  presence: true
+  validates :price,  inclusion: 300..9999999, allow_blank: true
   validates :category, presence: true
+  validates :condition, presence: true
   validates :size, presence: true
   validates :shipping_date, presence: true
   validates :shipping_method, presence: true
   validates :postage, presence: true
   validates :shipping_origin, presence: true
   validates :user_id, presence: true
+  validate :images_presence
+
+  def images_presence
+    if images.attached?
+      images.each do |image|
+        if !image.content_type.in?(%('image/jpeg image/png'))
+          image.purge
+          errors.add(:images, 'には画像ファイルを添付してください')
+        end
+      end
+    else
+      errors.add(:images, 'がありません')
+    end
+  end
 
   
 end

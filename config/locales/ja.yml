@@ -1,0 +1,47 @@
+ja:
+  activerecord:
+    models:
+      item:
+    attributes:
+      item:
+        products: 商品名
+        condition: 商品の状態
+        description_of_item: 商品の説明
+        price: 価格
+        shipping_date: 発送までの日数
+        shipping_method: 発送の方法
+        postage: 発送料の負担
+        shipping_origin: 発送元
+        category: カテゴリー
+        size: サイズ
+        images: 画像
+    errors:
+      models:
+        item:
+          attributes:
+            products:
+            description_of_item:   
+            condition:
+              format: '%{message}'
+              blank: 'を選択してください。'
+            shipping_date:
+              format: '%{message}'
+              blank: 'を選択してください。'
+            shipping_method:
+              format: '%{message}'
+              blank: 'を選択してください。'
+            postage:
+              format: '%{message}'
+              blank: 'を選択してください。'
+            shipping_origin:
+              format: '%{message}'
+              blank: 'を選択してください。'
+            category:
+              format: '%{message}'
+              blank: 'を選択してください。'
+            size:
+              format: '%{message}'
+              blank: 'を選択してください。'
+            price:
+              format: '%{message}'
+              blank: 'は300以上9999999以下で入力してください。'
