@@ -1,16 +1,16 @@
 class SellsController < ApplicationController
 
-  def new
+  def index
     @item = Item.new
   end
   
   def create
     
     @item = Item.new(item_params) 
-    if @item.save!
+    if @item.save
       redirect_to root_path, notice: '商品を出品しました'
     else
-      render :new
+      render :index
     end
     
   end

@@ -96,3 +96,4 @@ gem 'gretel'
 gem "aws-sdk-s3", require: false
 gem "jquery-rails"
 gem 'payjp'
+gem 'rails-i18n'

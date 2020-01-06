@@ -21,7 +21,10 @@
                     .sells__sell__upload__drop__box
                       = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
                       .sells__visible__pc ドラッグアンドドロップまたはクリックしてファイルをダウンロード
-                      %i.sells__icon__camera  
+                      %i.sells__icon__camera 
+                  .sells__images__error
+                    = render partial: "error-message", locals:{item: @item, column: :images}
+
 
               .sells__sell__content
                 .sells__sell__form__group
@@ -30,7 +33,7 @@
                   %span.sells__form__require 必須
                   .sells__input
                     = f.text_field :products, { class:'sells__input__default', placeholder: '商品名（必須 40文字まで)' }
-                    .sells__error__message 入力してください
+                    = render partial: "error-message", locals:{item: @item, column: :products}
                 .sells__sell__form__group
                   = f.label :description_of_item do
                     商品の説明
@@ -38,8 +41,7 @@
                   = f.text_area :description_of_item, { class: 'sells__textarea__default', placeholder: '商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入した購入したジャケットです。ライトグレーで傷はありませんライトグレーで傷はありません。合わせやすいのでおすすめです。' }
                   .sells__style__counter
                     %span 0/1000
-                    
-                  .sells__error__message 入力してください
+                  = render partial: "error-message", locals:{item: @item, column: :description_of_item}
               .sells__sell__content.clearfix
                 %h3.sells__sell__sub__head 商品の詳細
                 .sells__sell__form__box
@@ -51,7 +53,7 @@
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         = f.select :category, Item.categories.keys.to_a, { autofocus: 'true'}, {class:"sells__select__default"}
-                        .sells__error__message 選択してください
+                        = render partial: "error-message", locals:{item: @item, column: :category}
                       -# .sells__select__wrap
                       -#   %i.sells__icon__arrow
                       -#   = f.select :category, [['選択してください',1],['トップス',2]], { autofocus: 'true'}, {class:"sells__select__default"}
@@ -66,7 +68,7 @@
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         = f.select :size, Item.sizes.keys.to_a, {},autofocus: 'true', class:"sells__select__default"
-                        .sells__error__message 選択してください
+                        = render partial: "error-message", locals:{item: @item, column: :size}
                   .sells__sell__form__group
                     = f.label :brand do
                       ブランド
@@ -81,7 +83,7 @@
                       .sells__select__wrap
                         %i.sells__icon__arrow
                         = f.select :condition, Item.conditions.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"                       
-                        .sells__error__message 選択してください
+                        = render partial: "error-message", locals:{item: @item, column: :condition}
               .sells__sell__content.clearfix
                 .sells__sell__sub
                   %h3.sells__sell_sub__head 配送について
@@ -96,7 +98,7 @@
                         .sells__select__wrap
                           %i.sells__icon__arrow
                           = f.select :postage, Item.postages.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
-                          .sells__error__message 選択してください
+                          = render partial: "error-message", locals:{item: @item, column: :postage}
                     .sells__sell__form__group
                       = f.label :shipping_method do
                         配送の方法
@@ -104,8 +106,8 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          = f.select :shipping_method, Item.shipping_methods.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
-                          .sells__error__message 選択してください
+                          = f.select :shipping_method, Item.shipping_methods.keys.to_a, {}, autofocus: 'true', class:"sells__select__default" 
+                          = render partial: "error-message", locals:{item: @item, column: :shipping_method}
                     .sells__sell__form__group
                       = f.label :shipping_origin do
                         発送元の地域
@@ -113,8 +115,8 @@
                       .sells__select
                         .sells__select__wrap
                           %i.sells__icon__arrow
-                          = f.select :shipping_origin, Item.shipping_origins.keys.to_a, {}, autofocus: 'true', class:"sells__select__default"
-                          .sells__error__message 選択してください
+                          = f.select :shipping_origin, Item.shipping_origins.keys.to_a, {}, autofocus: 'true', class:"sells__select__default" 
+                          = render partial: "error-message", locals:{item: @item, column: :shipping_origin}
                     .sells__sell__form__group
                       = f.label :shipping_date do
                         発送までの日数
@@ -123,7 +125,7 @@
                         .sells__select__wrap
                           %i.sells__icon__arrow
                           = f.select :shipping_date, Item.shipping_dates.keys.to_a, {},  autofocus: 'true' , class:"sells__select__default"
-                          .sells__error__message 選択してください
+                          = render partial: "error-message", locals:{item: @item, column: :shipping_date}
               .sells__sell__content.clearfix
                 .sells__sell__sub
                   %h3.sells__sell_sub__head 価格(300~9,999,999)
@@ -137,7 +139,8 @@
                           .sells__right 
                             %span
                             = f.text_field :price, { id: 'sells__price', class:'sells__input__default', placeholder: " 例）300" } 
-                            .sells__error__message.error__price 300以上9999999以下で入力してください
+                            .error__price 
+                            = render partial: "error-message", locals:{item: @item, column: :price}
 
                       %li.sells__price.clearfix
                         .sells__left--border 販売手数料（10％)
