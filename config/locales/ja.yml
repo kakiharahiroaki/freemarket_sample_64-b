@@ -19,29 +19,7 @@ ja:
       models:
         item:
           attributes:
-            products:
-            description_of_item:   
-            condition:
-              format: '%{message}'
-              blank: 'を選択してください。'
-            shipping_date:
-              format: '%{message}'
-              blank: 'を選択してください。'
-            shipping_method:
-              format: '%{message}'
-              blank: 'を選択してください。'
-            postage:
-              format: '%{message}'
-              blank: 'を選択してください。'
-            shipping_origin:
-              format: '%{message}'
-              blank: 'を選択してください。'
-            category:
-              format: '%{message}'
-              blank: 'を選択してください。'
-            size:
-              format: '%{message}'
-              blank: 'を選択してください。'
             price:
               format: '%{message}'
               blank: 'は300以上9999999以下で入力してください。'
+        
