@@ -18,7 +18,7 @@ class SellsController < ApplicationController
    
     private
   def item_params
-    params.permit(
+    params.require(:item).permit(
       :products,
       :condition,
       :description_of_item,

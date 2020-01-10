@@ -32,7 +32,7 @@ class Item < ApplicationRecord
   def images_presence
     if images.attached?
       images.each do |image|
-        if !image.content_type.in?(%('image/jpeg image/png'))
+        if !image.content_type.in?(%('image/jpeg image/png image/jpg'))
           image.purge
           errors.add(:images, 'には画像ファイルを添付してください')
         end
