@@ -26,6 +26,7 @@ class PurchaseController < ApplicationController
     :customer => @card.customer_id, #顧客ID
     :currency => 'jpy', #日本円
     )
+    @item.update(status: '取引中')
   redirect_to action: 'done' #完了画面に移動
   end
 
