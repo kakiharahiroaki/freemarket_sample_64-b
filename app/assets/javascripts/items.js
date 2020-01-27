@@ -3,3 +3,10 @@
   setTimeout(function() {
     $('.alert__notice').fadeOut();
   }, 3000);
+
+  $(document).ready(function(){
+    $('.contents__image').bxSlider({
+        auto: true,
+        pause: 5000,
+    });
+  });

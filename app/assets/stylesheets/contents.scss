@@ -1,10 +1,16 @@
 .contents{
   background-color: rgb(245, 245, 245);
-  max-width: 1020px;
+  max-width: 1440px;
   width: 100%;
   margin: auto;
-  &__image{
-    background-size: auto;
+  &__image {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+  &__box {
+    max-width: 1020px;
+    margin: 0 auto;
   }
   &__category{
     background-color: white;
